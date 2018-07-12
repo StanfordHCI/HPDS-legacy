@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.core = AWARECore.shared()!
         self.study = AWAREStudy.shared()
-        //self.study.setDebug(true) //Debugging settings
+        self.study.setDebug(true) //Debugging settings
         self.manager = AWARESensorManager.shared()
         
         core.activate()
