@@ -1,0 +1,10 @@
+
+# File: TODO.txt
+# A file indicating the tasks left to be completed in this repository.
+# This file (roughly - with minor edits) follows the TODO.txt format suggested 
+# by Ali Karbassi at https://github.com/todotxt/todo.txt
+
+--------------------------------------------------------------------------------
+[ ] (A) YYYY-MM-DD 2018-07-12 || Update HealthKit settings to pull data with
+			      || greater frequency than once/hour.
+--------------------------------------------------------------------------------

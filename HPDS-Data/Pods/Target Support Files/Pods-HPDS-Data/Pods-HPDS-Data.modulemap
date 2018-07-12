@@ -1,0 +1,6 @@
+framework module Pods_HPDS_Data {
+  umbrella header "Pods-HPDS-Data-umbrella.h"
+
+  export *
+  module * { export * }
+}
