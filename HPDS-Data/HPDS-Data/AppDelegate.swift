@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var core: AWARECore!
     var study: AWAREStudy!
     var manager: AWARESensorManager!
+    let esmManager = ESMScheduleManager.shared()
+
     
     static func shared() -> AppDelegate {
         //Returns an instance of the current AppDelegate
@@ -25,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
         
         self.core = AWARECore.shared()!
         self.study = AWAREStudy.shared()
@@ -47,7 +51,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.manager?.createDBTablesOnAwareServer()
             self.manager?.startAllSensors()
         })
-        print("Added")
+        
+        /// Set up ESM
+        let schdule = ESMSchedule.init()
+        schdule.notificationTitle = "notification title"
+        schdule.notificationBody = "notification body"
+        schdule.scheduleId = "schedule_id"
+        schdule.expirationThreshold = 60
+        schdule.startDate = Date.init()
+        schdule.endDate = Date.init(timeIntervalSinceNow: 60*60*24*10)
+        schdule.fireHours = [9,12,18,21]
+        
+        let radio = ESMItem.init(asRadioESMWithTrigger: "1_radio", radioItems: ["A","B","C","D","E"])
+        radio?.setTitle("ESM title")
+        radio?.setInstructions("some instructions")
+        schdule.addESM(radio)
+        
+        // esmManager.removeAllNotifications()
+        // esmManager.removeAllESMHitoryFromDB()
+        // esmManager.removeAllSchedulesFromDB()
+        esmManager?.add(schdule)
+        
         return true
     }
     

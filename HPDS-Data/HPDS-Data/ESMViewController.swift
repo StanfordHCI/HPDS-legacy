@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AWAREFramework
 
 class ESMViewController: UIViewController {
 
@@ -14,6 +15,19 @@ class ESMViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let esmManager = AppDelegate.shared().esmManager
+        
+        let schedules = esmManager?.getValidSchedules()
+        if let unwrappedSchedules = schedules {
+            if(unwrappedSchedules.count > 0){
+                let esmViewController = ESMScrollViewController.init()
+                self.present(esmViewController, animated: true) {
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

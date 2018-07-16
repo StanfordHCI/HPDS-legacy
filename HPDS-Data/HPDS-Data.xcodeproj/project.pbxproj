@@ -14,6 +14,7 @@
 		BC143F8920F80A31007669A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC143F8820F80A31007669A2 /* Assets.xcassets */; };
 		BC143F8C20F80A31007669A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC143F8A20F80A31007669A2 /* LaunchScreen.storyboard */; };
 		BCCD599F20F80CDB00C2A225 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCD599E20F80CDB00C2A225 /* HealthKit.framework */; };
+		BCF9447B20FD1D0800DFCEFB /* ESMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF9447A20FD1D0800DFCEFB /* ESMViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		BC143F8D20F80A31007669A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCCD599E20F80CDB00C2A225 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		BCCD59A020F80CDB00C2A225 /* HPDS-Data.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HPDS-Data.entitlements"; sourceTree = "<group>"; };
+		BCF9447A20FD1D0800DFCEFB /* ESMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESMViewController.swift; sourceTree = "<group>"; };
 		DAA8C17F6DE0FB340234ACF7 /* Pods-HPDS-Data.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPDS-Data.release.xcconfig"; path = "Pods/Target Support Files/Pods-HPDS-Data/Pods-HPDS-Data.release.xcconfig"; sourceTree = "<group>"; };
 		DBE52163F0EFA62568064A43 /* Pods-HPDS-Data.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPDS-Data.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HPDS-Data/Pods-HPDS-Data.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +90,7 @@
 				BC143F8320F80A30007669A2 /* ViewController.swift */,
 				BC143F8520F80A30007669A2 /* Main.storyboard */,
 				BC143F8820F80A31007669A2 /* Assets.xcassets */,
+				BCF9447A20FD1D0800DFCEFB /* ESMViewController.swift */,
 				BC143F8A20F80A31007669A2 /* LaunchScreen.storyboard */,
 				BC143F8D20F80A31007669A2 /* Info.plist */,
 			);
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCF9447B20FD1D0800DFCEFB /* ESMViewController.swift in Sources */,
 				BC143F8420F80A30007669A2 /* ViewController.swift in Sources */,
 				BC143F8220F80A30007669A2 /* AppDelegate.swift in Sources */,
 			);
