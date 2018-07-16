@@ -18,24 +18,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cff-cf-N4R">
-                                <rect key="frame" x="126" y="429" width="122" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sync Sensor Data"/>
-                                <connections>
-                                    <action selector="syncSensors:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KCo-jG-SW5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcO-nH-Zai">
-                                <rect key="frame" x="147" y="493" width="82" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ESM Survey"/>
-                                <connections>
-                                    <segue destination="XiA-yG-ix3" kind="show" id="cUF-Cg-ZxW"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="V1L-IX-qMN">
+                                <rect key="frame" x="34.5" y="267.5" width="306" height="132"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cff-cf-N4R">
+                                        <rect key="frame" x="0.0" y="0.0" width="306" height="46"/>
+                                        <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="28"/>
+                                        <state key="normal" title="     Sync Sensor Data     ">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="syncSensors:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KCo-jG-SW5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcO-nH-Zai">
+                                        <rect key="frame" x="0.0" y="86" width="306" height="46"/>
+                                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="28"/>
+                                        <state key="normal" title="     ESM Survey     ">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="XiA-yG-ix3" kind="show" id="cUF-Cg-ZxW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="V1L-IX-qMN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8lv-gr-fbY"/>
+                            <constraint firstItem="V1L-IX-qMN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e05-PQ-Vxt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ROz-M0-QNX"/>

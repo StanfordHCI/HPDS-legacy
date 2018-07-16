@@ -15,5 +15,5 @@
 [ ] (A) YYYY-MM-DD 2018-07-16 || Import ESM from linked JSON instead of 
 			      || hardcoding ESM Q&A into the app.
 --------------------------------------------------------------------------------
-[ ] (B) YYYY-MM-DD 2018-07-16 || Button alignment for different devices.
+[X] (B) YYYY-MM-DD 2018-07-16 || Button alignment for different devices.
 --------------------------------------------------------------------------------
