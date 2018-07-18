@@ -46,6 +46,8 @@
 	<string>HealthKit Share</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>HealthKit Update</string>
+	<key>NSMotionUsageDescription</key>
+	<string>To track movement.</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

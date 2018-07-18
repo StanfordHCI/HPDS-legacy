@@ -46,7 +46,7 @@
         awareHKQuantity = [[AWAREHealthKitQuantity alloc] initWithAwareStudy:study dbType:dbType];
         
 //        frequency = 60 * 30; // 30min
-        frequency = 60; //1 minute
+        frequency = 1; //1 second
     }
     return self;
 }
@@ -122,6 +122,8 @@
 /////////////////////////////////////////////////////////////////
 
 - (void)startSyncDB{
+    NSLog(@"Syncing with the HealthKit database.");
+    NSLog(@"%@", awareHKQuantity);
     [awareHKWorkout startSyncDB];
     [awareHKCategory startSyncDB];
     [awareHKQuantity startSyncDB];

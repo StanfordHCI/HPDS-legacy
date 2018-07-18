@@ -41,11 +41,11 @@
                                                               delegate:self
                                                          delegateQueue:nil];
         
-//        if (_debug) {
-//            NSLog(@"[SyncExecutor:%@] NSURLSession is initalized",sensorName);
-//            NSLog(@"[SyncExecutor:%@] NSURLSession identifier = %@",sensorName, sessionConfig.identifier);
-//            NSLog(@"[SyncExecutor:%@] NSURLSession container identifier = %@",sensorName, sessionConfig.sharedContainerIdentifier);
-//        }
+        if (_debug) {
+            NSLog(@"[SyncExecutor:%@] NSURLSession is initalized",sensorName);
+            NSLog(@"[SyncExecutor:%@] NSURLSession identifier = %@",sensorName, sessionConfig.identifier);
+            NSLog(@"[SyncExecutor:%@] NSURLSession container identifier = %@",sensorName, sessionConfig.sharedContainerIdentifier);
+        }
         
     }
     return self;

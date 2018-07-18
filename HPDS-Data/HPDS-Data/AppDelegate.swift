@@ -17,9 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var core: AWARECore!
     var study: AWAREStudy!
     var manager: AWARESensorManager!
-    let esmManager = ESMScheduleManager.shared()
+//    let esmManager = ESMScheduleManager.shared()
+    var esm: IOSESM!
 
-    
     static func shared() -> AppDelegate {
         //Returns an instance of the current AppDelegate
         return UIApplication.shared.delegate as! AppDelegate
@@ -27,8 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        
         
         self.core = AWARECore.shared()!
         self.study = AWAREStudy.shared()
@@ -39,38 +37,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Request the following permission if you need to collect sensor data in the background.
         core.requestPermissionForBackgroundSensing()
         
-        let accelerometer = Accelerometer(awareStudy: self.study)
+        //let accelerometer = Accelerometer(awareStudy: self.study)
         let healthkit = AWAREHealthKit(awareStudy: self.study)
-        manager?.add(accelerometer)
+        let activity = IOSActivityRecognition(awareStudy: self.study)
+
+    
+        //manager?.add(accelerometer)
         manager?.add(healthkit)
+        manager?.add(activity)
+//        manager?.add(esm)
         
-        self.study?.setStudyURL("https://api.awareframework.com/index.php/webservice/index/1882/WPrPunwFXFLX")
-        let url = "https://api.awareframework.com/index.php/webservice/index/1882/WPrPunwFXFLX"
+        //Link in ESM Manager in ESMViewController
+        
+        self.study?.setStudyURL("https://api.awareframework.com/index.php/webservice/index/1888/UqMEKGUkE07T")
+
+        let url = "https://api.awareframework.com/index.php/webservice/index/1888/UqMEKGUkE07T"
+        
         self.study?.join(withURL: url, completion: { (settings, studyState, error) in
-            self.manager?.addSensors(with: self.study)
             self.manager?.createDBTablesOnAwareServer()
+            self.manager?.addSensors(with: self.study)
             self.manager?.startAllSensors()
         })
         
+        self.esm = IOSESM(awareStudy: self.study, dbType: self.study.getDBType())
+        print("Setup complete.")
         /// Set up ESM
-        let schdule = ESMSchedule.init()
-        schdule.notificationTitle = "notification title"
-        schdule.notificationBody = "notification body"
-        schdule.scheduleId = "schedule_id"
-        schdule.expirationThreshold = 60
-        schdule.startDate = Date.init()
-        schdule.endDate = Date.init(timeIntervalSinceNow: 60*60*24*10)
-        schdule.fireHours = [9,12,18,21]
-        
-        let radio = ESMItem.init(asRadioESMWithTrigger: "1_radio", radioItems: ["A","B","C","D","E"])
-        radio?.setTitle("ESM title")
-        radio?.setInstructions("some instructions")
-        schdule.addESM(radio)
-        
-        // esmManager.removeAllNotifications()
-        // esmManager.removeAllESMHitoryFromDB()
-        // esmManager.removeAllSchedulesFromDB()
-        esmManager?.add(schdule)
+//        let schdule = ESMSchedule.init()
+//        schdule.notificationTitle = "notification title"
+//        schdule.notificationBody = "notification body"
+//        schdule.scheduleId = "schedule_id"
+//        schdule.expirationThreshold = 60
+//        schdule.startDate = Date.init()
+//        schdule.endDate = Date.init(timeIntervalSinceNow: 60*60*24*10)
+//        schdule.fireHours = [9,12,18,21]
+//
+//        let radio = ESMItem.init(asRadioESMWithTrigger: "1_radio", radioItems: ["A","B","C","D","E"])
+//        radio?.setTitle("ESM title")
+//        radio?.setInstructions("some instructions")
+//        schdule.addESM(radio)
+//
+//        // esmManager.removeAllNotifications()
+//        // esmManager.removeAllESMHitoryFromDB()
+//        // esmManager.removeAllSchedulesFromDB()
+//        esmManager?.add(schdule)
         
         return true
     }
