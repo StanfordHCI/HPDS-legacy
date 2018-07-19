@@ -8,7 +8,7 @@
 [X] (A) 2018-07-13 2018-07-12 || Update HealthKit settings to pull data with
 			      || greater frequency than once/hour.
 --------------------------------------------------------------------------------
-[ ] (A) YYYY-MM-DD 2018-07-12 || Get HeathKit data saving working - currently
+[X] (A) 2018-07-19 2018-07-12 || Get HeathKit data saving working - currently
 			      || creates the tables, but does not populate
 			      || them accordingly.
 --------------------------------------------------------------------------------

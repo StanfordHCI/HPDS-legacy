@@ -27,4 +27,16 @@ class ViewController: UIViewController {
         let sensorManager = AppDelegate.shared().manager!
         sensorManager.syncAllSensors()
     }
+    
+    @IBAction func openEmail(_ sender: Any) {
+        let email = "foo@bar.com"
+        if let url = URL(string: "mailto:\(email)") {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
+    }
+    
 }
