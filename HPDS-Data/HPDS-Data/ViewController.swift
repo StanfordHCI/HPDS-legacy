@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     override func didReceiveMemoryWarning() {

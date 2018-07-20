@@ -17,6 +17,7 @@
 --------------------------------------------------------------------------------
 [X] (B) YYYY-MM-DD 2018-07-16 || Button alignment for different devices.
 --------------------------------------------------------------------------------
-[ ] (A) YYYY-MM-DD 2018-07-19 || Fix cancel button for ESM. (Currently does
-			      || nothing).
+[X] (A) YYYY-MM-DD 2018-07-19 || Fix cancel button for ESM. (Currently does
+			      || nothing). UPDATE: Fixed it to bring the user
+			      || back to the home screen.
 --------------------------------------------------------------------------------
