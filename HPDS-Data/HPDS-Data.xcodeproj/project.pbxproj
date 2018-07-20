@@ -13,6 +13,7 @@
 		BC143F8720F80A30007669A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC143F8520F80A30007669A2 /* Main.storyboard */; };
 		BC143F8920F80A31007669A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC143F8820F80A31007669A2 /* Assets.xcassets */; };
 		BC143F8C20F80A31007669A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC143F8A20F80A31007669A2 /* LaunchScreen.storyboard */; };
+		BC5C9A13210259F000EAAE1B /* AboutScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C9A12210259F000EAAE1B /* AboutScreenViewController.swift */; };
 		BCCD599F20F80CDB00C2A225 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCD599E20F80CDB00C2A225 /* HealthKit.framework */; };
 		BCF9447B20FD1D0800DFCEFB /* ESMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF9447A20FD1D0800DFCEFB /* ESMViewController.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 		BC143F8820F80A31007669A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC143F8B20F80A31007669A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC143F8D20F80A31007669A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC5C9A12210259F000EAAE1B /* AboutScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScreenViewController.swift; sourceTree = "<group>"; };
 		BCCD599E20F80CDB00C2A225 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		BCCD59A020F80CDB00C2A225 /* HPDS-Data.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HPDS-Data.entitlements"; sourceTree = "<group>"; };
 		BCF9447A20FD1D0800DFCEFB /* ESMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESMViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				BC143F8120F80A30007669A2 /* AppDelegate.swift */,
 				BC143F8320F80A30007669A2 /* ViewController.swift */,
 				BC143F8520F80A30007669A2 /* Main.storyboard */,
+				BC5C9A12210259F000EAAE1B /* AboutScreenViewController.swift */,
 				BC143F8820F80A31007669A2 /* Assets.xcassets */,
 				BCF9447A20FD1D0800DFCEFB /* ESMViewController.swift */,
 				BC143F8A20F80A31007669A2 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC5C9A13210259F000EAAE1B /* AboutScreenViewController.swift in Sources */,
 				BCF9447B20FD1D0800DFCEFB /* ESMViewController.swift in Sources */,
 				BC143F8420F80A30007669A2 /* ViewController.swift in Sources */,
 				BC143F8220F80A30007669A2 /* AppDelegate.swift in Sources */,

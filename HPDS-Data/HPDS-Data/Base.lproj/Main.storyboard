@@ -82,25 +82,65 @@
             </objects>
             <point key="canvasLocation" x="840.79999999999995" y="320.68965517241384"/>
         </scene>
-        <!--View Controller-->
+        <!--About Screen View Controller-->
         <scene sceneID="Hx9-JK-zpq">
             <objects>
-                <viewController id="4qH-SO-lgT" sceneMemberID="viewController">
+                <viewController id="4qH-SO-lgT" customClass="AboutScreenViewController" customModule="HPDS_Data" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Fa-OB-peJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3tS-6A-2wF">
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDY-a8-5cY">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="1002"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex velit, tincidunt vitae euismod eu, pulvinar sit amet massa. Pellentesque interdum eu ligula vitae pretium. Aenean scelerisque pellentesque aliquam. Pellentesque erat est, mattis vel nunc nec, mollis pretium libero. Curabitur vehicula nibh non nunc elementum auctor. Praesent et mattis eros, sed pharetra ante. Cras eget odio ut nisl efficitur consequat sit amet vel nulla. Proin ut ultricies turpis, in pulvinar dui.
+
+Donec sagittis pellentesque sollicitudin. Aliquam pulvinar molestie enim, non varius tortor pulvinar sed. Nullam tristique, lectus quis faucibus facilisis, quam elit facilisis tortor, a vulputate erat tortor vitae elit. Pellentesque elementum pharetra ante, eget semper leo posuere id. Integer consequat elit enim, eget porta urna ultricies vitae. Phasellus eu ipsum leo. Ut in nunc fermentum, sagittis nisl ut, ultrices nulla. Suspendisse lacinia posuere mi efficitur varius. Pellentesque tristique mattis tempus. Nam eleifend gravida sollicitudin. Duis posuere fermentum varius. Nulla ac tincidunt nulla, quis rutrum neque. Proin libero velit, lacinia vel blandit quis, suscipit sit amet nisl. Phasellus at arcu ut eros accumsan lobortis. Donec id eros at lectus luctus lobortis.
+
+Nullam eleifend diam diam, ac bibendum neque tempus non. Duis lobortis sagittis tempor. Morbi eget lorem ut massa fringilla volutpat. Aenean fringilla, mi quis semper pharetra, metus mauris finibus sapien, et mattis lacus urna id elit. Aenean non enim eget est rutrum vulputate. Ut velit purus, suscipit id pellentesque eu, convallis at lectus. Nulla eget leo ipsum.
+
+Phasellus est dolor, euismod et ligula a, fermentum fermentum lorem. Morbi in est id orci ullamcorper lacinia et eu eros. Etiam rutrum sapien non quam sollicitudin elementum sit amet quis urna. Etiam quis malesuada odio. Phasellus risus libero, luctus quis tincidunt sit amet, efficitur vel mi. Praesent consectetur nunc odio, quis tristique tortor fringilla sed. Maecenas posuere ante id euismod sollicitudin. Donec ultricies dapibus justo sit amet accumsan. Morbi et luctus libero. Quisque ac lobortis lectus. Cras tristique eros ac diam placerat venenatis. Nullam ac dui feugiat, posuere augue id, rhoncus justo.
+
+Proin euismod auctor tellus eget cursus. Donec molestie rutrum metus, eget congue nibh pharetra in. Quisque quis pharetra risus, sed elementum libero. Donec dignissim suscipit dolor lobortis tincidunt. Proin dapibus risus a odio luctus, at facilisis neque ornare. Etiam consectetur sollicitudin magna, a mattis orci pharetra eu. Quisque eget sem odio.</string>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="gDY-a8-5cY" firstAttribute="leading" secondItem="3tS-6A-2wF" secondAttribute="leading" constant="-4" id="WNk-Xa-Wv4"/>
+                                    <constraint firstItem="gDY-a8-5cY" firstAttribute="width" secondItem="3tS-6A-2wF" secondAttribute="width" id="Xl7-Uy-her"/>
+                                    <constraint firstItem="gDY-a8-5cY" firstAttribute="top" secondItem="3tS-6A-2wF" secondAttribute="top" id="a8y-EB-paX"/>
+                                    <constraint firstAttribute="bottom" secondItem="gDY-a8-5cY" secondAttribute="bottom" constant="-399" placeholder="YES" id="jT3-iH-l0a"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3tS-6A-2wF" firstAttribute="bottom" secondItem="f6u-Dl-y6E" secondAttribute="bottom" id="CYo-dt-EDe"/>
+                            <constraint firstItem="f6u-Dl-y6E" firstAttribute="trailing" secondItem="3tS-6A-2wF" secondAttribute="trailing" constant="16" id="RSc-g0-GNi"/>
+                            <constraint firstItem="3tS-6A-2wF" firstAttribute="leading" secondItem="f6u-Dl-y6E" secondAttribute="leading" constant="16" id="WH4-Bn-Tdj"/>
+                            <constraint firstItem="3tS-6A-2wF" firstAttribute="top" secondItem="f6u-Dl-y6E" secondAttribute="top" id="qrx-Fa-vnx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="f6u-Dl-y6E"/>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="3tS-6A-2wF" id="b8b-Y9-2Ri"/>
+                        <outlet property="textView" destination="gDY-a8-5cY" id="h6d-9P-aj9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wf8-Gq-PHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1766" y="1093"/>
+            <point key="canvasLocation" x="1765.5999999999999" y="1092.5037481259371"/>
         </scene>
-        <!--View Controller-->
+        <!--Scroll View Controller-->
         <scene sceneID="kqF-No-z0x">
             <objects>
-                <viewController id="XiA-yG-ix3" customClass="ESMViewController" customModule="HPDS_Data" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XiA-yG-ix3" customClass="ESMScrollViewController" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="Ri8-Jx-twg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -109,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TfL-Cz-8kn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1766" y="321"/>
+            <point key="canvasLocation" x="1765.5999999999999" y="320.68965517241384"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JHe-YV-pOK">

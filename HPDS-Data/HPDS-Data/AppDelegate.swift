@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var study: AWAREStudy!
     var manager: AWARESensorManager!
 //    let esmManager = ESMScheduleManager.shared()
-    var esm: IOSESM!
+//    var esm: IOSESM!
 
     static func shared() -> AppDelegate {
         //Returns an instance of the current AppDelegate
@@ -59,7 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.manager?.startAllSensors()
         })
         
-        self.esm = IOSESM(awareStudy: self.study, dbType: self.study.getDBType())
+//        self.esm = IOSESM(awareStudy: self.study, dbType: self.study.getDBType())
         print("Setup complete.")
         /// Set up ESM
 //        let schdule = ESMSchedule.init()
@@ -72,7 +72,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        schdule.fireHours = [9,12,18,21]
 //
 //        let radio = ESMItem.init(asRadioESMWithTrigger: "1_radio", radioItems: ["A","B","C","D","E"])
-//        radio?.setTitle("ESM title")
+//        radio?.setTitle("ESM titletitle")
 //        radio?.setInstructions("some instructions")
 //        schdule.addESM(radio)
 //

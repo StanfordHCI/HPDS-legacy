@@ -18,7 +18,7 @@ class ESMViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let esm = AppDelegate.shared().esm
+        let esm = IOSESM(awareStudy: AppDelegate.shared().study)
         esm?.startSensor(withURL: "https://api.awareframework.com/index.php/webservice/index/1888/UqMEKGUkE07T", tableName: "ESM")
         let esmViewController = ESMViewController.init()
         self.present(esmViewController, animated: true)

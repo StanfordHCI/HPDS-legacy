@@ -21,15 +21,16 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //Push data to AWARE server on button press
-    
     @IBAction func syncSensors(_ sender: Any) {
+        //Push data to AWARE server on button press
         let sensorManager = AppDelegate.shared().manager!
         sensorManager.syncAllSensors()
     }
     
     @IBAction func openEmail(_ sender: Any) {
-        let email = "foo@bar.com"
+        //Opens the user's default email client, and an email within the client
+        //addressed to the email address below.
+        let email = "foo@bar.com" // To be updated with real contact info
         if let url = URL(string: "mailto:\(email)") {
             if #available(iOS 10.0, *) {
                 UIApplication.shared.open(url)
