@@ -18,20 +18,20 @@ class ESMViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let esm = IOSESM(awareStudy: AppDelegate.shared().study)
-        esm?.startSensor(withURL: "https://api.awareframework.com/index.php/webservice/index/1888/UqMEKGUkE07T", tableName: "ESM")
-        let esmViewController = ESMViewController.init()
-        self.present(esmViewController, animated: true)
-//        let esmManager = AppDelegate.shared().esmManager
-//
-//        let schedules = esmManager?.getValidSchedules()
-//        if let unwrappedSchedules = schedules {
-//            if(unwrappedSchedules.count > 0){
-//                let esmViewController = ESMScrollViewController.init()
-//                self.present(esmViewController, animated: true) {
-//                }
-//            }
-//        }
+        print("The view appeared!")
+        print("The view appeared!")
+        print("The view appeared!")
+        print("The view appeared!")
+        print("The view appeared!")
+        let esmManager = ESMScheduleManager.shared()
+        let schedules = esmManager?.getValidSchedules()
+        if let unwrappedSchedules = schedules {
+            if(unwrappedSchedules.count > 0){
+                let esmViewController = ESMScrollViewController.init()
+                self.present(esmViewController, animated: true) {
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

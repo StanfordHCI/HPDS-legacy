@@ -13,7 +13,6 @@ class AboutScreenViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var textView: UITextView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.contentLayoutGuide.bottomAnchor.constraint(equalTo: textView.bottomAnchor).isActive = true

@@ -17,8 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var core: AWARECore!
     var study: AWAREStudy!
     var manager: AWARESensorManager!
-//    let esmManager = ESMScheduleManager.shared()
-//    var esm: IOSESM!
 
     static func shared() -> AppDelegate {
         //Returns an instance of the current AppDelegate
@@ -35,23 +33,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         core.activate()
         // Request the following permission if you need to collect sensor data in the background.
+        
         core.requestPermissionForBackgroundSensing()
         
-        //let accelerometer = Accelerometer(awareStudy: self.study)
         let healthkit = AWAREHealthKit(awareStudy: self.study)
         let activity = IOSActivityRecognition(awareStudy: self.study)
+        let esm = IOSESM(awareStudy: self.study)
 
     
-        //manager?.add(accelerometer)
         manager?.add(healthkit)
         manager?.add(activity)
-//        manager?.add(esm)
+        manager?.add(esm)
+
+
         
-        //Link in ESM Manager in ESMViewController
-        
-        self.study?.setStudyURL("https://api.awareframework.com/index.php/webservice/index/1888/UqMEKGUkE07T")
+
 
         let url = "https://api.awareframework.com/index.php/webservice/index/1888/UqMEKGUkE07T"
+        self.study?.setStudyURL(url)
+        esm?.startSensor(withURL: url, tableName: "esm")
+        print("Started ESM Sensor!")
+        print("Started ESM Sensor!")
+        print("Started ESM Sensor!")
+        print("Started ESM Sensor!")
+        print("Started ESM Sensor!")
         
         self.study?.join(withURL: url, completion: { (settings, studyState, error) in
             self.manager?.createDBTablesOnAwareServer()
@@ -59,28 +64,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.manager?.startAllSensors()
         })
         
-//        self.esm = IOSESM(awareStudy: self.study, dbType: self.study.getDBType())
         print("Setup complete.")
-        /// Set up ESM
-//        let schdule = ESMSchedule.init()
-//        schdule.notificationTitle = "notification title"
-//        schdule.notificationBody = "notification body"
-//        schdule.scheduleId = "schedule_id"
-//        schdule.expirationThreshold = 60
-//        schdule.startDate = Date.init()
-//        schdule.endDate = Date.init(timeIntervalSinceNow: 60*60*24*10)
-//        schdule.fireHours = [9,12,18,21]
-//
-//        let radio = ESMItem.init(asRadioESMWithTrigger: "1_radio", radioItems: ["A","B","C","D","E"])
-//        radio?.setTitle("ESM titletitle")
-//        radio?.setInstructions("some instructions")
-//        schdule.addESM(radio)
-//
-//        // esmManager.removeAllNotifications()
-//        // esmManager.removeAllESMHitoryFromDB()
-//        // esmManager.removeAllSchedulesFromDB()
-//        esmManager?.add(schdule)
-        
+
         return true
     }
     

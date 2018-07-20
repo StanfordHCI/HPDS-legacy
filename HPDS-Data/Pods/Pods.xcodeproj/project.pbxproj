@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -757,7 +757,7 @@
 
 /* Begin PBXFileReference section */
 		0014135ADAE84B1FC9C2BA17E21C54B7 /* Calendar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Calendar.m; path = AWAREFramework/Classes/Plugins/Calendar/Calendar.m; sourceTree = "<group>"; };
-		00BC62965A294ED518AD8A83A5845DDF /* 12_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 12_2.jpg; path = AWAREFramework/Assets/images/12_satisfied/12_2.jpg; sourceTree = "<group>"; };
+		00BC62965A294ED518AD8A83A5845DDF /* 12_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 12_2.jpg; path = AWAREFramework/Assets/images/12_satisfied/12_2.jpg; sourceTree = "<group>"; };
 		01D452D4955080FA9581FE777DB80518 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
 		02ED0203C0E57ED4D47E8798EB2AECD5 /* BatteryDischarge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BatteryDischarge.m; path = AWAREFramework/Classes/Sensors/Battery/BatteryDischarge.m; sourceTree = "<group>"; };
 		0313E9ABAC668FF38AE9009E76149111 /* AmbientNoise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AmbientNoise.m; path = AWAREFramework/Classes/Plugins/AmbientNoise/AmbientNoise.m; sourceTree = "<group>"; };
@@ -790,14 +790,14 @@
 		11BDF07A1D4E36CE00DBAF3A544723AB /* EntityFitbitDevice+CoreDataClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EntityFitbitDevice+CoreDataClass.h"; path = "AWAREFramework/Classes/Plugins/Fitbit/EntityFitbitDevice+CoreDataClass.h"; sourceTree = "<group>"; };
 		11CBD1989CA03119FA9782276DB95669 /* EZAudioPlot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioPlot.h; path = AWAREFramework/Classes/Plugins/AmbientNoise/EZAudio/EZAudioPlot.h; sourceTree = "<group>"; };
 		124F304B836772F32E2D06A79B7A658E /* EARestrictedScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EARestrictedScrollView.m; path = EARestrictedScrollView/EARestrictedScrollView.m; sourceTree = "<group>"; };
-		12505AB5E0D1D7F615544FE2ABC7F602 /* 5_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 5_3.jpg; path = AWAREFramework/Assets/images/5_frustrated/5_3.jpg; sourceTree = "<group>"; };
+		12505AB5E0D1D7F615544FE2ABC7F602 /* 5_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 5_3.jpg; path = AWAREFramework/Assets/images/5_frustrated/5_3.jpg; sourceTree = "<group>"; };
 		12A35D22B8CBEC9C96A5FBDF2035D7E8 /* EntityRotation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EntityRotation.m; path = AWAREFramework/Classes/Sensors/Rotation/EntityRotation.m; sourceTree = "<group>"; };
 		12CC9519103BEB7942B1CF67AD021931 /* EntityLocationVisit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EntityLocationVisit.m; path = AWAREFramework/Classes/Plugins/FusedLocations/EntityLocationVisit.m; sourceTree = "<group>"; };
 		13114417697F2D28977D3D04C44A947C /* EZAudioPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioPlayer.m; path = AWAREFramework/Classes/Plugins/AmbientNoise/EZAudio/EZAudioPlayer.m; sourceTree = "<group>"; };
 		137CE86E026987125822A092AAC1C06B /* Network.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Network.m; path = AWAREFramework/Classes/Sensors/Network/Network.m; sourceTree = "<group>"; };
 		13FC3CC9BA4EDCA2AA3A94929D0B0200 /* AWAREDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWAREDelegate.h; path = AWAREFramework/Classes/Core/AWAREDelegate.h; sourceTree = "<group>"; };
 		141D3F4F90E7E9C7470DB0123CB1A678 /* Reachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = AWAREFramework/Classes/Core/Utility/Reachability.m; sourceTree = "<group>"; };
-		14272A7DA209E84F8FEEDF6F58524C6A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = AWAREFramework/Classes/Plugins/AmbientNoise/EZAudio/README.md; sourceTree = "<group>"; };
+		14272A7DA209E84F8FEEDF6F58524C6A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = AWAREFramework/Classes/Plugins/AmbientNoise/EZAudio/README.md; sourceTree = "<group>"; };
 		1452A4248E9018C914C1C6A9AC305712 /* EntityOpenWeather+CoreDataProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityOpenWeather+CoreDataProperties.m"; path = "AWAREFramework/Classes/Plugins/OpenWeather/EntityOpenWeather+CoreDataProperties.m"; sourceTree = "<group>"; };
 		147548FB62854ADCA1BC4BAAC248083F /* SensorWifi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorWifi.h; path = AWAREFramework/Classes/Sensors/Wifi/SensorWifi.h; sourceTree = "<group>"; };
 		14D910E40AD068646B25C2BDC2AF4067 /* EntityLocationVisit+CoreDataProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityLocationVisit+CoreDataProperties.m"; path = "AWAREFramework/Classes/Plugins/FusedLocations/EntityLocationVisit+CoreDataProperties.m"; sourceTree = "<group>"; };
@@ -808,16 +808,16 @@
 		16955FA9569F7508F1D68C30A2B9B5BE /* EZAudioPlotGL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioPlotGL.m; path = AWAREFramework/Classes/Plugins/AmbientNoise/EZAudio/EZAudioPlotGL.m; sourceTree = "<group>"; };
 		16A87FDFB14EAB5C873612B18B41EE9D /* CocoaAsyncSocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CocoaAsyncSocket.modulemap; sourceTree = "<group>"; };
 		16C20942A4D468BEA6DD0830422C6555 /* SVProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SVProgressHUD.modulemap; sourceTree = "<group>"; };
-		1723570B0840941A275F6BDF7957C9D5 /* 13_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 13_2.jpg; path = AWAREFramework/Assets/images/13_gloomy/13_2.jpg; sourceTree = "<group>"; };
+		1723570B0840941A275F6BDF7957C9D5 /* 13_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 13_2.jpg; path = AWAREFramework/Assets/images/13_gloomy/13_2.jpg; sourceTree = "<group>"; };
 		174D6EFC8E488F19072C3122948880B2 /* EntityGravity+CoreDataProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EntityGravity+CoreDataProperties.h"; path = "AWAREFramework/Classes/Sensors/Gravity/EntityGravity+CoreDataProperties.h"; sourceTree = "<group>"; };
 		181FCBDB7B1C9BBC6E88CA57C8052491 /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = GTMOAuth2ViewTouch.xib; path = Source/Touch/GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
 		189880886241501F8D52EAFBAC9E4C31 /* EntityProcessor+CoreDataProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EntityProcessor+CoreDataProperties.h"; path = "AWAREFramework/Classes/Sensors/Processor/EntityProcessor+CoreDataProperties.h"; sourceTree = "<group>"; };
 		18B386866B22CB6AA306A771ABC6738F /* Memory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Memory.h; path = AWAREFramework/Classes/Plugins/Memory/Memory.h; sourceTree = "<group>"; };
-		19476E5F25CB0DBE1BDC81C70C6C0E0B /* 9_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 9_1.jpg; path = AWAREFramework/Assets/images/9_miserable/9_1.jpg; sourceTree = "<group>"; };
+		19476E5F25CB0DBE1BDC81C70C6C0E0B /* 9_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 9_1.jpg; path = AWAREFramework/Assets/images/9_miserable/9_1.jpg; sourceTree = "<group>"; };
 		1A28504BA16AFA0B32D3068D3D044957 /* Conversation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Conversation.m; path = AWAREFramework/Classes/Plugins/Conversation/Conversation.m; sourceTree = "<group>"; };
 		1B22DD9B9F48C5CC9EDE42363DBAC93E /* EntityMagnetometer+CoreDataProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EntityMagnetometer+CoreDataProperties.h"; path = "AWAREFramework/Classes/Sensors/Magnetometer/EntityMagnetometer+CoreDataProperties.h"; sourceTree = "<group>"; };
 		1B61548DC511E373C801561B86F0E680 /* GTMSessionFetcherService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcherService.h; path = Source/GTMSessionFetcherService.h; sourceTree = "<group>"; };
-		1BAC8F9D82E57BD08F6D918C70B64DDC /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BAC8F9D82E57BD08F6D918C70B64DDC /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC33AE09E45101966E2C6E0C029AE43 /* SCReachabilityRefBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCReachabilityRefBuilder.m; path = Classes/Private/SCReachabilityRefBuilder.m; sourceTree = "<group>"; };
 		1C6CFF21F8DB825EB2D3C6D73CC9D901 /* EAIntroPage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EAIntroPage.h; path = EAIntroView/EAIntroPage.h; sourceTree = "<group>"; };
 		1C705C793A6864D69D008D09EEAD549F /* Pods-HPDS-Data-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HPDS-Data-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -871,7 +871,7 @@
 		3524F3D5C63C2AEDD04A518A65A99052 /* EntityScreen.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EntityScreen.m; path = AWAREFramework/Classes/Sensors/Screen/EntityScreen.m; sourceTree = "<group>"; };
 		357B75692D32AA83A2CEABC0D8DD8616 /* AmbientNoise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AmbientNoise.h; path = AWAREFramework/Classes/Plugins/AmbientNoise/AmbientNoise.h; sourceTree = "<group>"; };
 		372D74EFF80A1E7761F7C353B4CE353B /* EntityLocation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EntityLocation.h; path = AWAREFramework/Classes/Sensors/Location/EntityLocation.h; sourceTree = "<group>"; };
-		3786C978B329DFDA4C064F9AA2287AA9 /* 9_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 9_3.jpg; path = AWAREFramework/Assets/images/9_miserable/9_3.jpg; sourceTree = "<group>"; };
+		3786C978B329DFDA4C064F9AA2287AA9 /* 9_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 9_3.jpg; path = AWAREFramework/Assets/images/9_miserable/9_3.jpg; sourceTree = "<group>"; };
 		37E9652485E87A31CB35E1F448372060 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
 		3815E5C6475B6A739C15C5331F47F7E3 /* GTMSessionFetcher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GTMSessionFetcher.modulemap; sourceTree = "<group>"; };
 		388CE0D925EE2720D1AF077218800BF0 /* WiFiManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WiFiManager.h; path = AWAREFramework/Classes/Sensors/Wifi/MobileWiFi/WiFiManager.h; sourceTree = "<group>"; };
@@ -889,13 +889,13 @@
 		3BA996E052F587C1E9AA5C4AE98B0127 /* SCNetworkReachability-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCNetworkReachability-prefix.pch"; sourceTree = "<group>"; };
 		3BC7984C8A37AE23DB803C8C28A915A0 /* EntityBLEHeartRate+CoreDataProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EntityBLEHeartRate+CoreDataProperties.h"; path = "AWAREFramework/Classes/Plugins/BLEHeartRate/EntityBLEHeartRate+CoreDataProperties.h"; sourceTree = "<group>"; };
 		3CDFF2C84857249BDB5D7EAEDEA17DD6 /* FitbitDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FitbitDevice.h; path = AWAREFramework/Classes/Plugins/Fitbit/FitbitDevice.h; sourceTree = "<group>"; };
-		3CEBD9ABA47C4AC80D235D6B29F869C8 /* SCNetworkReachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SCNetworkReachability.framework; path = SCNetworkReachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CEBD9ABA47C4AC80D235D6B29F869C8 /* SCNetworkReachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SCNetworkReachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D1705AFE9DECED138ACE3AA31B20AD0 /* NetAssociation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NetAssociation.h; path = "ios-ntp-lib/NetAssociation.h"; sourceTree = "<group>"; };
 		3D2827639EB5EEE6DC4790FF96EEB455 /* JSONStorage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONStorage.m; path = AWAREFramework/Classes/Core/Storage/JSON/JSONStorage.m; sourceTree = "<group>"; };
 		3D35707457FAEA6A88FA37625AC845E9 /* AWARESensorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWARESensorManager.h; path = AWAREFramework/Classes/Core/Sensor/AWARESensorManager.h; sourceTree = "<group>"; };
 		3D729571EDE9EFCC38CD2315DF167643 /* WiFiNetwork.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WiFiNetwork.h; path = AWAREFramework/Classes/Sensors/Wifi/MobileWiFi/WiFiNetwork.h; sourceTree = "<group>"; };
-		3E982A1AC0494AC3C68CA0B56DE51921 /* 6_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 6_1.jpg; path = AWAREFramework/Assets/images/6_angry/6_1.jpg; sourceTree = "<group>"; };
-		3EB44C4122C27A084164364C0BFADA58 /* EARestrictedScrollView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EARestrictedScrollView.framework; path = EARestrictedScrollView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E982A1AC0494AC3C68CA0B56DE51921 /* 6_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 6_1.jpg; path = AWAREFramework/Assets/images/6_angry/6_1.jpg; sourceTree = "<group>"; };
+		3EB44C4122C27A084164364C0BFADA58 /* EARestrictedScrollView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EARestrictedScrollView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE657EF64437BE21B094FF6DA820438 /* SCReachabilityFlagsParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCReachabilityFlagsParser.h; path = Classes/Private/SCReachabilityFlagsParser.h; sourceTree = "<group>"; };
 		402A92B795410644A2BF078B0FB52E0C /* DBTableCreator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBTableCreator.h; path = AWAREFramework/Classes/Core/Storage/Tools/DBTableCreator.h; sourceTree = "<group>"; };
 		402FC66CF4240C45900BE261FC694F13 /* EZAudioUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioUtilities.m; path = AWAREFramework/Classes/Plugins/AmbientNoise/EZAudio/EZAudioUtilities.m; sourceTree = "<group>"; };
@@ -926,7 +926,7 @@
 		4DA11E42DDACC4C276265643AFC1A819 /* EZAudioFloatData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioFloatData.m; path = AWAREFramework/Classes/Plugins/AmbientNoise/EZAudio/EZAudioFloatData.m; sourceTree = "<group>"; };
 		4E4439082D4243EB42F876BEA7E9EEB1 /* ESMQuickAnswerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ESMQuickAnswerView.m; path = AWAREFramework/Classes/ESM/ESMScrollViewCells/ESMQuickAnswer/ESMQuickAnswerView.m; sourceTree = "<group>"; };
 		4E67373D052E153388C8258EC6DF776D /* ESMWebView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ESMWebView.m; path = AWAREFramework/Classes/ESM/ESMScrollViewCells/ESMWebView/ESMWebView.m; sourceTree = "<group>"; };
-		4EAFDFFFD180FECC30CAA876EEACFE4E /* EAIntroView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EAIntroView.framework; path = EAIntroView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EAFDFFFD180FECC30CAA876EEACFE4E /* EAIntroView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EAIntroView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F0D47C511D06C16F0B9D4D6D55B7970 /* EARestrictedScrollView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EARestrictedScrollView.xcconfig; sourceTree = "<group>"; };
 		4FC157A21F62EB8404A59A0B39F9B02C /* Pedometer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Pedometer.m; path = AWAREFramework/Classes/Sensors/Pedometer/Pedometer.m; sourceTree = "<group>"; };
 		4FD652EDFB7B82F1179B84A5559C9645 /* GTMSessionUploadFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionUploadFetcher.h; path = Source/GTMSessionUploadFetcher.h; sourceTree = "<group>"; };
@@ -935,9 +935,9 @@
 		5206F8EFE471FB39A88A3335E4BDF1B4 /* EntityESM+CoreDataClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EntityESM+CoreDataClass.h"; path = "AWAREFramework/Classes/ESM/ESMEntities/EntityESM+CoreDataClass.h"; sourceTree = "<group>"; };
 		5277D82F8DE0C57DEF7899C4DD8421A3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5332B71614FA0E479C0BE6961EDF1AFB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
-		53759B32979C1D73EC92C379AD0D80B4 /* 10_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 10_1.jpg; path = AWAREFramework/Assets/images/10_sad/10_1.jpg; sourceTree = "<group>"; };
+		53759B32979C1D73EC92C379AD0D80B4 /* 10_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 10_1.jpg; path = AWAREFramework/Assets/images/10_sad/10_1.jpg; sourceTree = "<group>"; };
 		538F369B52DE825BC7D70C648DF7B83C /* AWAREHealthKitWorkout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWAREHealthKitWorkout.m; path = AWAREFramework/Classes/Plugins/HealthKit/AWAREHealthKitWorkout.m; sourceTree = "<group>"; };
-		53C6175CA86F39B9AB10A35BCDB4D4FA /* 11_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 11_1.jpg; path = AWAREFramework/Assets/images/11_calm/11_1.jpg; sourceTree = "<group>"; };
+		53C6175CA86F39B9AB10A35BCDB4D4FA /* 11_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 11_1.jpg; path = AWAREFramework/Assets/images/11_calm/11_1.jpg; sourceTree = "<group>"; };
 		53FDF3177439D604F28642F53F89BBDC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5429AD0B80668852C124E9D21DCF897E /* EntityESM+CoreDataProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EntityESM+CoreDataProperties.h"; path = "AWAREFramework/Classes/ESM/ESMEntities/EntityESM+CoreDataProperties.h"; sourceTree = "<group>"; };
 		544F07010866633CF8C27401DCD8782F /* EntityNTPTime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EntityNTPTime.h; path = AWAREFramework/Classes/Plugins/NTPTime/EntityNTPTime.h; sourceTree = "<group>"; };
@@ -959,16 +959,16 @@
 		5739B960B6C2DF137D4D09FE258C2F94 /* EntityAmbientNoise+CoreDataClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityAmbientNoise+CoreDataClass.m"; path = "AWAREFramework/Classes/Plugins/AmbientNoise/EntityAmbientNoise+CoreDataClass.m"; sourceTree = "<group>"; };
 		57C85E3EB44BF2F45ABE659FF4885770 /* AWAREKeys.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWAREKeys.m; path = AWAREFramework/Classes/Core/Utility/AWAREKeys.m; sourceTree = "<group>"; };
 		580C22A999A77AE3F9AB8DCA4D9487DD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		588B26368CB682DC3120B6EFFD550535 /* 8_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 8_2.jpg; path = AWAREFramework/Assets/images/8_glad/8_2.jpg; sourceTree = "<group>"; };
+		588B26368CB682DC3120B6EFFD550535 /* 8_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 8_2.jpg; path = AWAREFramework/Assets/images/8_glad/8_2.jpg; sourceTree = "<group>"; };
 		58C98F1E052E7E4674E361F54F59776B /* EntityLinearAccelerometer+CoreDataProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityLinearAccelerometer+CoreDataProperties.m"; path = "AWAREFramework/Classes/Sensors/LinearAccelerometer/EntityLinearAccelerometer+CoreDataProperties.m"; sourceTree = "<group>"; };
-		590B573C5FC83631DE7E336A98E6396D /* 14_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 14_1.jpg; path = AWAREFramework/Assets/images/14_tired/14_1.jpg; sourceTree = "<group>"; };
+		590B573C5FC83631DE7E336A98E6396D /* 14_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 14_1.jpg; path = AWAREFramework/Assets/images/14_tired/14_1.jpg; sourceTree = "<group>"; };
 		593A472EE4C9DF7C0A92649C295316BF /* TPCircularBuffer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer-umbrella.h"; sourceTree = "<group>"; };
 		597CF42A74E481FE9844EEA0BB1EC954 /* ESMScrollViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESMScrollViewController.h; path = AWAREFramework/Classes/ESM/ESMScrollViewController.h; sourceTree = "<group>"; };
 		59E255721C7CF31C3DA2C0FA6EDC6949 /* PushNotification.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PushNotification.h; path = AWAREFramework/Classes/Plugins/PushNotification/PushNotification.h; sourceTree = "<group>"; };
 		5A887DD6812B4F29C367DAFBD90460E9 /* EntityTimezone.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EntityTimezone.m; path = AWAREFramework/Classes/Sensors/Timezone/EntityTimezone.m; sourceTree = "<group>"; };
 		5B007A663B8E2E0E9A9CAD33184EA452 /* Gyroscope.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Gyroscope.m; path = AWAREFramework/Classes/Sensors/Gyroscope/Gyroscope.m; sourceTree = "<group>"; };
 		5B2D355479F1754012F7B6EACCBC32C6 /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
-		5B30F83FD062B66BDECDE303C6340333 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = AWAREFramework/Classes/Plugins/AmbientNoise/EZAudio/LICENSE; sourceTree = "<group>"; };
+		5B30F83FD062B66BDECDE303C6340333 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = AWAREFramework/Classes/Plugins/AmbientNoise/EZAudio/LICENSE; sourceTree = "<group>"; };
 		5B80BF1DE100F937D55B6A9B9ED9B717 /* SyncExecutor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SyncExecutor.h; path = AWAREFramework/Classes/Core/Storage/Tools/SyncExecutor.h; sourceTree = "<group>"; };
 		5BCE7BFED7DEF7EF40C92BBCABD159C0 /* AWARE_v3.xcdatamodel */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcdatamodel; path = AWARE_v3.xcdatamodel; sourceTree = "<group>"; };
 		5C6428E81FC57067A9215CA358418B3C /* EntityBatteryDischarge+CoreDataProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityBatteryDischarge+CoreDataProperties.m"; path = "AWAREFramework/Classes/Sensors/Battery/EntityBatteryDischarge+CoreDataProperties.m"; sourceTree = "<group>"; };
@@ -976,7 +976,7 @@
 		5CD4DD24D9FC9B8710F37D51E941CB5E /* EntityESMAnswerHistory+CoreDataClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EntityESMAnswerHistory+CoreDataClass.h"; path = "AWAREFramework/Classes/ESM/ESMEntities/EntityESMAnswerHistory+CoreDataClass.h"; sourceTree = "<group>"; };
 		5D22840B5B2E701CFA96632A3CA6F586 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E3E2A1A3A4B5C96BF2D7AAB7AF4C75C /* ESMLikertScaleView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESMLikertScaleView.h; path = AWAREFramework/Classes/ESM/ESMScrollViewCells/ESMLikertScale/ESMLikertScaleView.h; sourceTree = "<group>"; };
-		5E61ACAA5EA62A3CC77FB2741BC01931 /* 13_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 13_1.jpg; path = AWAREFramework/Assets/images/13_gloomy/13_1.jpg; sourceTree = "<group>"; };
+		5E61ACAA5EA62A3CC77FB2741BC01931 /* 13_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 13_1.jpg; path = AWAREFramework/Assets/images/13_gloomy/13_1.jpg; sourceTree = "<group>"; };
 		5F1C8B63E370E523FC998D675CB7E0EC /* EntityBLEHeartRate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EntityBLEHeartRate.m; path = AWAREFramework/Classes/Plugins/BLEHeartRate/EntityBLEHeartRate.m; sourceTree = "<group>"; };
 		5F2432BC41F1FA64CDF1EE1D93BEB2C2 /* CalEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CalEvent.m; path = AWAREFramework/Classes/Plugins/Calendar/CalEvent.m; sourceTree = "<group>"; };
 		5FA8A78E7339B5FC2626A75684DECDF7 /* LinearAccelerometer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LinearAccelerometer.h; path = AWAREFramework/Classes/Sensors/LinearAccelerometer/LinearAccelerometer.h; sourceTree = "<group>"; };
@@ -986,15 +986,15 @@
 		613E462B4227805EF944614EA52B6F85 /* ResourceBundle-AWAREFramework-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-AWAREFramework-Info.plist"; sourceTree = "<group>"; };
 		61FC0406722B741F6A64B80D639832EF /* EntityDebug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EntityDebug.h; path = AWAREFramework/Classes/Sensors/Debug/EntityDebug.h; sourceTree = "<group>"; };
 		6213BF6AF41AAC8ED4BB81D2645D5DEE /* CoreDataHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CoreDataHandler.m; path = AWAREFramework/Classes/Core/Storage/Tools/CoreDataHandlers/CoreDataHandler.m; sourceTree = "<group>"; };
-		6226E25531F3794312AB2CAB393A369D /* 1_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 1_1.jpg; path = AWAREFramework/Assets/images/1_afraid/1_1.jpg; sourceTree = "<group>"; };
+		6226E25531F3794312AB2CAB393A369D /* 1_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 1_1.jpg; path = AWAREFramework/Assets/images/1_afraid/1_1.jpg; sourceTree = "<group>"; };
 		622B78A4F7A2F8EDC96F6D896DE0346B /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		638E762917AF8D069C7C7D0789BF8ED8 /* AWAREHealthKitQuantity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWAREHealthKitQuantity.m; path = AWAREFramework/Classes/Plugins/HealthKit/AWAREHealthKitQuantity.m; sourceTree = "<group>"; };
-		63BE5B796B047EA44BD89932D1B9260F /* 11_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 11_3.jpg; path = AWAREFramework/Assets/images/11_calm/11_3.jpg; sourceTree = "<group>"; };
+		63BE5B796B047EA44BD89932D1B9260F /* 11_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 11_3.jpg; path = AWAREFramework/Assets/images/11_calm/11_3.jpg; sourceTree = "<group>"; };
 		63D45B749BECC50D53EA3B625A8C147D /* Fitbit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Fitbit.m; path = AWAREFramework/Classes/Plugins/Fitbit/Fitbit.m; sourceTree = "<group>"; };
 		642C383AF5533BE67A215DE476198353 /* AWAREFramework.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AWAREFramework.xcconfig; sourceTree = "<group>"; };
 		643C5EC328940D9642D9B5CDEB960184 /* ESMWebView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESMWebView.h; path = AWAREFramework/Classes/ESM/ESMScrollViewCells/ESMWebView/ESMWebView.h; sourceTree = "<group>"; };
 		6549A4D21596464D3D3723DE9C00B555 /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
-		6559C7E57B7B4A4F0CFA1E468F96DCBD /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SVProgressHUD.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6559C7E57B7B4A4F0CFA1E468F96DCBD /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6594B9F1E9901BDA47C84BB90A26D237 /* EntityESMAnswerHistory+CoreDataProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityESMAnswerHistory+CoreDataProperties.m"; path = "AWAREFramework/Classes/ESM/ESMEntities/EntityESMAnswerHistory+CoreDataProperties.m"; sourceTree = "<group>"; };
 		65ACB9965AA8525F4834C68BE3EA8373 /* ESM.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ESM.m; path = AWAREFramework/Classes/ESM/ESM.m; sourceTree = "<group>"; };
 		660CC1B1841D9CBB61A8AE152917F379 /* ESMDateTimePickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ESMDateTimePickerView.m; path = AWAREFramework/Classes/ESM/ESMScrollViewCells/ESMDateTimePicker/ESMDateTimePickerView.m; sourceTree = "<group>"; };
@@ -1008,30 +1008,30 @@
 		6A1A3FAF498F0DDB06806040F430E607 /* PushNotification.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PushNotification.m; path = AWAREFramework/Classes/Plugins/PushNotification/PushNotification.m; sourceTree = "<group>"; };
 		6A28C2C3CEE07A65386C7A489D0CA699 /* EntityESMAnswerHistory+CoreDataProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EntityESMAnswerHistory+CoreDataProperties.h"; path = "AWAREFramework/Classes/ESM/ESMEntities/EntityESMAnswerHistory+CoreDataProperties.h"; sourceTree = "<group>"; };
 		6A3B0FAC1A52F4798D48F21D2CC2B254 /* EZAudio.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudio.h; path = AWAREFramework/Classes/Plugins/AmbientNoise/EZAudio/EZAudio.h; sourceTree = "<group>"; };
-		6AE28CEC266463CC044588DC9EC0B382 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTMSessionFetcher.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AE28CEC266463CC044588DC9EC0B382 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B131A0D35E357394A79F75CC9C0AE48 /* JSONStorage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONStorage.h; path = AWAREFramework/Classes/Core/Storage/JSON/JSONStorage.h; sourceTree = "<group>"; };
 		6B2FE850B0865316F34FDD9772F6F33E /* ios-ntp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ios-ntp-dummy.m"; sourceTree = "<group>"; };
-		6B6A08CE550188EF5CF340D914AFFEFF /* TPCircularBuffer.c */ = {isa = PBXFileReference; includeInIndex = 1; name = TPCircularBuffer.c; path = AWAREFramework/Classes/Plugins/AmbientNoise/EZAudio/TPCircularBuffer.c; sourceTree = "<group>"; };
+		6B6A08CE550188EF5CF340D914AFFEFF /* TPCircularBuffer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = TPCircularBuffer.c; path = AWAREFramework/Classes/Plugins/AmbientNoise/EZAudio/TPCircularBuffer.c; sourceTree = "<group>"; };
 		6BDC8661FF77E26DC654D6F1F58F5098 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BE8AB5C191A428DE3D1D1B301BBD344 /* Pods-HPDS-Data-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HPDS-Data-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6CCFCDCC9836B7DAF371E03EEFFEFC82 /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
 		6D108353C7218E43AF8FF4D6561436DD /* EARestrictedScrollView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EARestrictedScrollView-umbrella.h"; sourceTree = "<group>"; };
 		6D8BD5945AD9518414B6E8902EF78728 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
-		6DF4ACA5B5CDEA6564EE25D41D330A17 /* Pods_HPDS_Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HPDS_Data.framework; path = "Pods-HPDS-Data.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DF4ACA5B5CDEA6564EE25D41D330A17 /* Pods_HPDS_Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HPDS_Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E1E9F0CF8BE9F12265D7D3BA46274B7 /* GTMNSString+URLArguments.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSString+URLArguments.h"; path = "Foundation/GTMNSString+URLArguments.h"; sourceTree = "<group>"; };
 		6F82CC7B83EDCBFA924F966E8D315B69 /* Orientation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Orientation.m; path = AWAREFramework/Classes/Sensors/Orientation/Orientation.m; sourceTree = "<group>"; };
 		6F9F1DE7002CF97941519385DACE31E1 /* EntityBatteryDischarge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EntityBatteryDischarge.h; path = AWAREFramework/Classes/Sensors/Battery/EntityBatteryDischarge.h; sourceTree = "<group>"; };
 		6FA55FE70A72BAF124DC5B92EAA94FCE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		7050C41E58B72F2C767A82E04FBB9CB6 /* 3_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 3_1.jpg; path = AWAREFramework/Assets/images/3_excited/3_1.jpg; sourceTree = "<group>"; };
+		7050C41E58B72F2C767A82E04FBB9CB6 /* 3_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 3_1.jpg; path = AWAREFramework/Assets/images/3_excited/3_1.jpg; sourceTree = "<group>"; };
 		7097956ECCBC18CD9AD01605CB5225E2 /* EntityBatteryDischarge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EntityBatteryDischarge.m; path = AWAREFramework/Classes/Sensors/Battery/EntityBatteryDischarge.m; sourceTree = "<group>"; };
 		70B144BBCED40D21B508C029315C689C /* EntityESMAnswer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EntityESMAnswer.m; path = AWAREFramework/Classes/ESM/ESMEntities/EntityESMAnswer.m; sourceTree = "<group>"; };
 		70F6F67F3EFF7A11846CE2E7F0C99B42 /* EntityMagnetometer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EntityMagnetometer.h; path = AWAREFramework/Classes/Sensors/Magnetometer/EntityMagnetometer.h; sourceTree = "<group>"; };
 		71582BC10B3DC5C05F8E834E6658459D /* CoreDataHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CoreDataHandler.h; path = AWAREFramework/Classes/Core/Storage/Tools/CoreDataHandlers/CoreDataHandler.h; sourceTree = "<group>"; };
 		721CEDC9636BEC539573CCE6DB13242B /* WiFiDeviceClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WiFiDeviceClient.h; path = AWAREFramework/Classes/Sensors/Wifi/MobileWiFi/WiFiDeviceClient.h; sourceTree = "<group>"; };
 		727F80DC97448658ECF58366A8A6EE06 /* EntityProcessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EntityProcessor.h; path = AWAREFramework/Classes/Sensors/Processor/EntityProcessor.h; sourceTree = "<group>"; };
-		7430DD8F22ED2007F4331459AF639641 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaAsyncSocket.framework; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7430DD8F22ED2007F4331459AF639641 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74B64ACE45F5467EF2D0835B921CDFD1 /* ESMLikertScaleView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ESMLikertScaleView.m; path = AWAREFramework/Classes/ESM/ESMScrollViewCells/ESMLikertScale/ESMLikertScaleView.m; sourceTree = "<group>"; };
-		74BC06AAE09EED89662D7A2093005F46 /* 10_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 10_3.jpg; path = AWAREFramework/Assets/images/10_sad/10_3.jpg; sourceTree = "<group>"; };
+		74BC06AAE09EED89662D7A2093005F46 /* 10_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 10_3.jpg; path = AWAREFramework/Assets/images/10_sad/10_3.jpg; sourceTree = "<group>"; };
 		74BF23FECEA274E19C809A65EAA5D7DF /* EntityMemory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EntityMemory.m; path = AWAREFramework/Classes/Plugins/Memory/EntityMemory.m; sourceTree = "<group>"; };
 		750A25B98C750A365CE2032617BE923F /* IOSESM.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IOSESM.m; path = AWAREFramework/Classes/Plugins/IOSESM/IOSESM.m; sourceTree = "<group>"; };
 		75BD49C46B6A0B1F0B18730F1B80C985 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
@@ -1049,7 +1049,7 @@
 		7AEC39D69BC1D2580479EA3209D857A1 /* EntityDebug+CoreDataProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EntityDebug+CoreDataProperties.h"; path = "AWAREFramework/Classes/Sensors/Debug/EntityDebug+CoreDataProperties.h"; sourceTree = "<group>"; };
 		7BC022CB758E99F5DBA8EE226953BC32 /* BLEScanner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BLEScanner.h; path = AWAREFramework/Classes/Sensors/Bluetooth/BLEScanner.h; sourceTree = "<group>"; };
 		7C8120684770AF635D4261E9C68E18FD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7C9A0EA41CE9132DFA58E9002FDF6E8D /* 15_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 15_1.jpg; path = AWAREFramework/Assets/images/15_sleepy/15_1.jpg; sourceTree = "<group>"; };
+		7C9A0EA41CE9132DFA58E9002FDF6E8D /* 15_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 15_1.jpg; path = AWAREFramework/Assets/images/15_sleepy/15_1.jpg; sourceTree = "<group>"; };
 		7C9F415A0D5E50098C3F572B97BDFD1E /* GTMOAuth2SignIn.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMOAuth2SignIn.h; path = Source/GTMOAuth2SignIn.h; sourceTree = "<group>"; };
 		7CDFF695C99B7B59E86CEEBEB65D66E5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		7DB5250F546A931B85BA67212D3AA8B2 /* BLEHeartRate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BLEHeartRate.m; path = AWAREFramework/Classes/Plugins/BLEHeartRate/BLEHeartRate.m; sourceTree = "<group>"; };
@@ -1067,11 +1067,11 @@
 		82AEC39982C47844C597FE99717DDE8C /* GTMOAuth2ViewControllerTouch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMOAuth2ViewControllerTouch.h; path = Source/Touch/GTMOAuth2ViewControllerTouch.h; sourceTree = "<group>"; };
 		82F8AF5840B2AC59A526039E6531DF5E /* TPCircularBuffer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TPCircularBuffer-dummy.m"; sourceTree = "<group>"; };
 		83B2F7356B442EC5524F28872AA14033 /* EntityDebug+CoreDataProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityDebug+CoreDataProperties.m"; path = "AWAREFramework/Classes/Sensors/Debug/EntityDebug+CoreDataProperties.m"; sourceTree = "<group>"; };
-		83F9AC69653DB506557D55006C59FE50 /* 14_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 14_2.jpg; path = AWAREFramework/Assets/images/14_tired/14_2.jpg; sourceTree = "<group>"; };
+		83F9AC69653DB506557D55006C59FE50 /* 14_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 14_2.jpg; path = AWAREFramework/Assets/images/14_tired/14_2.jpg; sourceTree = "<group>"; };
 		85214E90991BA83018DB7D30CFC5E3C5 /* EZOutput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZOutput.m; path = AWAREFramework/Classes/Plugins/AmbientNoise/EZAudio/EZOutput.m; sourceTree = "<group>"; };
 		858457128400D93BED14B1D320B58FED /* ESMVideoView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESMVideoView.h; path = AWAREFramework/Classes/ESM/ESMScrollViewCells/ESMVideo/ESMVideoView.h; sourceTree = "<group>"; };
 		85D48B9091EB72AC2DC8C849DF31D17E /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVRadialGradientLayer.m; path = SVProgressHUD/SVRadialGradientLayer.m; sourceTree = "<group>"; };
-		863A64FC4F37B389647B359A7F600AF1 /* 3_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 3_2.jpg; path = AWAREFramework/Assets/images/3_excited/3_2.jpg; sourceTree = "<group>"; };
+		863A64FC4F37B389647B359A7F600AF1 /* 3_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 3_2.jpg; path = AWAREFramework/Assets/images/3_excited/3_2.jpg; sourceTree = "<group>"; };
 		86A6765BE469BD1A5491FA8A7E1D482A /* ESMCheckBoxView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESMCheckBoxView.h; path = AWAREFramework/Classes/ESM/ESMScrollViewCells/ESMCheckBox/ESMCheckBoxView.h; sourceTree = "<group>"; };
 		86B590420B08E36E7AA1A31846D8F390 /* EntityConversation+CoreDataProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityConversation+CoreDataProperties.m"; path = "AWAREFramework/Classes/Plugins/Conversation/EntityConversation+CoreDataProperties.m"; sourceTree = "<group>"; };
 		87816EFE53BEB330DDC29071BFCEE3E3 /* EntityScreen+CoreDataProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityScreen+CoreDataProperties.m"; path = "AWAREFramework/Classes/Sensors/Screen/EntityScreen+CoreDataProperties.m"; sourceTree = "<group>"; };
@@ -1085,7 +1085,7 @@
 		8AECDE04C63D20D564B9340D3E382E05 /* Rotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Rotation.h; path = AWAREFramework/Classes/Sensors/Rotation/Rotation.h; sourceTree = "<group>"; };
 		8B3A699F538A39117CA944E8B40DA8B0 /* Calendar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Calendar.h; path = AWAREFramework/Classes/Plugins/Calendar/Calendar.h; sourceTree = "<group>"; };
 		8B3ABBE917DE60AD75F17418AF997926 /* BLEHeartRate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BLEHeartRate.h; path = AWAREFramework/Classes/Plugins/BLEHeartRate/BLEHeartRate.h; sourceTree = "<group>"; };
-		8BA60716B4CEB3B62E521EA01F7BA571 /* TPCircularBuffer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TPCircularBuffer.framework; path = TPCircularBuffer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BA60716B4CEB3B62E521EA01F7BA571 /* TPCircularBuffer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TPCircularBuffer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE5879C02339535FF74A749A4E6941E /* AWAREFramework.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AWAREFramework.modulemap; sourceTree = "<group>"; };
 		8D22D9D24DEF2EA844221A993B102A69 /* EntityOpenWeather.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EntityOpenWeather.m; path = AWAREFramework/Classes/Plugins/OpenWeather/EntityOpenWeather.m; sourceTree = "<group>"; };
 		8D2D1EB3813B21A92C68CD3CCDC5000A /* EntityTimezone+CoreDataProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EntityTimezone+CoreDataProperties.h"; path = "AWAREFramework/Classes/Sensors/Timezone/EntityTimezone+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -1097,25 +1097,25 @@
 		8FC1016A8F13FA1E169A67CB4866F718 /* EntityIOSActivityRecognition+CoreDataClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityIOSActivityRecognition+CoreDataClass.m"; path = "AWAREFramework/Classes/Plugins/IOSActivityRecognition/EntityIOSActivityRecognition+CoreDataClass.m"; sourceTree = "<group>"; };
 		8FC2CF165F8E323350F19D4D6B179FE3 /* Locations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Locations.h; path = AWAREFramework/Classes/Sensors/Location/Locations.h; sourceTree = "<group>"; };
 		904E23421B179E2BE131003B5BEEC045 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90CAC84B0C323A8C7AC2AAA4D6BC7D7C /* 7_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 7_3.jpg; path = AWAREFramework/Assets/images/7_happy/7_3.jpg; sourceTree = "<group>"; };
+		90CAC84B0C323A8C7AC2AAA4D6BC7D7C /* 7_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 7_3.jpg; path = AWAREFramework/Assets/images/7_happy/7_3.jpg; sourceTree = "<group>"; };
 		9161718E25082949E056AE7C084F0D76 /* EntityWifi+CoreDataProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityWifi+CoreDataProperties.m"; path = "AWAREFramework/Classes/Sensors/Wifi/EntityWifi+CoreDataProperties.m"; sourceTree = "<group>"; };
 		91F9C69F76DABCEF5B42EEE311DAE9E6 /* SCNetworkReachability.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCNetworkReachability.xcconfig; sourceTree = "<group>"; };
 		92D56D118E4B61CF9269AAAFBD8DDC8F /* ESMScheduleManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ESMScheduleManager.m; path = AWAREFramework/Classes/ESM/ESMScheduleManager.m; sourceTree = "<group>"; };
-		9324D7A80EF1082E4B069C3BFE352A90 /* 5_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 5_1.jpg; path = AWAREFramework/Assets/images/5_frustrated/5_1.jpg; sourceTree = "<group>"; };
+		9324D7A80EF1082E4B069C3BFE352A90 /* 5_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 5_1.jpg; path = AWAREFramework/Assets/images/5_frustrated/5_1.jpg; sourceTree = "<group>"; };
 		9337D06283C0FC447C488954D5A8DD38 /* EntityAmbientNoise+CoreDataProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityAmbientNoise+CoreDataProperties.m"; path = "AWAREFramework/Classes/Plugins/AmbientNoise/EntityAmbientNoise+CoreDataProperties.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93F222E3835B32771038847DE0A92CCF /* 9_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 9_2.jpg; path = AWAREFramework/Assets/images/9_miserable/9_2.jpg; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93F222E3835B32771038847DE0A92CCF /* 9_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 9_2.jpg; path = AWAREFramework/Assets/images/9_miserable/9_2.jpg; sourceTree = "<group>"; };
 		9577FF8A82220724106CF636B2B61878 /* EntityProximity+CoreDataProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityProximity+CoreDataProperties.m"; path = "AWAREFramework/Classes/Sensors/Proximity/EntityProximity+CoreDataProperties.m"; sourceTree = "<group>"; };
 		96312C7D96176A3D39AC000329CA82EB /* EZMicrophone.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZMicrophone.m; path = AWAREFramework/Classes/Plugins/AmbientNoise/EZAudio/EZMicrophone.m; sourceTree = "<group>"; };
 		96A3EEBDF4838D2A8837DADB6B5EFCF8 /* Wifi.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Wifi.m; path = AWAREFramework/Classes/Sensors/Wifi/Wifi.m; sourceTree = "<group>"; };
 		9779EE0688B9676F5B7F4791336717DA /* Gyroscope.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Gyroscope.h; path = AWAREFramework/Classes/Sensors/Gyroscope/Gyroscope.h; sourceTree = "<group>"; };
-		979CC8FC07AF0AB5A99019A3C5E8099F /* TPCircularBuffer+AudioBufferList.c */ = {isa = PBXFileReference; includeInIndex = 1; path = "TPCircularBuffer+AudioBufferList.c"; sourceTree = "<group>"; };
+		979CC8FC07AF0AB5A99019A3C5E8099F /* TPCircularBuffer+AudioBufferList.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = "TPCircularBuffer+AudioBufferList.c"; sourceTree = "<group>"; };
 		97FED3A39F7BE85BACCC5919009A03DB /* GTMSessionUploadFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionUploadFetcher.m; path = Source/GTMSessionUploadFetcher.m; sourceTree = "<group>"; };
 		982D1A88477C7CBCDDD5DB6CB38F5A74 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99651B53A619810EDD2D95F633F0E2BF /* TPCircularBuffer+AudioBufferList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer+AudioBufferList.h"; sourceTree = "<group>"; };
 		9A18B27BD704C66DC6BBF01A66B817CC /* GTMGatherInputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMGatherInputStream.h; path = Source/GTMGatherInputStream.h; sourceTree = "<group>"; };
-		9AF0D58C46460BE5724CD27A0D104C4B /* 14_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 14_3.jpg; path = AWAREFramework/Assets/images/14_tired/14_3.jpg; sourceTree = "<group>"; };
-		9B6B304050FE058025B74F93E4AAF81C /* 8_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 8_1.jpg; path = AWAREFramework/Assets/images/8_glad/8_1.jpg; sourceTree = "<group>"; };
+		9AF0D58C46460BE5724CD27A0D104C4B /* 14_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 14_3.jpg; path = AWAREFramework/Assets/images/14_tired/14_3.jpg; sourceTree = "<group>"; };
+		9B6B304050FE058025B74F93E4AAF81C /* 8_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 8_1.jpg; path = AWAREFramework/Assets/images/8_glad/8_1.jpg; sourceTree = "<group>"; };
 		9B92CD986BE4F3E17F4E1148D4D14AD2 /* SCNetworkReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCNetworkReachability.m; path = Classes/Public/SCNetworkReachability.m; sourceTree = "<group>"; };
 		9BAD2B443B9D1BC8454326DED59793F3 /* ESMScrollViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ESMScrollViewController.m; path = AWAREFramework/Classes/ESM/ESMScrollViewController.m; sourceTree = "<group>"; };
 		9BF981BF87D8F4C4F6B7DE0EDDE1BBB6 /* EntityAccelerometer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EntityAccelerometer.h; path = AWAREFramework/Classes/Sensors/Accelerometer/EntityAccelerometer.h; sourceTree = "<group>"; };
@@ -1132,16 +1132,16 @@
 		9EF3F695072DF547A02FA36D5DABB702 /* EntityContact+CoreDataProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EntityContact+CoreDataProperties.h"; path = "AWAREFramework/Classes/Plugins/Contacts/EntityContact+CoreDataProperties.h"; sourceTree = "<group>"; };
 		9F43ACA26AA844EADBF92DAFF1AA0F5E /* EntityCall.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EntityCall.h; path = AWAREFramework/Classes/Sensors/Calls/EntityCall.h; sourceTree = "<group>"; };
 		9F44D68F6CFBEE2252C37DCAE0E04D71 /* EntityTimezone+CoreDataProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityTimezone+CoreDataProperties.m"; path = "AWAREFramework/Classes/Sensors/Timezone/EntityTimezone+CoreDataProperties.m"; sourceTree = "<group>"; };
-		9F450CD27A1C7426D1D314DD77FE363C /* 12_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 12_3.jpg; path = AWAREFramework/Assets/images/12_satisfied/12_3.jpg; sourceTree = "<group>"; };
+		9F450CD27A1C7426D1D314DD77FE363C /* 12_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 12_3.jpg; path = AWAREFramework/Assets/images/12_satisfied/12_3.jpg; sourceTree = "<group>"; };
 		9F6C3A443A1C49031AB3B8576363B938 /* EZAudioUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioUtilities.h; path = AWAREFramework/Classes/Plugins/AmbientNoise/EZAudio/EZAudioUtilities.h; sourceTree = "<group>"; };
 		A0AE79CD9FF33B89BEEF185F9759E953 /* GTMReadMonitorInputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMReadMonitorInputStream.h; path = Source/GTMReadMonitorInputStream.h; sourceTree = "<group>"; };
 		A0C5F70F2E3A22A296772838FB40E731 /* NTPTime.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NTPTime.m; path = AWAREFramework/Classes/Plugins/NTPTime/NTPTime.m; sourceTree = "<group>"; };
 		A0DD7F23EBA2C948171B6AFE543F6741 /* EntityESM+CoreDataClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityESM+CoreDataClass.m"; path = "AWAREFramework/Classes/ESM/ESMEntities/EntityESM+CoreDataClass.m"; sourceTree = "<group>"; };
-		A1103E85C0A13A467CB77C5C38F28DDF /* 6_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 6_2.jpg; path = AWAREFramework/Assets/images/6_angry/6_2.jpg; sourceTree = "<group>"; };
+		A1103E85C0A13A467CB77C5C38F28DDF /* 6_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 6_2.jpg; path = AWAREFramework/Assets/images/6_angry/6_2.jpg; sourceTree = "<group>"; };
 		A11E903962294A3B89DAAB3556503A7B /* EntityFitbitData+CoreDataProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityFitbitData+CoreDataProperties.m"; path = "AWAREFramework/Classes/Plugins/Fitbit/EntityFitbitData+CoreDataProperties.m"; sourceTree = "<group>"; };
 		A1481E9165670FBD8887EA2383B881D1 /* BaseCoreDataHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BaseCoreDataHandler.m; path = AWAREFramework/Classes/Core/Storage/Tools/CoreDataHandlers/BaseCoreDataHandler.m; sourceTree = "<group>"; };
 		A39C84A89FCA54B70556C905FFE1234D /* EntityDeviceUsage+CoreDataProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityDeviceUsage+CoreDataProperties.m"; path = "AWAREFramework/Classes/Plugins/DeviceUsage/EntityDeviceUsage+CoreDataProperties.m"; sourceTree = "<group>"; };
-		A458445526140B1A0D7845768FDDA57D /* 15_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 15_3.jpg; path = AWAREFramework/Assets/images/15_sleepy/15_3.jpg; sourceTree = "<group>"; };
+		A458445526140B1A0D7845768FDDA57D /* 15_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 15_3.jpg; path = AWAREFramework/Assets/images/15_sleepy/15_3.jpg; sourceTree = "<group>"; };
 		A4658F01579184637BE58A72FD7C3DD0 /* AWAREUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWAREUtils.m; path = AWAREFramework/Classes/Core/Utility/AWAREUtils.m; sourceTree = "<group>"; };
 		A50A3592B28FADE432EE0593A100F5AA /* DBTableCreator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DBTableCreator.m; path = AWAREFramework/Classes/Core/Storage/Tools/DBTableCreator.m; sourceTree = "<group>"; };
 		A52F63BCFAB7DEBB924E646C7CEA2EAA /* AudioAnalysis.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AudioAnalysis.h; path = AWAREFramework/Classes/Plugins/AmbientNoise/AudioAnalysis.h; sourceTree = "<group>"; };
@@ -1160,15 +1160,15 @@
 		AA30E8845C72CBEEEF1F46F0477D1912 /* AWARESensor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWARESensor.m; path = AWAREFramework/Classes/Core/Sensor/AWARESensor.m; sourceTree = "<group>"; };
 		AA6A711F0519585CE732BB08EE294E3B /* IOSESM.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IOSESM.h; path = AWAREFramework/Classes/Plugins/IOSESM/IOSESM.h; sourceTree = "<group>"; };
 		AA9F21170DE99EF602813A2642BD5110 /* EZAudioDevice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioDevice.m; path = AWAREFramework/Classes/Plugins/AmbientNoise/EZAudio/EZAudioDevice.m; sourceTree = "<group>"; };
-		AB5BB00B5DD4614D958B8D2FAC473B54 /* AWAREFramework.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = AWAREFramework.bundle; path = "AWAREFramework-AWAREFramework.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB5BB00B5DD4614D958B8D2FAC473B54 /* AWAREFramework.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AWAREFramework.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB9625EAD2A482E564025EB64B72F535 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = DEVELOPER_DIR; };
-		ABB0DF81AED9D14D8FE2D7D3F31DBB4C /* 1_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 1_3.jpg; path = AWAREFramework/Assets/images/1_afraid/1_3.jpg; sourceTree = "<group>"; };
+		ABB0DF81AED9D14D8FE2D7D3F31DBB4C /* 1_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 1_3.jpg; path = AWAREFramework/Assets/images/1_afraid/1_3.jpg; sourceTree = "<group>"; };
 		ACCDE834620E0C0C15E73E3F9B38BCD6 /* Network.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Network.h; path = AWAREFramework/Classes/Sensors/Network/Network.h; sourceTree = "<group>"; };
 		AD6415E0F5CD9CF003D752D4D9A00D20 /* EZOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZOutput.h; path = AWAREFramework/Classes/Plugins/AmbientNoise/EZAudio/EZOutput.h; sourceTree = "<group>"; };
 		AD9638E512F65B7688917F30023F11B4 /* ESMItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESMItem.h; path = AWAREFramework/Classes/ESM/ESMItem.h; sourceTree = "<group>"; };
 		AE0747C4CF38077043729A8D85550275 /* Magnetometer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Magnetometer.m; path = AWAREFramework/Classes/Sensors/Magnetometer/Magnetometer.m; sourceTree = "<group>"; };
 		AE965ED53E33238EF799F3958EF1770C /* BRLineReader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRLineReader.h; path = AWAREFramework/Classes/Core/Storage/Tools/BRLineReader.h; sourceTree = "<group>"; };
-		AF5F65ABFC576BF99D5E792DC162F108 /* GTMOAuth2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTMOAuth2.framework; path = GTMOAuth2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF5F65ABFC576BF99D5E792DC162F108 /* GTMOAuth2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTMOAuth2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01ACBC56B3941822A4740779EDC4B9A /* EAIntroView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EAIntroView.xcconfig; sourceTree = "<group>"; };
 		B0B294EDC9346B35CE065B8FCD917BE6 /* ESMSchedule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ESMSchedule.m; path = AWAREFramework/Classes/ESM/ESMSchedule.m; sourceTree = "<group>"; };
 		B0DF66F299B9B968916869D7F883E36E /* EntityDeviceUsage+CoreDataProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EntityDeviceUsage+CoreDataProperties.h"; path = "AWAREFramework/Classes/Plugins/DeviceUsage/EntityDeviceUsage+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -1189,11 +1189,11 @@
 		B5D2DE1DF77FDD9A46FAC4AE47FF89BB /* macros_blocks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = macros_blocks.h; sourceTree = "<group>"; };
 		B6521E5B6BDF18E0782DBD8778EF9276 /* EAIntroView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EAIntroView-umbrella.h"; sourceTree = "<group>"; };
 		B663D8CC106EED1867565BBBF8FDB3A1 /* EntityBluetooth+CoreDataProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityBluetooth+CoreDataProperties.m"; path = "AWAREFramework/Classes/Sensors/Bluetooth/EntityBluetooth+CoreDataProperties.m"; sourceTree = "<group>"; };
-		B6C84987A111B068C498F81CB071698E /* 4_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 4_1.jpg; path = AWAREFramework/Assets/images/4_delighted/4_1.jpg; sourceTree = "<group>"; };
+		B6C84987A111B068C498F81CB071698E /* 4_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 4_1.jpg; path = AWAREFramework/Assets/images/4_delighted/4_1.jpg; sourceTree = "<group>"; };
 		B6DEF00579BEF5E3404D7194822EFFF2 /* EntitySensorWifi+CoreDataProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntitySensorWifi+CoreDataProperties.m"; path = "AWAREFramework/Classes/Sensors/Wifi/EntitySensorWifi+CoreDataProperties.m"; sourceTree = "<group>"; };
 		B6E72FC2D24461648EBE3BEF46654970 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
 		B7C72B9A54716DE6702A9DA339DD18A0 /* SCNetworkReachability.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SCNetworkReachability.modulemap; sourceTree = "<group>"; };
-		B87949BE45DC2F758B164D2095B62481 /* 16_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 16_1.jpg; path = AWAREFramework/Assets/images/16_serene/16_1.jpg; sourceTree = "<group>"; };
+		B87949BE45DC2F758B164D2095B62481 /* 16_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 16_1.jpg; path = AWAREFramework/Assets/images/16_serene/16_1.jpg; sourceTree = "<group>"; };
 		B88D042651CF738D05204BC4876BBEAE /* GoogleToolboxForMac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-umbrella.h"; sourceTree = "<group>"; };
 		B8DF3A94B22D548938BCF437E4A5D93B /* EntityGravity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EntityGravity.m; path = AWAREFramework/Classes/Sensors/Gravity/EntityGravity.m; sourceTree = "<group>"; };
 		B90361788C525D1E1507D5F232935494 /* SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
@@ -1203,15 +1203,15 @@
 		B997E756E56CE7C5B0D08BF7B648DF06 /* ESMCheckBoxView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ESMCheckBoxView.m; path = AWAREFramework/Classes/ESM/ESMScrollViewCells/ESMCheckBox/ESMCheckBoxView.m; sourceTree = "<group>"; };
 		B9D82A3782476DB7AD54444AB49577DB /* CalEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CalEvent.h; path = AWAREFramework/Classes/Plugins/Calendar/CalEvent.h; sourceTree = "<group>"; };
 		B9F5C0DE868525AC77D14A36D406A46E /* AWAREFramework-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AWAREFramework-umbrella.h"; sourceTree = "<group>"; };
-		BA04E94965BF900B80ECAC44B76219D1 /* AWAREFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AWAREFramework.framework; path = AWAREFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA04E94965BF900B80ECAC44B76219D1 /* AWAREFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWAREFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7622435C9E7BFE087A6205E05D7C08 /* ios-ntp.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ios-ntp.xcconfig"; sourceTree = "<group>"; };
 		BAC4ADFF651D264D32ACA1988378AD34 /* ESMSchedule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESMSchedule.h; path = AWAREFramework/Classes/ESM/ESMSchedule.h; sourceTree = "<group>"; };
 		BADA8A7276CB94484E897D15D2E7A86D /* IOSActivityRecognition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IOSActivityRecognition.m; path = AWAREFramework/Classes/Plugins/IOSActivityRecognition/IOSActivityRecognition.m; sourceTree = "<group>"; };
 		BBCC0357751C5E1DC1B03336AC3B8626 /* GTMGatherInputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMGatherInputStream.m; path = Source/GTMGatherInputStream.m; sourceTree = "<group>"; };
 		BBEADFA23BC459E7F1AA195C3E997085 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCDA7A17DE8D52F62B4E79DCB8399266 /* EntityESMAnswerHistory+CoreDataClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityESMAnswerHistory+CoreDataClass.m"; path = "AWAREFramework/Classes/ESM/ESMEntities/EntityESMAnswerHistory+CoreDataClass.m"; sourceTree = "<group>"; };
-		BCDAD37ADCE1A447F8813EB196AADA1F /* 11_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 11_2.jpg; path = AWAREFramework/Assets/images/11_calm/11_2.jpg; sourceTree = "<group>"; };
-		BCFA85CD5AF11B903E411E79E45975EC /* 16_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 16_3.jpg; path = AWAREFramework/Assets/images/16_serene/16_3.jpg; sourceTree = "<group>"; };
+		BCDAD37ADCE1A447F8813EB196AADA1F /* 11_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 11_2.jpg; path = AWAREFramework/Assets/images/11_calm/11_2.jpg; sourceTree = "<group>"; };
+		BCFA85CD5AF11B903E411E79E45975EC /* 16_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 16_3.jpg; path = AWAREFramework/Assets/images/16_serene/16_3.jpg; sourceTree = "<group>"; };
 		BD21A254D8E68EC8BA17175E262B7750 /* EntityLinearAccelerometer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EntityLinearAccelerometer.m; path = AWAREFramework/Classes/Sensors/LinearAccelerometer/EntityLinearAccelerometer.m; sourceTree = "<group>"; };
 		BD3610B8F30AC806A0F584AD88FA0D41 /* Orientation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Orientation.h; path = AWAREFramework/Classes/Sensors/Orientation/Orientation.h; sourceTree = "<group>"; };
 		BD59E468367EF8CD5E07EB3A1ED6578E /* Pods-HPDS-Data-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HPDS-Data-frameworks.sh"; sourceTree = "<group>"; };
@@ -1220,10 +1220,10 @@
 		BE7580A314DD5024EE6415ECB444303B /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
 		BEA7405E066644E2648CEB6FC9ED3C96 /* ExternalCoreDataHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ExternalCoreDataHandler.h; path = AWAREFramework/Classes/Core/Storage/Tools/CoreDataHandlers/ExternalCoreDataHandler.h; sourceTree = "<group>"; };
 		BF7020EC1BAEF80EF3716DCA35A36799 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressAnimatedView.h; path = SVProgressHUD/SVProgressAnimatedView.h; sourceTree = "<group>"; };
-		BFEC2522F07E421853EFD3A2F52B6446 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = AWAREFramework/Classes/Plugins/CalendarESMScheduler/README.md; sourceTree = "<group>"; };
+		BFEC2522F07E421853EFD3A2F52B6446 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = AWAREFramework/Classes/Plugins/CalendarESMScheduler/README.md; sourceTree = "<group>"; };
 		BFF92E6A40F54F0D898C99F11B83A5F1 /* EntityESMSchedule+CoreDataClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityESMSchedule+CoreDataClass.m"; path = "AWAREFramework/Classes/ESM/ESMEntities/EntityESMSchedule+CoreDataClass.m"; sourceTree = "<group>"; };
 		C00B3A2005CC6163B7675B538A06F0A2 /* EntityConversation+CoreDataClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EntityConversation+CoreDataClass.h"; path = "AWAREFramework/Classes/Plugins/Conversation/EntityConversation+CoreDataClass.h"; sourceTree = "<group>"; };
-		C01B0FF7DD1C4DA7264EA48436267197 /* 2_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 2_1.jpg; path = AWAREFramework/Assets/images/2_tense/2_1.jpg; sourceTree = "<group>"; };
+		C01B0FF7DD1C4DA7264EA48436267197 /* 2_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 2_1.jpg; path = AWAREFramework/Assets/images/2_tense/2_1.jpg; sourceTree = "<group>"; };
 		C0A8CB0831F101278F7BE0EDC7EC7A16 /* EARestrictedScrollView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EARestrictedScrollView-prefix.pch"; sourceTree = "<group>"; };
 		C0FF06CF750E80186B705743E445D281 /* EntityCall+CoreDataProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityCall+CoreDataProperties.m"; path = "AWAREFramework/Classes/Sensors/Calls/EntityCall+CoreDataProperties.m"; sourceTree = "<group>"; };
 		C121B000CA126F0DB7BF157655C8291F /* EntityBattery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EntityBattery.m; path = AWAREFramework/Classes/Sensors/Battery/EntityBattery.m; sourceTree = "<group>"; };
@@ -1242,7 +1242,7 @@
 		C6FB674D1A6788CDD73DE965B3014A18 /* EntityIOSActivityRecognition+CoreDataClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EntityIOSActivityRecognition+CoreDataClass.h"; path = "AWAREFramework/Classes/Plugins/IOSActivityRecognition/EntityIOSActivityRecognition+CoreDataClass.h"; sourceTree = "<group>"; };
 		C72E1B4996DCCA6E2A7DF36E39078E8D /* AWARESensors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWARESensors.m; path = AWAREFramework/Classes/Core/Sensor/AWARESensors.m; sourceTree = "<group>"; };
 		C7E62CB8AA9E16AEAB819081E6F8E589 /* SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
-		C887FC956CC1B1B3DE05E451BB4B92AE /* 15_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 15_2.jpg; path = AWAREFramework/Assets/images/15_sleepy/15_2.jpg; sourceTree = "<group>"; };
+		C887FC956CC1B1B3DE05E451BB4B92AE /* 15_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 15_2.jpg; path = AWAREFramework/Assets/images/15_sleepy/15_2.jpg; sourceTree = "<group>"; };
 		C8FDB995B7F5528EEFDB0413734B5AA5 /* EntityBattery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EntityBattery.h; path = AWAREFramework/Classes/Sensors/Battery/EntityBattery.h; sourceTree = "<group>"; };
 		C907EFAAB7B88DF51B33E5174E662A54 /* AWARE_v2.xcdatamodel */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcdatamodel; path = AWARE_v2.xcdatamodel; sourceTree = "<group>"; };
 		C915D7446788D78B742765276E71452D /* EntityLocation+CoreDataProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityLocation+CoreDataProperties.m"; path = "AWAREFramework/Classes/Sensors/Location/EntityLocation+CoreDataProperties.m"; sourceTree = "<group>"; };
@@ -1256,13 +1256,13 @@
 		CD8C7E519F2379544CCAF55027E1F4A6 /* Reachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = AWAREFramework/Classes/Core/Utility/Reachability.h; sourceTree = "<group>"; };
 		CDE400AF3367B09CE2B23292EB7E3A6D /* CSVStorage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSVStorage.h; path = AWAREFramework/Classes/Core/Storage/CSV/CSVStorage.h; sourceTree = "<group>"; };
 		CE979569704880749E714CB952D663FB /* IOSActivityRecognition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IOSActivityRecognition.h; path = AWAREFramework/Classes/Plugins/IOSActivityRecognition/IOSActivityRecognition.h; sourceTree = "<group>"; };
-		CF081A688AFCD92258ECA8AF63CBFA86 /* 10_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 10_2.jpg; path = AWAREFramework/Assets/images/10_sad/10_2.jpg; sourceTree = "<group>"; };
+		CF081A688AFCD92258ECA8AF63CBFA86 /* 10_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 10_2.jpg; path = AWAREFramework/Assets/images/10_sad/10_2.jpg; sourceTree = "<group>"; };
 		CF16036B0C8D188CFE84300EB8A47D6A /* EntityConversation+CoreDataClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityConversation+CoreDataClass.m"; path = "AWAREFramework/Classes/Plugins/Conversation/EntityConversation+CoreDataClass.m"; sourceTree = "<group>"; };
 		CF8AE6E8F20CDBA80B43922A943859D5 /* AWARE_v6.xcdatamodel */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcdatamodel; path = AWARE_v6.xcdatamodel; sourceTree = "<group>"; };
 		D023335E1427109B2BA6210847CC8516 /* Wifi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Wifi.h; path = AWAREFramework/Classes/Sensors/Wifi/Wifi.h; sourceTree = "<group>"; };
 		D0F7868419FBA04BA9278CC3EB0EFF27 /* AWAREUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWAREUtils.h; path = AWAREFramework/Classes/Core/Utility/AWAREUtils.h; sourceTree = "<group>"; };
 		D11C70EF183601C53B004992F3399C68 /* EZAudioFloatConverter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioFloatConverter.h; path = AWAREFramework/Classes/Plugins/AmbientNoise/EZAudio/EZAudioFloatConverter.h; sourceTree = "<group>"; };
-		D137F79CD40C0FCB0CA4AF5CD337829F /* 12_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 12_1.jpg; path = AWAREFramework/Assets/images/12_satisfied/12_1.jpg; sourceTree = "<group>"; };
+		D137F79CD40C0FCB0CA4AF5CD337829F /* 12_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 12_1.jpg; path = AWAREFramework/Assets/images/12_satisfied/12_1.jpg; sourceTree = "<group>"; };
 		D160D77A470F882D555633FBDEF40480 /* AWAREHealthKitQuantity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWAREHealthKitQuantity.h; path = AWAREFramework/Classes/Plugins/HealthKit/AWAREHealthKitQuantity.h; sourceTree = "<group>"; };
 		D319077281D7FDFA1317A04E0641435A /* Proximity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Proximity.m; path = AWAREFramework/Classes/Sensors/Proximity/Proximity.m; sourceTree = "<group>"; };
 		D461A7CB2F4611FB466A530CDFFF126C /* GTMSessionFetcher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GTMSessionFetcher.xcconfig; sourceTree = "<group>"; };
@@ -1275,15 +1275,15 @@
 		D6A51D1ED666D38792E487657EE18876 /* Pods-HPDS-Data-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HPDS-Data-resources.sh"; sourceTree = "<group>"; };
 		D6A72724F0EF22000C74546CCDA44849 /* EntityAmbientNoise+CoreDataProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EntityAmbientNoise+CoreDataProperties.h"; path = "AWAREFramework/Classes/Plugins/AmbientNoise/EntityAmbientNoise+CoreDataProperties.h"; sourceTree = "<group>"; };
 		D6C147D13A4C4314E3A5D42B8FE648B4 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
-		D6E08B5C9C512856A2DBB3EBF46F8E1B /* 3_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 3_3.jpg; path = AWAREFramework/Assets/images/3_excited/3_3.jpg; sourceTree = "<group>"; };
-		D79C569E87CAF47918271E69D24AE169 /* 6_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 6_3.jpg; path = AWAREFramework/Assets/images/6_angry/6_3.jpg; sourceTree = "<group>"; };
+		D6E08B5C9C512856A2DBB3EBF46F8E1B /* 3_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 3_3.jpg; path = AWAREFramework/Assets/images/3_excited/3_3.jpg; sourceTree = "<group>"; };
+		D79C569E87CAF47918271E69D24AE169 /* 6_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 6_3.jpg; path = AWAREFramework/Assets/images/6_angry/6_3.jpg; sourceTree = "<group>"; };
 		D8476D5AAE867772A222A5D590E4CD74 /* EntitySensorWifi+CoreDataProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EntitySensorWifi+CoreDataProperties.h"; path = "AWAREFramework/Classes/Sensors/Wifi/EntitySensorWifi+CoreDataProperties.h"; sourceTree = "<group>"; };
 		D8A1761914195C63E7DDF25BE2AFE680 /* EntityMemory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EntityMemory.h; path = AWAREFramework/Classes/Plugins/Memory/EntityMemory.h; sourceTree = "<group>"; };
 		D95AFB0FF7191DF5C98F1A254800C33B /* ESMPAMView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ESMPAMView.m; path = AWAREFramework/Classes/ESM/ESMScrollViewCells/ESMPAM/ESMPAMView.m; sourceTree = "<group>"; };
 		D95FF211EEC26CE8F5DC82A7B6F8C84D /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
-		DA29BC332CD8CA1DD3E518B488778CF4 /* 1_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 1_2.jpg; path = AWAREFramework/Assets/images/1_afraid/1_2.jpg; sourceTree = "<group>"; };
-		DA72EC8F5CF5CD77184EF8625CA12D09 /* 4_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 4_2.jpg; path = AWAREFramework/Assets/images/4_delighted/4_2.jpg; sourceTree = "<group>"; };
-		DA9C44A25D8167295ED0A6DA26B90A9E /* 4_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 4_3.jpg; path = AWAREFramework/Assets/images/4_delighted/4_3.jpg; sourceTree = "<group>"; };
+		DA29BC332CD8CA1DD3E518B488778CF4 /* 1_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 1_2.jpg; path = AWAREFramework/Assets/images/1_afraid/1_2.jpg; sourceTree = "<group>"; };
+		DA72EC8F5CF5CD77184EF8625CA12D09 /* 4_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 4_2.jpg; path = AWAREFramework/Assets/images/4_delighted/4_2.jpg; sourceTree = "<group>"; };
+		DA9C44A25D8167295ED0A6DA26B90A9E /* 4_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 4_3.jpg; path = AWAREFramework/Assets/images/4_delighted/4_3.jpg; sourceTree = "<group>"; };
 		DAC38EFC145110ED381EA0AEE5EAE6A9 /* GTMDebugSelectorValidation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMDebugSelectorValidation.h; path = DebugUtils/GTMDebugSelectorValidation.h; sourceTree = "<group>"; };
 		DAC87E66989768A413A7B6DA884B9E1D /* Calls.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Calls.h; path = AWAREFramework/Classes/Sensors/Calls/Calls.h; sourceTree = "<group>"; };
 		DAEBAECD4B88B7C4394DAAF6569FCE90 /* Contacts.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Contacts.m; path = AWAREFramework/Classes/Plugins/Contacts/Contacts.m; sourceTree = "<group>"; };
@@ -1300,7 +1300,7 @@
 		DEF76390EE4A1CE8FBD8972FA798E1B1 /* EntityBarometer+CoreDataProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EntityBarometer+CoreDataProperties.h"; path = "AWAREFramework/Classes/Sensors/Barometer/EntityBarometer+CoreDataProperties.h"; sourceTree = "<group>"; };
 		DEF9759B62ABC77A37EED5B117BF47D8 /* EntityESMSchedule+CoreDataClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EntityESMSchedule+CoreDataClass.h"; path = "AWAREFramework/Classes/ESM/ESMEntities/EntityESMSchedule+CoreDataClass.h"; sourceTree = "<group>"; };
 		DF36E2A85AAAF0C2A21CEC5A6414A7D6 /* SQLiteStorage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SQLiteStorage.m; path = AWAREFramework/Classes/Core/Storage/SQLite/SQLiteStorage.m; sourceTree = "<group>"; };
-		DFF29B67823E1F82936E9F19B5730964 /* 2_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 2_2.jpg; path = AWAREFramework/Assets/images/2_tense/2_2.jpg; sourceTree = "<group>"; };
+		DFF29B67823E1F82936E9F19B5730964 /* 2_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 2_2.jpg; path = AWAREFramework/Assets/images/2_tense/2_2.jpg; sourceTree = "<group>"; };
 		E04D1074861F48A219C2A518E740DCF0 /* ESMNumberView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESMNumberView.h; path = AWAREFramework/Classes/ESM/ESMScrollViewCells/ESMNumber/ESMNumberView.h; sourceTree = "<group>"; };
 		E05DA119F7C9CB31602E91FA78CC6DF3 /* AWAREDebugMessageLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWAREDebugMessageLogger.h; path = AWAREFramework/Classes/Core/Utility/AWAREDebugMessageLogger.h; sourceTree = "<group>"; };
 		E06F0527BBDE3E85F307A6FB6F78C063 /* EZAudioDisplayLink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioDisplayLink.h; path = AWAREFramework/Classes/Plugins/AmbientNoise/EZAudio/EZAudioDisplayLink.h; sourceTree = "<group>"; };
@@ -1315,20 +1315,20 @@
 		E33369629B271F2214E93296E2CDF2E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E335D3FBEF2CE97ED4CAC882D9B4EE8F /* EntityDeviceUsage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EntityDeviceUsage.m; path = AWAREFramework/Classes/Plugins/DeviceUsage/EntityDeviceUsage.m; sourceTree = "<group>"; };
 		E36D3CE3064DB927572A886758E18CB2 /* Debug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Debug.h; path = AWAREFramework/Classes/Sensors/Debug/Debug.h; sourceTree = "<group>"; };
-		E3AB8C7F47E33224CE4FC749735FB54C /* 16_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 16_2.jpg; path = AWAREFramework/Assets/images/16_serene/16_2.jpg; sourceTree = "<group>"; };
+		E3AB8C7F47E33224CE4FC749735FB54C /* 16_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 16_2.jpg; path = AWAREFramework/Assets/images/16_serene/16_2.jpg; sourceTree = "<group>"; };
 		E3E08F85A2E1279478846E1B6F1E9DDF /* NetworkClock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NetworkClock.h; path = "ios-ntp-lib/NetworkClock.h"; sourceTree = "<group>"; };
 		E4A085886A70F27E175B41BEAB7614DC /* Pods-HPDS-Data.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HPDS-Data.debug.xcconfig"; sourceTree = "<group>"; };
 		E65B88E3DD4F6A3A4535278A6847DFA6 /* EntityCalendar+CoreDataClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EntityCalendar+CoreDataClass.h"; path = "AWAREFramework/Classes/Plugins/Calendar/EntityCalendar+CoreDataClass.h"; sourceTree = "<group>"; };
 		E6B420817FAAF39F26FE424DFEC17C57 /* DeviceUsage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DeviceUsage.h; path = AWAREFramework/Classes/Plugins/DeviceUsage/DeviceUsage.h; sourceTree = "<group>"; };
 		E711212399065A2A5426E5691AB1BEA6 /* LinearAccelerometer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LinearAccelerometer.m; path = AWAREFramework/Classes/Sensors/LinearAccelerometer/LinearAccelerometer.m; sourceTree = "<group>"; };
-		E714F06CEDB2EA2F5DD2BDE044DF2F60 /* 13_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 13_3.jpg; path = AWAREFramework/Assets/images/13_gloomy/13_3.jpg; sourceTree = "<group>"; };
-		E7354F25F05899762AA01E7369837053 /* 2_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 2_3.jpg; path = AWAREFramework/Assets/images/2_tense/2_3.jpg; sourceTree = "<group>"; };
+		E714F06CEDB2EA2F5DD2BDE044DF2F60 /* 13_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 13_3.jpg; path = AWAREFramework/Assets/images/13_gloomy/13_3.jpg; sourceTree = "<group>"; };
+		E7354F25F05899762AA01E7369837053 /* 2_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 2_3.jpg; path = AWAREFramework/Assets/images/2_tense/2_3.jpg; sourceTree = "<group>"; };
 		E7562D340EC2E23C5530DFB9DAFCD0D7 /* EntityLinearAccelerometer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EntityLinearAccelerometer.h; path = AWAREFramework/Classes/Sensors/LinearAccelerometer/EntityLinearAccelerometer.h; sourceTree = "<group>"; };
 		E7A8E58B1AC7F4DFD3CCB4BF359D92C7 /* VisitLocations.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VisitLocations.m; path = AWAREFramework/Classes/Sensors/Location/VisitLocations.m; sourceTree = "<group>"; };
 		E85C021EE94B0C769FB36B3B62DF5605 /* GTMOAuth2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GTMOAuth2-dummy.m"; sourceTree = "<group>"; };
-		E90D0D0FEB76BD1A00FCDBC9FBDD825E /* ios_ntp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ios_ntp.framework; path = "ios-ntp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E90D0D0FEB76BD1A00FCDBC9FBDD825E /* ios_ntp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ios_ntp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9128383B7103CE1B37863FE511CEC39 /* EntityESMSchedule+CoreDataProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EntityESMSchedule+CoreDataProperties.h"; path = "AWAREFramework/Classes/ESM/ESMEntities/EntityESMSchedule+CoreDataProperties.h"; sourceTree = "<group>"; };
-		E9AD4E9A5248BB01E3F1D08866643BAD /* 8_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 8_3.jpg; path = AWAREFramework/Assets/images/8_glad/8_3.jpg; sourceTree = "<group>"; };
+		E9AD4E9A5248BB01E3F1D08866643BAD /* 8_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 8_3.jpg; path = AWAREFramework/Assets/images/8_glad/8_3.jpg; sourceTree = "<group>"; };
 		E9C6C37BA78F9638C2F3DBD92E571580 /* Bluetooth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Bluetooth.h; path = AWAREFramework/Classes/Sensors/Bluetooth/Bluetooth.h; sourceTree = "<group>"; };
 		EA207BBBF4601F64D96DA0917D198383 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/EventKit.framework; sourceTree = DEVELOPER_DIR; };
 		EA396EB773A8FA98DEB4D89DDE0FEAD9 /* CSVStorage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSVStorage.m; path = AWAREFramework/Classes/Core/Storage/CSV/CSVStorage.m; sourceTree = "<group>"; };
@@ -1346,11 +1346,11 @@
 		EEC64A3083A1FDF9805100BC88D24438 /* EntityESMSchedule+CoreDataProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityESMSchedule+CoreDataProperties.m"; path = "AWAREFramework/Classes/ESM/ESMEntities/EntityESMSchedule+CoreDataProperties.m"; sourceTree = "<group>"; };
 		EF6525266E5D7AB4DC36D95086140B74 /* EntityBatteryCharge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EntityBatteryCharge.m; path = AWAREFramework/Classes/Sensors/Battery/EntityBatteryCharge.m; sourceTree = "<group>"; };
 		EF75FF7964AAC3C97BBCAB94B35C962D /* CocoaAsyncSocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.xcconfig; sourceTree = "<group>"; };
-		EF87A13FC9986148379555DFEA020620 /* 7_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 7_1.jpg; path = AWAREFramework/Assets/images/7_happy/7_1.jpg; sourceTree = "<group>"; };
-		EFB742DA49BE1DA48D36176943469029 /* 7_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 7_2.jpg; path = AWAREFramework/Assets/images/7_happy/7_2.jpg; sourceTree = "<group>"; };
+		EF87A13FC9986148379555DFEA020620 /* 7_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 7_1.jpg; path = AWAREFramework/Assets/images/7_happy/7_1.jpg; sourceTree = "<group>"; };
+		EFB742DA49BE1DA48D36176943469029 /* 7_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 7_2.jpg; path = AWAREFramework/Assets/images/7_happy/7_2.jpg; sourceTree = "<group>"; };
 		EFF68A49DB55EC1538D3FF3641FBF411 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSignIn.framework; path = Frameworks/GoogleSignIn.framework; sourceTree = "<group>"; };
 		F08A790A2BE317D8CB045291EFD0F7E2 /* BatteryDischarge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BatteryDischarge.h; path = AWAREFramework/Classes/Sensors/Battery/BatteryDischarge.h; sourceTree = "<group>"; };
-		F0B18678CAE23E5F77D0B6402BDA258A /* 5_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 5_2.jpg; path = AWAREFramework/Assets/images/5_frustrated/5_2.jpg; sourceTree = "<group>"; };
+		F0B18678CAE23E5F77D0B6402BDA258A /* 5_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 5_2.jpg; path = AWAREFramework/Assets/images/5_frustrated/5_2.jpg; sourceTree = "<group>"; };
 		F0CAA739E44DCFB3D9825CD1248BCBDE /* ESM.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESM.h; path = AWAREFramework/Classes/ESM/ESM.h; sourceTree = "<group>"; };
 		F2167CD703622B6681D3F32354260480 /* AWAREHealthKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWAREHealthKit.h; path = AWAREFramework/Classes/Plugins/HealthKit/AWAREHealthKit.h; sourceTree = "<group>"; };
 		F2237145D8E228A00FAD4E822FA9C651 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVRadialGradientLayer.h; path = SVProgressHUD/SVRadialGradientLayer.h; sourceTree = "<group>"; };
@@ -1369,7 +1369,7 @@
 		F787D0AB17C1072A2BC438DAA80A2081 /* EAIntroView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EAIntroView.h; path = EAIntroView/EAIntroView.h; sourceTree = "<group>"; };
 		F80EF6977C9189BF4F0049F85FE67820 /* EntityFitbitDevice+CoreDataClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EntityFitbitDevice+CoreDataClass.m"; path = "AWAREFramework/Classes/Plugins/Fitbit/EntityFitbitDevice+CoreDataClass.m"; sourceTree = "<group>"; };
 		F83DC0D8A1E8C37A9B781C7D18E84FBB /* EntityLocation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EntityLocation.m; path = AWAREFramework/Classes/Sensors/Location/EntityLocation.m; sourceTree = "<group>"; };
-		F8B6DE93186212B8E10B74CB6D039507 /* TPCircularBuffer.c */ = {isa = PBXFileReference; includeInIndex = 1; path = TPCircularBuffer.c; sourceTree = "<group>"; };
+		F8B6DE93186212B8E10B74CB6D039507 /* TPCircularBuffer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
 		F90F715BC13D48D9D98670043F12A34A /* EZAudioFFT.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioFFT.h; path = AWAREFramework/Classes/Plugins/AmbientNoise/EZAudio/EZAudioFFT.h; sourceTree = "<group>"; };
 		FA03BAD0E902B38627686690411E2B4F /* ESMClockLineView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESMClockLineView.h; path = AWAREFramework/Classes/ESM/ESMScrollViewCells/ESMClockTimePicker/ClockLineView/ESMClockLineView.h; sourceTree = "<group>"; };
 		FB2D8BD8DD6E1E745D51FB3294163ACF /* EntityGyroscope.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EntityGyroscope.h; path = AWAREFramework/Classes/Sensors/Gyroscope/EntityGyroscope.h; sourceTree = "<group>"; };
@@ -1525,7 +1525,6 @@
 				DF9CE0D5C6100F7B517B2134FEB5584E /* NSString+URLArguments */,
 				96B1F70F0127385936F798BA285D1960 /* Support Files */,
 			);
-			name = GoogleToolboxForMac;
 			path = GoogleToolboxForMac;
 			sourceTree = "<group>";
 		};
@@ -1976,7 +1975,6 @@
 				493439D013C15A99A9F099770593EDDC /* Resources */,
 				47E5C0A9E6A589933A0557DBDDA05C06 /* Support Files */,
 			);
-			name = AWAREFramework;
 			path = AWAREFramework;
 			sourceTree = "<group>";
 		};
@@ -2053,7 +2051,6 @@
 				99651B53A619810EDD2D95F633F0E2BF /* TPCircularBuffer+AudioBufferList.h */,
 				2B7ADD7E08ADD7F912B551BE3B569F94 /* Support Files */,
 			);
-			name = TPCircularBuffer;
 			path = TPCircularBuffer;
 			sourceTree = "<group>";
 		};
@@ -2205,7 +2202,6 @@
 				317AB8CF3C799E366FBE183D9C1DFE05 /* Frameworks */,
 				F120BD43529A030D19D761FA90745803 /* Resources */,
 			);
-			name = GoogleSignIn;
 			path = GoogleSignIn;
 			sourceTree = "<group>";
 		};
@@ -2222,7 +2218,6 @@
 				815CFCE4D7DAB4133E0E8A811A1223C7 /* ntp-log.h */,
 				0C765C72047258BC21B019D13D312A7F /* Support Files */,
 			);
-			name = "ios-ntp";
 			path = "ios-ntp";
 			sourceTree = "<group>";
 		};
@@ -2231,7 +2226,6 @@
 			children = (
 				435408CADD4CB59D2FF63B0790EAF51F /* core */,
 			);
-			name = macros_blocks;
 			path = macros_blocks;
 			sourceTree = "<group>";
 		};
@@ -2268,7 +2262,6 @@
 				EF0D8FE2849D5B006C7FBCA1EEE4E7A7 /* Resources */,
 				4118A12F18C1C3C4099AFE413E7547FC /* Support Files */,
 			);
-			name = GTMOAuth2;
 			path = GTMOAuth2;
 			sourceTree = "<group>";
 		};
@@ -2281,7 +2274,6 @@
 				F40A85A72FF07C4B5E49233F837FD2E2 /* EAIntroView.m */,
 				80562E74B0B5FA065AD906EEB571B14E /* Support Files */,
 			);
-			name = EAIntroView;
 			path = EAIntroView;
 			sourceTree = "<group>";
 		};
@@ -2331,7 +2323,6 @@
 				6B6B56A2D72D9084805B0DA18EB2B28B /* Full */,
 				E8F94405FDABBB5AEDB76CBCE3D5D2A2 /* Support Files */,
 			);
-			name = GTMSessionFetcher;
 			path = GTMSessionFetcher;
 			sourceTree = "<group>";
 		};
@@ -2341,7 +2332,6 @@
 				B959A381A2AC55EA58B9365DBE9AE5DE /* Core */,
 				0CAC11AEA970A4817037F84C582C27E5 /* Support Files */,
 			);
-			name = SCNetworkReachability;
 			path = SCNetworkReachability;
 			sourceTree = "<group>";
 		};
@@ -2359,7 +2349,6 @@
 				2219A1F0DA15F4445CBF21B721090224 /* Resources */,
 				1C1B74AC0D68CF1CD63D5DBA5B4E2AD2 /* Support Files */,
 			);
-			name = SVProgressHUD;
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -2426,7 +2415,6 @@
 				124F304B836772F32E2D06A79B7A658E /* EARestrictedScrollView.m */,
 				86DFB67925425B8EFAAEC2603EBE2168 /* Support Files */,
 			);
-			name = EARestrictedScrollView;
 			path = EARestrictedScrollView;
 			sourceTree = "<group>";
 		};
@@ -2468,7 +2456,6 @@
 				801F253B39883012BFDFA7FB43046F99 /* GCDAsyncUdpSocket.m */,
 				422DAB41D27E78B6BB13012E9EF53361 /* Support Files */,
 			);
-			name = CocoaAsyncSocket;
 			path = CocoaAsyncSocket;
 			sourceTree = "<group>";
 		};
@@ -3724,11 +3711,7 @@
 				INFOPLIST_FILE = "Target Support Files/EAIntroView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/EAIntroView/EAIntroView.modulemap";
 				PRODUCT_MODULE_NAME = EAIntroView;
 				PRODUCT_NAME = EAIntroView;
@@ -3760,11 +3743,7 @@
 				INFOPLIST_FILE = "Target Support Files/SCNetworkReachability/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SCNetworkReachability/SCNetworkReachability.modulemap";
 				PRODUCT_MODULE_NAME = SCNetworkReachability;
 				PRODUCT_NAME = SCNetworkReachability;
@@ -3795,11 +3774,7 @@
 				INFOPLIST_FILE = "Target Support Files/SCNetworkReachability/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SCNetworkReachability/SCNetworkReachability.modulemap";
 				PRODUCT_MODULE_NAME = SCNetworkReachability;
 				PRODUCT_NAME = SCNetworkReachability;
@@ -3831,11 +3806,7 @@
 				INFOPLIST_FILE = "Target Support Files/GTMOAuth2/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GTMOAuth2/GTMOAuth2.modulemap";
 				PRODUCT_MODULE_NAME = GTMOAuth2;
 				PRODUCT_NAME = GTMOAuth2;
@@ -3866,11 +3837,7 @@
 				INFOPLIST_FILE = "Target Support Files/ios-ntp/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/ios-ntp/ios-ntp.modulemap";
 				PRODUCT_MODULE_NAME = ios_ntp;
 				PRODUCT_NAME = ios_ntp;
@@ -3901,11 +3868,7 @@
 				INFOPLIST_FILE = "Target Support Files/EARestrictedScrollView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/EARestrictedScrollView/EARestrictedScrollView.modulemap";
 				PRODUCT_MODULE_NAME = EARestrictedScrollView;
 				PRODUCT_NAME = EARestrictedScrollView;
@@ -3936,11 +3899,7 @@
 				INFOPLIST_FILE = "Target Support Files/EARestrictedScrollView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/EARestrictedScrollView/EARestrictedScrollView.modulemap";
 				PRODUCT_MODULE_NAME = EARestrictedScrollView;
 				PRODUCT_NAME = EARestrictedScrollView;
@@ -3972,11 +3931,7 @@
 				INFOPLIST_FILE = "Target Support Files/CocoaAsyncSocket/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket.modulemap";
 				PRODUCT_MODULE_NAME = CocoaAsyncSocket;
 				PRODUCT_NAME = CocoaAsyncSocket;
@@ -4007,11 +3962,7 @@
 				INFOPLIST_FILE = "Target Support Files/GTMSessionFetcher/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GTMSessionFetcher/GTMSessionFetcher.modulemap";
 				PRODUCT_MODULE_NAME = GTMSessionFetcher;
 				PRODUCT_NAME = GTMSessionFetcher;
@@ -4043,11 +3994,7 @@
 				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
 				PRODUCT_MODULE_NAME = SVProgressHUD;
 				PRODUCT_NAME = SVProgressHUD;
@@ -4078,11 +4025,7 @@
 				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
 				PRODUCT_MODULE_NAME = SVProgressHUD;
 				PRODUCT_NAME = SVProgressHUD;
@@ -4114,11 +4057,7 @@
 				INFOPLIST_FILE = "Target Support Files/GTMSessionFetcher/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GTMSessionFetcher/GTMSessionFetcher.modulemap";
 				PRODUCT_MODULE_NAME = GTMSessionFetcher;
 				PRODUCT_NAME = GTMSessionFetcher;
@@ -4149,11 +4088,7 @@
 				INFOPLIST_FILE = "Target Support Files/GTMOAuth2/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GTMOAuth2/GTMOAuth2.modulemap";
 				PRODUCT_MODULE_NAME = GTMOAuth2;
 				PRODUCT_NAME = GTMOAuth2;
@@ -4306,11 +4241,7 @@
 				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
 				PRODUCT_MODULE_NAME = GoogleToolboxForMac;
 				PRODUCT_NAME = GoogleToolboxForMac;
@@ -4341,11 +4272,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/AWAREFramework/AWAREFramework-prefix.pch";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/AWAREFramework/AWAREFramework.modulemap";
 				PRODUCT_MODULE_NAME = AWAREFramework;
@@ -4377,11 +4304,7 @@
 				INFOPLIST_FILE = "Target Support Files/CocoaAsyncSocket/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket.modulemap";
 				PRODUCT_MODULE_NAME = CocoaAsyncSocket;
 				PRODUCT_NAME = CocoaAsyncSocket;
@@ -4413,11 +4336,7 @@
 				INFOPLIST_FILE = "Target Support Files/EAIntroView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/EAIntroView/EAIntroView.modulemap";
 				PRODUCT_MODULE_NAME = EAIntroView;
 				PRODUCT_NAME = EAIntroView;
@@ -4464,11 +4383,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/AWAREFramework/AWAREFramework-prefix.pch";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/AWAREFramework/AWAREFramework.modulemap";
 				PRODUCT_MODULE_NAME = AWAREFramework;
@@ -4502,11 +4417,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-HPDS-Data/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-HPDS-Data/Pods-HPDS-Data.modulemap";
 				OTHER_LDFLAGS = "";
@@ -4539,11 +4450,7 @@
 				INFOPLIST_FILE = "Target Support Files/ios-ntp/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/ios-ntp/ios-ntp.modulemap";
 				PRODUCT_MODULE_NAME = ios_ntp;
 				PRODUCT_NAME = ios_ntp;
@@ -4576,11 +4483,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-HPDS-Data/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-HPDS-Data/Pods-HPDS-Data.modulemap";
 				OTHER_LDFLAGS = "";
@@ -4614,11 +4517,7 @@
 				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
 				PRODUCT_MODULE_NAME = GoogleToolboxForMac;
 				PRODUCT_NAME = GoogleToolboxForMac;
@@ -4650,11 +4549,7 @@
 				INFOPLIST_FILE = "Target Support Files/TPCircularBuffer/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/TPCircularBuffer/TPCircularBuffer.modulemap";
 				PRODUCT_MODULE_NAME = TPCircularBuffer;
 				PRODUCT_NAME = TPCircularBuffer;
@@ -4702,11 +4597,7 @@
 				INFOPLIST_FILE = "Target Support Files/TPCircularBuffer/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/TPCircularBuffer/TPCircularBuffer.modulemap";
 				PRODUCT_MODULE_NAME = TPCircularBuffer;
 				PRODUCT_NAME = TPCircularBuffer;
