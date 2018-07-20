@@ -370,6 +370,7 @@
             currentESMNumber = 0;
         }
         [self viewDidAppear:NO];
+        [self performSegueWithIdentifier:@"homeScreen" sender:self]; //Added by me - this should take user to home screen
         return;
     }
 }
