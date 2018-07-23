@@ -102,6 +102,7 @@ static AWARESensorManager * sharedSensorManager;
             [sensor startSensor];
         }
     }
+    NSLog(@"All sensors successfully started!"); //Logging
     return YES;
 }
 

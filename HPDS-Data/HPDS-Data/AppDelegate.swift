@@ -40,14 +40,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let activity = IOSActivityRecognition(awareStudy: self.study)
         let esm = IOSESM(awareStudy: self.study)
 
-    
+        //Setup background fetching
+        UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
+        
         manager?.add(healthkit)
         manager?.add(activity)
         manager?.add(esm)
-
-
-        
-
 
         let url = "https://api.awareframework.com/index.php/webservice/index/1888/UqMEKGUkE07T"
         self.study?.setStudyURL(url)
@@ -79,7 +77,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-        
+        self.manager?.startAllSensors()
+
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {

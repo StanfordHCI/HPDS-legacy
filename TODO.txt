@@ -21,3 +21,5 @@
 			      || nothing). UPDATE: Fixed it to bring the user
 			      || back to the home screen.
 --------------------------------------------------------------------------------
+[ ] (A) YYYY-MM-DD 2018-07-23 || Background processes data collection.
+--------------------------------------------------------------------------------
