@@ -8,8 +8,10 @@
 
 import UIKit
 import AWAREFramework
+import ResearchKit
 
 class ViewController: UIViewController {
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,4 +47,15 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func researchKitSurvey(_ sender: Any) {
+        let taskViewController = ORKTaskViewController(task: SurveyTask, taskRun: nil)
+        taskViewController.delegate = (self as! ORKTaskViewControllerDelegate)
+        present(taskViewController, animated: true, completion: nil)
+    }
+}
+
+extension ViewController : ORKTaskViewControllerDelegate {
+    func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
+        taskViewController.dismiss(animated: true, completion: nil)
+    }
 }

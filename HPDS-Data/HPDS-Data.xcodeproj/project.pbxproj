@@ -15,6 +15,8 @@
 		BC143F8C20F80A31007669A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC143F8A20F80A31007669A2 /* LaunchScreen.storyboard */; };
 		BC5C9A13210259F000EAAE1B /* AboutScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C9A12210259F000EAAE1B /* AboutScreenViewController.swift */; };
 		BCCD599F20F80CDB00C2A225 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCD599E20F80CDB00C2A225 /* HealthKit.framework */; };
+		BCD94AA321069FB900F2E25B /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD94AA121069F9200F2E25B /* ResearchKit.framework */; };
+		BCD94AA521069FFA00F2E25B /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD94AA421069FFA00F2E25B /* SurveyTask.swift */; };
 		BCF9447B20FD1D0800DFCEFB /* ESMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF9447A20FD1D0800DFCEFB /* ESMViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,8 @@
 		BC5C9A12210259F000EAAE1B /* AboutScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScreenViewController.swift; sourceTree = "<group>"; };
 		BCCD599E20F80CDB00C2A225 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		BCCD59A020F80CDB00C2A225 /* HPDS-Data.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HPDS-Data.entitlements"; sourceTree = "<group>"; };
+		BCD94AA121069F9200F2E25B /* ResearchKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResearchKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCD94AA421069FFA00F2E25B /* SurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
 		BCF9447A20FD1D0800DFCEFB /* ESMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESMViewController.swift; sourceTree = "<group>"; };
 		DAA8C17F6DE0FB340234ACF7 /* Pods-HPDS-Data.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPDS-Data.release.xcconfig"; path = "Pods/Target Support Files/Pods-HPDS-Data/Pods-HPDS-Data.release.xcconfig"; sourceTree = "<group>"; };
 		DBE52163F0EFA62568064A43 /* Pods-HPDS-Data.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPDS-Data.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HPDS-Data/Pods-HPDS-Data.debug.xcconfig"; sourceTree = "<group>"; };
@@ -40,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCD94AA321069FB900F2E25B /* ResearchKit.framework in Frameworks */,
 				206BD9B1CC718AE7516CF6C6 /* Pods_HPDS_Data.framework in Frameworks */,
 				BCCD599F20F80CDB00C2A225 /* HealthKit.framework in Frameworks */,
 			);
@@ -60,6 +65,7 @@
 		6C2858A52068C2DE44E668B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BCD94AA121069F9200F2E25B /* ResearchKit.framework */,
 				BCCD599E20F80CDB00C2A225 /* HealthKit.framework */,
 				2DA42E765116BE1C81D37867 /* Pods_HPDS_Data.framework */,
 			);
@@ -94,6 +100,7 @@
 				BC5C9A12210259F000EAAE1B /* AboutScreenViewController.swift */,
 				BC143F8820F80A31007669A2 /* Assets.xcassets */,
 				BCF9447A20FD1D0800DFCEFB /* ESMViewController.swift */,
+				BCD94AA421069FFA00F2E25B /* SurveyTask.swift */,
 				BC143F8A20F80A31007669A2 /* LaunchScreen.storyboard */,
 				BC143F8D20F80A31007669A2 /* Info.plist */,
 			);
@@ -265,6 +272,7 @@
 			files = (
 				BC5C9A13210259F000EAAE1B /* AboutScreenViewController.swift in Sources */,
 				BCF9447B20FD1D0800DFCEFB /* ESMViewController.swift in Sources */,
+				BCD94AA521069FFA00F2E25B /* SurveyTask.swift in Sources */,
 				BC143F8420F80A30007669A2 /* ViewController.swift in Sources */,
 				BC143F8220F80A30007669A2 /* AppDelegate.swift in Sources */,
 			);

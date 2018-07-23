@@ -40,7 +40,7 @@
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="XiA-yG-ix3" kind="show" id="cUF-Cg-ZxW"/>
+                                            <action selector="researchKitSurvey:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KeV-fm-6LO"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzk-H2-1xU">
@@ -103,7 +103,7 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDY-a8-5cY">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="1046"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <mutableString key="text">
+                                        <string key="text">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex velit, tincidunt vitae euismod eu, pulvinar sit amet massa. Pellentesque interdum eu ligula vitae pretium. Aenean scelerisque pellentesque aliquam. Pellentesque erat est, mattis vel nunc nec, mollis pretium libero. Curabitur vehicula nibh non nunc elementum auctor. Praesent et mattis eros, sed pharetra ante. Cras eget odio ut nisl efficitur consequat sit amet vel nulla. Proin ut ultricies turpis, in pulvinar dui.
 
 Donec sagittis pellentesque sollicitudin. Aliquam pulvinar molestie enim, non varius tortor pulvinar sed. Nullam tristique, lectus quis faucibus facilisis, quam elit facilisis tortor, a vulputate erat tortor vitae elit. Pellentesque elementum pharetra ante, eget semper leo posuere id. Integer consequat elit enim, eget porta urna ultricies vitae. Phasellus eu ipsum leo. Ut in nunc fermentum, sagittis nisl ut, ultrices nulla. Suspendisse lacinia posuere mi efficitur varius. Pellentesque tristique mattis tempus. Nam eleifend gravida sollicitudin. Duis posuere fermentum varius. Nulla ac tincidunt nulla, quis rutrum neque. Proin libero velit, lacinia vel blandit quis, suscipit sit amet nisl. Phasellus at arcu ut eros accumsan lobortis. Donec id eros at lectus luctus lobortis.
@@ -112,7 +112,7 @@ Nullam eleifend diam diam, ac bibendum neque tempus non. Duis lobortis sagittis 
 
 Phasellus est dolor, euismod et ligula a, fermentum fermentum lorem. Morbi in est id orci ullamcorper lacinia et eu eros. Etiam rutrum sapien non quam sollicitudin elementum sit amet quis urna. Etiam quis malesuada odio. Phasellus risus libero, luctus quis tincidunt sit amet, efficitur vel mi. Praesent consectetur nunc odio, quis tristique tortor fringilla sed. Maecenas posuere ante id euismod sollicitudin. Donec ultricies dapibus justo sit amet accumsan. Morbi et luctus libero. Quisque ac lobortis lectus. Cras tristique eros ac diam placerat venenatis. Nullam ac dui feugiat, posuere augue id, rhoncus justo.
 
-Proin euismod auctor tellus eget cursus. Donec molestie rutrum metus, eget congue nibh pharetra in. Quisque quis pharetra risus, sed elementum libero. Donec dignissim suscipit dolor lobortis tincidunt. Proin dapibus risus a odio luctus, at facilisis neque ornare. Etiam consectetur sollicitudin magna, a mattis orci pharetra eu. Quisque eget sem odio.</mutableString>
+Proin euismod auctor tellus eget cursus. Donec molestie rutrum metus, eget congue nibh pharetra in. Quisque quis pharetra risus, sed elementum libero. Donec dignissim suscipit dolor lobortis tincidunt. Proin dapibus risus a odio luctus, at facilisis neque ornare. Etiam consectetur sollicitudin magna, a mattis orci pharetra eu. Quisque eget sem odio.</string>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -163,23 +163,6 @@ Proin euismod auctor tellus eget cursus. Donec molestie rutrum metus, eget congu
             </objects>
             <point key="canvasLocation" x="1766" y="1121"/>
         </scene>
-        <!--Scroll View Controller-->
-        <scene sceneID="kqF-No-z0x">
-            <objects>
-                <viewController id="XiA-yG-ix3" customClass="ESMScrollViewController" sceneMemberID="viewController">
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="Ri8-Jx-twg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <viewLayoutGuide key="safeArea" id="zz7-aN-Nmv"/>
-                    </scrollView>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="homeScreen" id="hiy-Bd-tbm"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TfL-Cz-8kn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1766" y="321"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="JHe-YV-pOK">
             <objects>
@@ -198,6 +181,7 @@ Proin euismod auctor tellus eget cursus. Donec molestie rutrum metus, eget congu
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="hYs-vk-TGX"/>
         <segue reference="0l7-CF-dre"/>
     </inferredMetricsTieBreakers>
 </document>
