@@ -103,7 +103,8 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDY-a8-5cY">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="1046"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <string key="text">  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex velit, tincidunt vitae euismod eu, pulvinar sit amet massa. Pellentesque interdum eu ligula vitae pretium. Aenean scelerisque pellentesque aliquam. Pellentesque erat est, mattis vel nunc nec, mollis pretium libero. Curabitur vehicula nibh non nunc elementum auctor. Praesent et mattis eros, sed pharetra ante. Cras eget odio ut nisl efficitur consequat sit amet vel nulla. Proin ut ultricies turpis, in pulvinar dui.
+                                        <mutableString key="text">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex velit, tincidunt vitae euismod eu, pulvinar sit amet massa. Pellentesque interdum eu ligula vitae pretium. Aenean scelerisque pellentesque aliquam. Pellentesque erat est, mattis vel nunc nec, mollis pretium libero. Curabitur vehicula nibh non nunc elementum auctor. Praesent et mattis eros, sed pharetra ante. Cras eget odio ut nisl efficitur consequat sit amet vel nulla. Proin ut ultricies turpis, in pulvinar dui.
 
 Donec sagittis pellentesque sollicitudin. Aliquam pulvinar molestie enim, non varius tortor pulvinar sed. Nullam tristique, lectus quis faucibus facilisis, quam elit facilisis tortor, a vulputate erat tortor vitae elit. Pellentesque elementum pharetra ante, eget semper leo posuere id. Integer consequat elit enim, eget porta urna ultricies vitae. Phasellus eu ipsum leo. Ut in nunc fermentum, sagittis nisl ut, ultrices nulla. Suspendisse lacinia posuere mi efficitur varius. Pellentesque tristique mattis tempus. Nam eleifend gravida sollicitudin. Duis posuere fermentum varius. Nulla ac tincidunt nulla, quis rutrum neque. Proin libero velit, lacinia vel blandit quis, suscipit sit amet nisl. Phasellus at arcu ut eros accumsan lobortis. Donec id eros at lectus luctus lobortis.
 
@@ -111,12 +112,30 @@ Nullam eleifend diam diam, ac bibendum neque tempus non. Duis lobortis sagittis 
 
 Phasellus est dolor, euismod et ligula a, fermentum fermentum lorem. Morbi in est id orci ullamcorper lacinia et eu eros. Etiam rutrum sapien non quam sollicitudin elementum sit amet quis urna. Etiam quis malesuada odio. Phasellus risus libero, luctus quis tincidunt sit amet, efficitur vel mi. Praesent consectetur nunc odio, quis tristique tortor fringilla sed. Maecenas posuere ante id euismod sollicitudin. Donec ultricies dapibus justo sit amet accumsan. Morbi et luctus libero. Quisque ac lobortis lectus. Cras tristique eros ac diam placerat venenatis. Nullam ac dui feugiat, posuere augue id, rhoncus justo.
 
-Proin euismod auctor tellus eget cursus. Donec molestie rutrum metus, eget congue nibh pharetra in. Quisque quis pharetra risus, sed elementum libero. Donec dignissim suscipit dolor lobortis tincidunt. Proin dapibus risus a odio luctus, at facilisis neque ornare. Etiam consectetur sollicitudin magna, a mattis orci pharetra eu. Quisque eget sem odio.</string>
+Proin euismod auctor tellus eget cursus. Donec molestie rutrum metus, eget congue nibh pharetra in. Quisque quis pharetra risus, sed elementum libero. Donec dignissim suscipit dolor lobortis tincidunt. Proin dapibus risus a odio luctus, at facilisis neque ornare. Etiam consectetur sollicitudin magna, a mattis orci pharetra eu. Quisque eget sem odio.</mutableString>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="grW-PQ-gQk">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <items>
+                                            <navigationItem title="About" id="Hmb-5X-c28">
+                                                <barButtonItem key="leftBarButtonItem" style="plain" id="hzE-gP-hdU">
+                                                    <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="18U-3I-6DS">
+                                                        <rect key="frame" x="16" y="7" width="48" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="&lt; Back"/>
+                                                        <connections>
+                                                            <segue destination="BYZ-38-t0r" kind="show" id="0l7-CF-dre"/>
+                                                        </connections>
+                                                    </button>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="0.66344713184931503" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="gDY-a8-5cY" firstAttribute="leading" secondItem="3tS-6A-2wF" secondAttribute="leading" constant="-4" id="WNk-Xa-Wv4"/>
                                     <constraint firstItem="gDY-a8-5cY" firstAttribute="width" secondItem="3tS-6A-2wF" secondAttribute="width" id="Xl7-Uy-her"/>
@@ -179,7 +198,6 @@ Proin euismod auctor tellus eget cursus. Donec molestie rutrum metus, eget congu
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cUF-Cg-ZxW"/>
-        <segue reference="hiy-Bd-tbm"/>
+        <segue reference="0l7-CF-dre"/>
     </inferredMetricsTieBreakers>
 </document>
