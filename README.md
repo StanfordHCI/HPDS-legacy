@@ -9,9 +9,9 @@ These instructions will get you a copy of the project up and running on your loc
 ### Installation
 Navigate into the directory on your computer where you would like to place the project folder. Then type the following command to download the project.
 
-'''
+```
 $ git clone https://github.com/StanfordHCI/Hybrid-Physical-Digital-Spaces.git
-'''
+```
 
 Navigate into the newly-created directory, then into HPDS-Data. Open up the file with the .xcworkspace extension (not the .xcproject) in XCode. From here, you can make various edits, add features, have a party, etc.
 
@@ -19,16 +19,16 @@ To commit changes to the repo:
 
 To commit changes to the repo, save all of your changes locally, then navigate into the project folder from your terminal. Then, type the following commands:
 
-'''
+```
 $ git add .
 $ git commit -m “[message]”
-'''
+```
 
 Where “message” (inside quotes but no need for the square brackets), is a brief description of the changes you hae made since  last committing to the repo. Next, type,
 
-'''
+```
 $ git push origin master
-''''
+```
 
 And this should update the repository to your version. :)
 
@@ -36,9 +36,9 @@ The rule of thumb with which I am familiar is to commit “whenever something wo
 
 When starting work on a project each day, you should confirm that you are working on the latest version of the codebase. To do so, navigate to the project folder in your terminal, then type,
 
-'''
+```
 $ git pull
-'''
+```
 
 This will ensure your local copy of the code is up to date with the latest version in the codebase.
 
