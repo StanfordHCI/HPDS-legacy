@@ -41,7 +41,7 @@ $ git pull
 This will ensure your local copy of the code is up to date with the latest version in the codebase.
 
 ## Built With
-[AWARE Framework iOS](https://github.com/tetujin/AWAREFramework-iOS)
+[AWARE Framework iOS](https://github.com/tetujin/AWAREFramework-iOS)  
 [ResearchKit](https://github.com/ResearchKit/ResearchKit)
 
 ## Authors
