@@ -19,47 +19,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var manager: AWARESensorManager!
 
     static func shared() -> AppDelegate {
-        //Returns an instance of the current AppDelegate
+        //Returns an instance of the current AppDelegate - this is used to access class-level
+        //variables of this AppDelegate in other files.
         return UIApplication.shared.delegate as! AppDelegate
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         
-        self.core = AWARECore.shared()!
-        self.study = AWAREStudy.shared()
-        self.study.setDebug(true) //Debugging settings
-        self.manager = AWARESensorManager.shared()
+        self.core = AWARECore.shared()!                         //Initialize AWARE Core
+        self.study = AWAREStudy.shared()                        //Initialize AWARE Study
+        self.study.setDebug(true)                               //Debugging settings - turn off when running in production
+        self.manager = AWARESensorManager.shared()              //Initialize AWARE Sensor Manager
         
         core.activate()
-        // Request the following permission if you need to collect sensor data in the background.
-        
+
+        //Request permission to perform background sensing
         core.requestPermissionForBackgroundSensing()
         
+        //Declare, initialize AWARE sensors
         let healthkit = AWAREHealthKit(awareStudy: self.study)
         let activity = IOSActivityRecognition(awareStudy: self.study)
-        let esm = IOSESM(awareStudy: self.study)
 
-        //Setup background fetching
+        //Setup background fetching interval
         UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
         
+        //Add AWARE sensors to the sensor manager
         manager?.add(healthkit)
         manager?.add(activity)
-        manager?.add(esm)
 
+        //Set study url to the url listed on AWARE Dashboard
         let url = "https://api.awareframework.com/index.php/webservice/index/1888/UqMEKGUkE07T"
         self.study?.setStudyURL(url)
-        esm?.startSensor(withURL: url, tableName: "esm")
-        print("Started ESM Sensor!")
-        print("Started ESM Sensor!")
-        print("Started ESM Sensor!")
-        print("Started ESM Sensor!")
-        print("Started ESM Sensor!")
         
         self.study?.join(withURL: url, completion: { (settings, studyState, error) in
-            self.manager?.createDBTablesOnAwareServer()
-            self.manager?.addSensors(with: self.study)
-            self.manager?.startAllSensors()
+            self.manager?.createDBTablesOnAwareServer()             //Initialize database for sensors
+            self.manager?.addSensors(with: self.study)              //Add sensors to study
+            self.manager?.startAllSensors()                         //Start sensors running
         })
         
         print("Setup complete.")
@@ -77,6 +72,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
+        //Start sensors operating in the background
         self.manager?.startAllSensors()
 
     }

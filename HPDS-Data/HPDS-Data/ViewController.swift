@@ -12,14 +12,14 @@ import ResearchKit
 
 class ViewController: UIViewController {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        //Hides the default parent level navigation bar upon navigating to a child screen
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
@@ -27,16 +27,24 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
+    /*
+     * Action: syncSensors
+     * Description: Syncs all AWARE sensors with the AWARE server.
+     */
     @IBAction func syncSensors(_ sender: Any) {
-        //Push data to AWARE server on button press
+        //Pull in the sensorManager from our AppDelegate file.
         let sensorManager = AppDelegate.shared().manager!
+        //Sync the sensor data with the AWARE server.
         sensorManager.syncAllSensors()
     }
     
+    /*
+     * Action: openEmail
+     * Description: Opens the user's default email client, and an email within
+     * the client addressed to the email address below.
+     */
     @IBAction func openEmail(_ sender: Any) {
-        //Opens the user's default email client, and an email within the client
-        //addressed to the email address below.
         let email = "foo@bar.com" // To be updated with real contact info
         if let url = URL(string: "mailto:\(email)") {
             if #available(iOS 10.0, *) {
@@ -47,13 +55,24 @@ class ViewController: UIViewController {
         }
     }
     
+    /*
+     * Action: researchKitSurvey
+     * Description: Opens the ResearchKit Survey in the "SurveyTask.swift" file; runs
+     * the survey.
+     */
     @IBAction func researchKitSurvey(_ sender: Any) {
         let taskViewController = ORKTaskViewController(task: SurveyTask, taskRun: nil)
         taskViewController.delegate = (self as! ORKTaskViewControllerDelegate)
         present(taskViewController, animated: true, completion: nil)
     }
+    
 }
 
+/*
+ * Extension:    ViewController : ORKTaskViewControllerDelegate
+ * Description: extends he current ViewController to iplement the taskViewController delegate
+ * method. This is necessary to allow the ViewController to support ResearchKit surveys.
+ */
 extension ViewController : ORKTaskViewControllerDelegate {
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
         taskViewController.dismiss(animated: true, completion: nil)

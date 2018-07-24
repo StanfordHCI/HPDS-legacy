@@ -9,13 +9,14 @@ import Foundation
 import ResearchKit
 
 public var SurveyTask: ORKOrderedTask {
+    //A ResearchKit survey task.
     
     var steps = [ORKStep]()
     
     //Instructions step
     let instructionStep = ORKInstructionStep(identifier: "IntroStep")
-    instructionStep.title = "Here are our questions:"
-    instructionStep.text = "Please answer accurately, honestly, precisely, and truly."
+    instructionStep.title = "Welcome!"
+    instructionStep.text = "Please answer the following questions accurately, honestly, precisely, and truly."
     steps += [instructionStep]
     
     //Name question
@@ -23,6 +24,7 @@ public var SurveyTask: ORKOrderedTask {
     nameAnswerFormat.multipleLines = false
     let nameQuestionStepTitle = "What is your name?"
     let nameQuestionStep = ORKQuestionStep(identifier: "QuestionStep", title: nameQuestionStepTitle, answer: nameAnswerFormat)
+    print(nameAnswerFormat)
     steps += [nameQuestionStep]
     
     //'What is your quest' question
@@ -34,6 +36,7 @@ public var SurveyTask: ORKOrderedTask {
     ]
     let questAnswerFormat: ORKTextChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
     let questQuestionStep = ORKQuestionStep(identifier: "TextChoiceQuestionStep", title: questQuestionStepTitle, answer: questAnswerFormat)
+    print(questAnswerFormat)
     steps += [questQuestionStep]
     
     
@@ -42,7 +45,6 @@ public var SurveyTask: ORKOrderedTask {
     summaryStep.title = "Right. Off you go!"
     summaryStep.text = "That was easy!"
     steps += [summaryStep]
-    
     
     return ORKOrderedTask(identifier: "SurveyTask", steps: steps)
 }

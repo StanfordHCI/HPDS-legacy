@@ -15,8 +15,8 @@ class AboutScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Constrain ScrollView to bottom anchor
         scrollView.contentLayoutGuide.bottomAnchor.constraint(equalTo: textView.bottomAnchor).isActive = true
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
