@@ -14,11 +14,27 @@
 		BC143F8920F80A31007669A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC143F8820F80A31007669A2 /* Assets.xcassets */; };
 		BC143F8C20F80A31007669A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC143F8A20F80A31007669A2 /* LaunchScreen.storyboard */; };
 		BC5C9A13210259F000EAAE1B /* AboutScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C9A12210259F000EAAE1B /* AboutScreenViewController.swift */; };
+		BC792CDC21078DF20039FE85 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD94AA121069F9200F2E25B /* ResearchKit.framework */; };
+		BC792CDD21078DF20039FE85 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCD94AA121069F9200F2E25B /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BCCD599F20F80CDB00C2A225 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCD599E20F80CDB00C2A225 /* HealthKit.framework */; };
-		BCD94AA321069FB900F2E25B /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD94AA121069F9200F2E25B /* ResearchKit.framework */; };
 		BCD94AA521069FFA00F2E25B /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD94AA421069FFA00F2E25B /* SurveyTask.swift */; };
+		BCD94AA62106A44400F2E25B /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD94AA121069F9200F2E25B /* ResearchKit.framework */; };
 		BCF9447B20FD1D0800DFCEFB /* ESMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF9447A20FD1D0800DFCEFB /* ESMViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BC792CDE21078DF20039FE85 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BC792CDD21078DF20039FE85 /* ResearchKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2DA42E765116BE1C81D37867 /* Pods_HPDS_Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HPDS_Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,8 +60,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCD94AA321069FB900F2E25B /* ResearchKit.framework in Frameworks */,
+				BCD94AA62106A44400F2E25B /* ResearchKit.framework in Frameworks */,
 				206BD9B1CC718AE7516CF6C6 /* Pods_HPDS_Data.framework in Frameworks */,
+				BC792CDC21078DF20039FE85 /* ResearchKit.framework in Frameworks */,
 				BCCD599F20F80CDB00C2A225 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +137,7 @@
 				BC143F7C20F80A30007669A2 /* Resources */,
 				FEF13B32253E5EDAB0FABAF9 /* [CP] Embed Pods Frameworks */,
 				63563A0DDC5D2EEB8A0EACD6 /* [CP] Copy Pods Resources */,
+				BC792CDE21078DF20039FE85 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
