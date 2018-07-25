@@ -24,6 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return UIApplication.shared.delegate as! AppDelegate
     }
     
+    func getUrl() -> String {
+        //Returns the URL of the AWARE study on which this application is running
+        return "https://api.awareframework.com/index.php/webservice/index/1888/UqMEKGUkE07T"
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         self.core = AWARECore.shared()!                         //Initialize AWARE Core
@@ -48,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         manager?.add(activity)
 
         //Set study url to the url listed on AWARE Dashboard
-        let url = "https://api.awareframework.com/index.php/webservice/index/1888/UqMEKGUkE07T"
+        let url = getUrl()
         self.study?.setStudyURL(url)
         
         self.study?.join(withURL: url, completion: { (settings, studyState, error) in

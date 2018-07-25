@@ -15,11 +15,17 @@
 [ ] (A) YYYY-MM-DD 2018-07-16 || Import ESM from linked JSON instead of 
 			      || hardcoding ESM Q&A into the app.
 --------------------------------------------------------------------------------
-[X] (B) YYYY-MM-DD 2018-07-16 || Button alignment for different devices.
+[X] (B) 2018-07-16 2018-07-16 || Button alignment for different devices.
 --------------------------------------------------------------------------------
-[X] (A) YYYY-MM-DD 2018-07-19 || Fix cancel button for ESM. (Currently does
+[X] (A) 2018-07-20 2018-07-19 || Fix cancel button for ESM. (Currently does
 			      || nothing). UPDATE: Fixed it to bring the user
 			      || back to the home screen.
 --------------------------------------------------------------------------------
-[ ] (A) YYYY-MM-DD 2018-07-23 || Background processes data collection.
+[X] (A) 2018-07-23 2018-07-23 || Background processes data collection.
+--------------------------------------------------------------------------------
+[ ] (A) YYYY-MM-DD 2018-07-25 || Add orientation documentation for the AWARE-iOS
+			      || client.
+--------------------------------------------------------------------------------
+[X] (A) YYYY-MM-DD 2018-07-25 || Digitize user consent through ResearchKit (if
+			      || we end up using ResearchKit).
 --------------------------------------------------------------------------------
