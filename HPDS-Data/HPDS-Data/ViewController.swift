@@ -64,6 +64,7 @@ class ViewController: UIViewController {
         let taskViewController = ORKTaskViewController(task: SurveyTask, taskRun: nil)
         taskViewController.delegate = (self as! ORKTaskViewControllerDelegate)
         present(taskViewController, animated: true, completion: nil)
+
     }
     
 }
@@ -75,6 +76,17 @@ class ViewController: UIViewController {
  */
 extension ViewController : ORKTaskViewControllerDelegate {
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
+        
+        let taskResult = taskViewController.result
+        
+        let jsonData = try! ORKESerializer.jsonData(for: taskResult)
+        if let jsonString = NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue) {
+            print(jsonString)
+        }
+        else {
+            print("WE FAILED")
+        }
+        
         taskViewController.dismiss(animated: true, completion: nil)
     }
 }
