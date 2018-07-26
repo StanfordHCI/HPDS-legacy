@@ -16,7 +16,16 @@ Navigate into the directory on your computer where you would like to place the p
 $ git clone https://github.com/StanfordHCI/Hybrid-Physical-Digital-Spaces.git
 ```
 
-Navigate into the newly-created directory, then into HPDS-Data. Open up the file with the .xcworkspace extension (not the .xcproject) in XCode. From here, you can make various edits, add features, have a party, etc.
+This project uses git submodules, so you're going to have to install those. In Terminal, navigate to the folder, Hybrid-Physical-Digital-Spaces, then type:
+
+```
+$ git submodule init
+```
+```
+$ git submodule update
+```
+
+Now that the submodules are installed, navigate into the Hybrid-Physical-Digital-Spaces directory, then into HPDS-Data. Open up the file with the .xcworkspace extension (not the .xcproject) in XCode. From here, you can make various edits, add features, have a party, etc.
 
 To commit changes to the repo, save all of your changes locally, then navigate into the project folder from your terminal. Then, type the following commands:
 
@@ -72,9 +81,11 @@ To deploy this project to an iOS simulator or to a live device:
 ## Acknowledgments
 [Yuuki Nishiyama](https://github.com/tetujin) for his work on the AWARE Framework iOS, and for his AWARE Framework tutorials, which were used in the development of this application.
 
-[jeffery\_the\_wind](https://stackoverflow.com/questions/36225543/how-to-use-orkeserializer-in-my-app) on StackOverFlow. His solution to serialize a ORKResult to a JSON (with ever-so-minor modifications) was used in this project. 
+[jeffery\_the\_wind](https://stackoverflow.com/users/959306/jeffery-the-wind) on StackOverFlow. His [solution to serialize a ORKResult to a JSON](https://stackoverflow.com/questions/36225543/how-to-use-orkeserializer-in-my-app) (with ever-so-minor modifications) was used in this project. 
 
-[Sergey Kargopolov](http://swiftdeveloperblog.com/about/) on Swift Developer Blog. His code to [convert JSON string to NSDictionary in Swift](http://swiftdeveloperblog.com/code-examples/convert-json-string-to-nsdictionary-in-swift/) was used in t his project.
+[Sergey Kargopolov](http://swiftdeveloperblog.com/about/) on Swift Developer Blog. His code to [convert JSON string to NSDictionary in Swift](http://swiftdeveloperblog.com/code-examples/convert-json-string-to-nsdictionary-in-swift/) was used in this project.
+
+[Stephen Groom](https://stackoverflow.com/users/2475902/stephen-groom) on StackOverFlow. His [solution to send an email from an iOS app](https://stackoverflow.com/questions/25981422/how-to-open-mail-app-from-swift) was used in this project.
 
 ## Tutorials for Reference
 Here are a list of tutorials that were used over the course of this project. The hope here is that, if you are not familiar with some of the design elements of the HPDS-Data app, these resources will enable you to quickly bring yourself up to speed.
