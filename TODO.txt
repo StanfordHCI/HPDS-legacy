@@ -26,6 +26,6 @@
 [ ] (A) YYYY-MM-DD 2018-07-25 || Add orientation documentation for the AWARE-iOS
 			      || client.
 --------------------------------------------------------------------------------
-[X] (A) YYYY-MM-DD 2018-07-25 || Digitize user consent through ResearchKit (if
+[ ] (A) YYYY-MM-DD 2018-07-25 || Digitize user consent through ResearchKit (if
 			      || we end up using ResearchKit).
 --------------------------------------------------------------------------------

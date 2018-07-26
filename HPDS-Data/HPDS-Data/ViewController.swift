@@ -71,20 +71,44 @@ class ViewController: UIViewController {
 
 /*
  * Extension:    ViewController : ORKTaskViewControllerDelegate
- * Description: extends he current ViewController to iplement the taskViewController delegate
+ * Description: extends he current ViewController to implement the taskViewController delegate
  * method. This is necessary to allow the ViewController to support ResearchKit surveys.
  */
 extension ViewController : ORKTaskViewControllerDelegate {
+    
+    func jsonToNSDictionary(jsonstring: String) -> NSDictionary {
+        //Converts a JSON string to an NSDictionary
+        
+        var dict: NSDictionary?
+        
+        if let data = jsonstring.data(using: String.Encoding.utf8) {
+            
+            do {
+                dict = try JSONSerialization.jsonObject(with: data, options: []) as? [String:AnyObject] as? NSDictionary
+                
+                if let myDictionary = dict
+                {
+                    return myDictionary
+                }
+            } catch let error as NSError {
+                print(error)
+            }
+        }
+        return dict!
+    }
+    
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
         
+        //Serializes the survey result into a JSON.
         let taskResult = taskViewController.result
         
         let jsonData = try! ORKESerializer.jsonData(for: taskResult)
         if let jsonString = NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue) {
-            print(jsonString)
+            //Converts the JSON to a dictionary
+            print(jsonToNSDictionary(jsonstring: jsonString as String))
         }
         else {
-            print("WE FAILED")
+            print("Failure - could not serialize ORKResult to JSON.")
         }
         
         taskViewController.dismiss(animated: true, completion: nil)
