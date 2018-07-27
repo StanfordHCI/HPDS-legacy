@@ -46,7 +46,7 @@
         awareHKQuantity = [[AWAREHealthKitQuantity alloc] initWithAwareStudy:study dbType:dbType];
         
 //        frequency = 60 * 30; // 30min
-        frequency = 1; //1 second
+        frequency = 0.1; //1 second
     }
     return self;
 }

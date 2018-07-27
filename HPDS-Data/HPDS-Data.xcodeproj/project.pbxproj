@@ -124,11 +124,19 @@
 				BCD94AA421069FFA00F2E25B /* SurveyTask.swift */,
 				BC143F8A20F80A31007669A2 /* LaunchScreen.storyboard */,
 				BC143F8D20F80A31007669A2 /* Info.plist */,
-				BC401FE2210916CB005B68CA /* ORKESerialization.h */,
-				BC401FE1210916CB005B68CA /* ORKESerialization.m */,
+				BCCCA52E210B8FEB005DDEF9 /* ORKESerialization */,
 				BC401FE0210916CA005B68CA /* HPDS-Data-Bridging-Header.h */,
 			);
 			path = "HPDS-Data";
+			sourceTree = "<group>";
+		};
+		BCCCA52E210B8FEB005DDEF9 /* ORKESerialization */ = {
+			isa = PBXGroup;
+			children = (
+				BC401FE2210916CB005B68CA /* ORKESerialization.h */,
+				BC401FE1210916CB005B68CA /* ORKESerialization.m */,
+			);
+			path = ORKESerialization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
