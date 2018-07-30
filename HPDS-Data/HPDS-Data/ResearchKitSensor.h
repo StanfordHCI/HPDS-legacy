@@ -6,7 +6,7 @@
 //  Copyright © 2018 Michael Cooper. All rights reserved.
 //
 
-#import "AWARESensor.h"
+#import <AWAREFramework/AWARESensor.h>
 #import <CoreMotion/CoreMotion.h>
 
 @interface RKSensor : AWARESensor <AWARESensorDelegate>

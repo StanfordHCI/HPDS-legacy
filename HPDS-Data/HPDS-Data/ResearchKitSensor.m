@@ -11,6 +11,7 @@
 #import "ResearchKitSensor.h"
 #import "AWAREKeys.h"
 #import "TCQMaker.h"
+#import <ResearchKit/ResearchKit.h>
 
 @implementation RKSensor{
     NSString* KEY_DEVICE_ID;
@@ -124,16 +125,11 @@
 }
 
 
-- (IBAction)getResearchKitData:(id)sender {
+- (void) getResearchKitData:(NSData*) surveyData {
     
-    //Todo: Link this to ESM Button
-    
-    //Launch ESM Survey
-    
-    NSLog(@"Survey running");
-    
-    //Collect surveydata
-    NSData* surveyData;                                               //Survey data in JSON string
+    //To be called from ViewController.swift - once we have a valid JSON, we pass it
+    //to this function for converting to an NSDictionary and for upload to the AWARE
+    //server
     
     NSDictionary* surveyResultsDict = [self validateSurveyJSON:surveyData];
     if (surveyResultsDict != nil) {
