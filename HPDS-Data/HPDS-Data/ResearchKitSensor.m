@@ -77,18 +77,69 @@
     return NO;
 }
 
+
+/*
+ * Function: validateSurveyJSON
+ * Description: parses the survey JSON, attempts to turn it into an NSDictionary.
+ * If successful, an NSDictionary is returned; if not, an error is raised.
+ */
+- (NSDictionary*) validateSurveyJSON:(NSData*) surveyData {
+    
+    if(NSClassFromString(@"NSJSONSerialization"))
+    {
+        NSError *error = nil;
+        id object = [NSJSONSerialization
+                     JSONObjectWithData:surveyData
+                     options:0
+                     error:&error];
+        
+        if(error) {
+            //JSON was malformed
+            NSLog(@"Survey data JSON was malformed. Error. Exiting getResearchKitData function...");
+            return nil;
+        }
+        
+        //Validate our dictionary
+        if([object isKindOfClass:[NSDictionary class]])
+        {
+            NSDictionary *results = object;
+            
+            //Confirm that the dictionary is not null (it shouldn't be) then call saveResearchKitData
+            if (results != nil) {
+                return results;
+            }
+            else {
+                //Raise an error since our results dictionary did not contain anything
+            }
+        }
+        else
+        {
+            //Raise an error since the outermost object in the JSON packet was not a dictionary
+        }
+    }
+    //The user is using iOS 4, since NSJSONSerialization is supported only by iOS 5.0+. I suspect
+    //this won't be an issue for us, but if this case arises, we will return nil to signal an error.
+    return nil;
+    
+}
+
+
 - (IBAction)getResearchKitData:(id)sender {
     
-    //Link this to ESM Button
+    //Todo: Link this to ESM Button
     
-    //Do the survey here, gather the data, save it to the appropriate data structures
+    //Launch ESM Survey
     
     NSLog(@"Survey running");
     
     //Collect surveydata
-    NSString* surveyData;
+    NSData* surveyData;                                               //Survey data in JSON string
     
-    //If data is not nil (i.e. if we get a JSON), format data, then call saveData
+    NSDictionary* surveyResultsDict = [self validateSurveyJSON:surveyData];
+    if (surveyResultsDict != nil) {
+        //We have successfully serialized the JSON - save the data
+        [self saveResearchKitData:surveyResultsDict];
+    }
     
     
 }
