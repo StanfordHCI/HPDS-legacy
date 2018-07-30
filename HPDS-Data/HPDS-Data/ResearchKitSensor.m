@@ -14,14 +14,14 @@
 
 @implementation RKSensor{
     NSString* KEY_DEVICE_ID;
-    NSString* KEY_TIMESTAMP;  //begin
-    NSString* KEY_END_TIMESTAMP; // end
+    NSString* KEY_TIMESTAMP;           //begin
+    NSString* KEY_END_TIMESTAMP;       // end
 
-    NSString* NAME;              // Question 1 of the survey, "What is your name?"
+    NSString* NAME;                    // Question 1 of the survey, "What is your name?"
 
-    int QUEST;                   // Question 2 of the survey, "What is your quest?"
-                                 // (chosen from array of [0, 1, 2...] representing
-                                 // the answers to the multiple choice questions
+    NSString* QUEST;                   // Question 2 of the survey, "What is your quest?"
+                                       // (chosen from array of [0, 1, 2...] representing
+                                       // the answers to the multiple choice questions
 }
 
 - (instancetype)initWithAwareStudy:(AWAREStudy *)study dbType:(AwareDBType)dbType{
@@ -30,7 +30,7 @@
     KEY_TIMESTAMP = @"timestamp";
     KEY_END_TIMESTAMP   = @"end_timestamp";
     NAME = @"name";
-    QUEST = @"quest";
+    QUEST = @"-1";                  //Default/error value
 
     AWAREStorage * storage = nil;
     if(dbType == AwareDBTypeCSV){
@@ -77,29 +77,38 @@
     return NO;
 }
 
-- (void) getPedometerData:(id)sender{
+- (IBAction)getResearchKitData:(id)sender {
+    
+    //Link this to ESM Button
+    
+    //Do the survey here, gather the data, save it to the appropriate data structures
+    
+    NSLog(@"Survey running");
+    
+    //Collect surveydata
+    NSString* surveyData;
+    
+    //If data is not nil (i.e. if we get a JSON), format data, then call saveData
+    
+    
 }
 
 
-- (void) savePedometerData:(NSDictionary*) surveyData {
+- (void) saveResearchKitData:(NSDictionary*) surveyData {
     //Takes in the primitive JSON-version of the dictionary.
     //Formats the data appropriately, then saves it to the server.
     NSString * name = @"";
     NSNumber * quest = @0;
 
-
-
     NSMutableDictionary * dict = [[NSMutableDictionary alloc] init];
     [dict setObject:[self getDeviceId] forKey:KEY_DEVICE_ID];
-    [dict setObject:[AWAREUtils getUnixTimestamp:pedometerData.startDate] forKey:KEY_TIMESTAMP];
-    [dict setObject:[AWAREUtils getUnixTimestamp:pedometerData.endDate] forKey:KEY_END_TIMESTAMP];
-    [dict setObject:@(frequencySec) forKey:KEY_FREQUENCY_SECOND];
-    [dict setObject:numberOfSteps forKey:KEY_NUMBER_OF_STEPS];
-    [dict setObject:distance forKey:KEY_DISTANCE];
-    [dict setObject:currentPace forKey:KEY_CURRENT_PACE];
-    [dict setObject:currentCadence forKey:KEY_CURRENT_CADENCE];
-    [dict setObject:floorsAscended forKey:KEY_FLOORS_ASCENDED];
-    [dict setObject:floorsDescended forKey:KEY_FLOORS_DESCENDED];
+    
+    NSDate *currentDate = [NSDate date]; //Get the current date/time
+    
+    [dict setObject:[AWAREUtils getUnixTimestamp:currentDate] forKey:KEY_TIMESTAMP];
+    //[dict setObject:[AWAREUtils getUnixTimestamp:pedometerData.endDate] forKey:KEY_END_TIMESTAMP];
+    [dict setObject:name forKey:NAME];
+    [dict setObject:quest forKey:QUEST];
 
     dispatch_async(dispatch_get_main_queue(), ^{
 
@@ -116,12 +125,15 @@
     });
     //
     //    NSString * message = [NSString stringWithFormat:@"%@(%@) %@(%@) %@ %@ %@(%@) %@(%@)", numberOfSteps, totalSteps, distance, totalDistance, currentPace, currentCadence, floorsAscended,totalFloorsAscended, floorsDescended, totalFllorsDescended];
-    NSString * message = [NSString stringWithFormat:@"[%@ - %@] Steps:%d, Distance:%d, Pace:%d, Floor Ascended:%d, Floor Descended:%d",
-                          pedometerData.startDate, pedometerData.endDate,
-                          numberOfSteps.intValue, distance.intValue,
-                          currentPace.intValue, floorsAscended.intValue,
-                          floorsDescended.intValue];
-    //                                                    // [self sendLocalNotificationForMessage:message soundFlag:NO];
+    
+    //TODO: Update this message with formatting
+    //NSString * message = [NSString stringWithFormat:@"[%@ - %@] Steps:%d, Distance:%d, Pace:%d, Floor Ascended:%d, Floor Descended:%d",
+    //                      pedometerData.startDate, pedometerData.endDate,
+    //                      numberOfSteps.intValue, distance.intValue,
+    //                      currentPace.intValue, floorsAscended.intValue,
+    //                      floorsDescended.intValue];
+    NSString * message = @"Saved RK data";
+
     if ([self isDebug]) NSLog(@"%@", message);
     [self setLatestValue:[NSString stringWithFormat:@"%@", message]];
 
