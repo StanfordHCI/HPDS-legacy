@@ -42,6 +42,8 @@
         
     }
     
+    NSLog(study.getStudyURL);
+    NSLog(@"Initialized RK Sensor");
     return self;
 }
 

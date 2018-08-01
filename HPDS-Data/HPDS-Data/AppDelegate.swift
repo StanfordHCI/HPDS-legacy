@@ -55,13 +55,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         manager?.add(activity)
 
         //Set study url to the url listed on AWARE Dashboard
-        let url = getUrl()
-        self.study?.setStudyURL(url)
+        let studyurl = getUrl()
+        self.study?.setStudyURL(studyurl)
         
         self.rk = RKSensor(awareStudy: self.study)              //Since this is a class-level variable, we can access it in ViewController.swift
-
+                                                                //We define it here so that the study has a URL
         
-        self.study?.join(withURL: url, completion: { (settings, studyState, error) in
+        //Testing things from Yuuki's Slack suggestion
+        let url = Bundle.main.url(forResource: "SampleDB", withExtension: "momd")
+        ExternalCoreDataHandler.shared()!.overwriteManageObjectModel(withFileURL: url)
+//        let sqliteURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last
+//        ExternalCoreDataHandler.shared()!.sqliteFileURL  = sqliteURL?.appendingPathComponent("SampleDB.sqlite")
+        
+        self.study?.join(withURL: studyurl, completion: { (settings, studyState, error) in
             self.manager?.createDBTablesOnAwareServer()             //Initialize database for sensors
             self.manager?.addSensors(with: self.study)              //Add sensors to study
             self.manager?.startAllSensors()                         //Start sensors running
