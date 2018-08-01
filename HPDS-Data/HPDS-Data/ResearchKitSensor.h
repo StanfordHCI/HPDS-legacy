@@ -11,4 +11,6 @@
 
 @interface RKSensor : AWARESensor <AWARESensorDelegate>
 
+-(BOOL)startSensor;
+
 @end

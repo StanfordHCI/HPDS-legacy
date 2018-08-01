@@ -65,6 +65,8 @@ class ViewController: UIViewController {
         taskViewController.delegate = (self as! ORKTaskViewControllerDelegate)
         present(taskViewController, animated: true, completion: nil)
         
+
+        
     }
     
 }
@@ -107,6 +109,8 @@ extension ViewController : ORKTaskViewControllerDelegate {
             //Converts the JSON to a dictionary
             print(jsonToNSDictionary(jsonstring: jsonString as String))
             
+            let rkSensor = AppDelegate.shared().rk!
+            rkSensor.startSensor()
             //The goal: something like syncESMWithAWARE(jsonToNSDictionary(jsonstring: jsonString as String)
         }
         else {

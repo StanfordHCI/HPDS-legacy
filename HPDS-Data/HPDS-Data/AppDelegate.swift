@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var core: AWARECore!
     var study: AWAREStudy!
     var manager: AWARESensorManager!
+    var rk: RKSensor!
 
     static func shared() -> AppDelegate {
         //Returns an instance of the current AppDelegate - this is used to access class-level
@@ -33,8 +34,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.core = AWARECore.shared()!                         //Initialize AWARE Core
         self.study = AWAREStudy.shared()                        //Initialize AWARE Study
-        self.study.setDebug(true)                               //Debugging settings - turn off when running in production
+        self.study.setDebug(false)                               //Debugging settings - turn off when running in production
         self.manager = AWARESensorManager.shared()              //Initialize AWARE Sensor Manager
+        
         
         core.activate()
 
@@ -55,6 +57,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Set study url to the url listed on AWARE Dashboard
         let url = getUrl()
         self.study?.setStudyURL(url)
+        
+        self.rk = RKSensor(awareStudy: self.study)              //Since this is a class-level variable, we can access it in ViewController.swift
+
         
         self.study?.join(withURL: url, completion: { (settings, studyState, error) in
             self.manager?.createDBTablesOnAwareServer()             //Initialize database for sensors

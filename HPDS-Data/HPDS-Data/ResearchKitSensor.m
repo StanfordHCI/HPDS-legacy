@@ -54,8 +54,8 @@
 
 /*
  * Function: validateSurveyJSON
- * Description: parses the survey JSON, attempts to turn it into an NSDictionary.
- * If successful, an NSDictionary is returned; if not, an error is raised.
+ * Description: parses the survey JSON, formats the results appropriately into an
+ * NSDictionary, then returns the NSDictionary.
  */
 - (NSDictionary*) validateSurveyJSON:(NSData*) surveyData {
     
@@ -98,11 +98,11 @@
 }
 
 
-- (BOOL)startSensor: (NSData*) surveyData {
-    timer = [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+- (BOOL)startSensor { //: (NSData*) surveyData {
+    NSLog(@"Successfully called RKSensor");
+    
         // dispatch_async(dispatch_get_main_queue(), ^{
-        i++;
-        NSLog(@"%d", i);
+
         [self.storage saveDataWithDictionary:@{@"device_id":[self getDeviceId],
                                                @"timestamp":@([NSDate new].timeIntervalSince1970*1000),
                                                @"value":@(0),
@@ -110,9 +110,7 @@
                                       buffer:NO
                             saveInMainThread:YES];
         // });
-    }];
-    [timer fire];
-    
+
     return YES;
 }
 
