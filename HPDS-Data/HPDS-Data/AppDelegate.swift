@@ -63,9 +63,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Testing things from Yuuki's Slack suggestion
         let url = Bundle.main.url(forResource: "SampleDB", withExtension: "momd")
-        ExternalCoreDataHandler.shared()!.overwriteManageObjectModel(withFileURL: url)
-//        let sqliteURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last
-//        ExternalCoreDataHandler.shared()!.sqliteFileURL  = sqliteURL?.appendingPathComponent("SampleDB.sqlite")
+        ExternalCoreDataHandler.shared()!.overwriteDatabasePath(withFileURL: url)
+        let sqliteURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last
+        ExternalCoreDataHandler.shared()!.sqliteFileURL = sqliteURL?.appendingPathComponent("SampleDB.sqlite")
         
         self.study?.join(withURL: studyurl, completion: { (settings, studyState, error) in
             self.manager?.createDBTablesOnAwareServer()             //Initialize database for sensors
