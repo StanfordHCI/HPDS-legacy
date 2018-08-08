@@ -109,7 +109,7 @@
                                                @"timestamp":@([NSDate new].timeIntervalSince1970*1000),
                                                @"value":@(0),
                                                @"label":@""}
-                                      buffer:NO
+                                      buffer:NO //What is this?
                             saveInMainThread:YES];
         // });
 
