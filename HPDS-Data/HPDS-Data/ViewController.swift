@@ -64,7 +64,9 @@ class ViewController: UIViewController {
         let taskViewController = ORKTaskViewController(task: SurveyTask, taskRun: nil)
         taskViewController.delegate = (self as! ORKTaskViewControllerDelegate)
         present(taskViewController, animated: true, completion: nil)
+        
 
+        
     }
     
 }
@@ -106,6 +108,10 @@ extension ViewController : ORKTaskViewControllerDelegate {
         if let jsonString = NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue) {
             //Converts the JSON to a dictionary
             print(jsonToNSDictionary(jsonstring: jsonString as String))
+            
+            let rkSensor = AppDelegate.shared().rk!
+            rkSensor.startSensor()
+            //The goal: something like syncESMWithAWARE(jsonToNSDictionary(jsonstring: jsonString as String)
         }
         else {
             print("Failure - could not serialize ORKResult to JSON.")

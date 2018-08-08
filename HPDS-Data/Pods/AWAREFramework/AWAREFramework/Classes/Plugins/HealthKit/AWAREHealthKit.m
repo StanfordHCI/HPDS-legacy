@@ -146,8 +146,10 @@
     //NSDate * startDate =  [NSDate dateWithTimeIntervalSinceNow:-60*60*24]; // <- test
     NSDate * endDate = [NSDate new];
 
-    NSLog(@"[%@] %@ <---> %@", [self getSensorName], startDate, endDate);
-
+    if (self.isDebug) {
+        NSLog(@"[%@] %@ <---> %@", [self getSensorName], startDate, endDate);
+    }
+        
     NSSet* quantities = [self dataTypesToRead];
     for (HKQuantityType * set in quantities) {
         if(set.identifier == nil){

@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var core: AWARECore!
     var study: AWAREStudy!
     var manager: AWARESensorManager!
+    var rk: RKSensor!
 
     static func shared() -> AppDelegate {
         //Returns an instance of the current AppDelegate - this is used to access class-level
@@ -33,8 +34,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.core = AWARECore.shared()!                         //Initialize AWARE Core
         self.study = AWAREStudy.shared()                        //Initialize AWARE Study
-        self.study.setDebug(true)                               //Debugging settings - turn off when running in production
+        self.study.setDebug(false)                               //Debugging settings - turn off when running in production
         self.manager = AWARESensorManager.shared()              //Initialize AWARE Sensor Manager
+        
         
         core.activate()
 
@@ -53,10 +55,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         manager?.add(activity)
 
         //Set study url to the url listed on AWARE Dashboard
-        let url = getUrl()
-        self.study?.setStudyURL(url)
+        let studyurl = getUrl()
+        self.study?.setStudyURL(studyurl)
         
-        self.study?.join(withURL: url, completion: { (settings, studyState, error) in
+        self.rk = RKSensor(awareStudy: self.study)              //Since this is a class-level variable, we can access it in ViewController.swift
+                                                                //We define it here so that the study has a URL
+        
+        //Testing things from Yuuki's Slack suggestion
+        let url = Bundle.main.url(forResource: "SampleDB", withExtension: "momd")
+        ExternalCoreDataHandler.shared()!.overwriteDatabasePath(withFileURL: url)
+        let sqliteURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last
+        ExternalCoreDataHandler.shared()!.sqliteFileURL = sqliteURL?.appendingPathComponent("SampleDB.sqlite")
+        
+        self.study?.join(withURL: studyurl, completion: { (settings, studyState, error) in
             self.manager?.createDBTablesOnAwareServer()             //Initialize database for sensors
             self.manager?.addSensors(with: self.study)              //Add sensors to study
             self.manager?.startAllSensors()                         //Start sensors running

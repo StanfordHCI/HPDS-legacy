@@ -40,6 +40,8 @@
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="getData:" destination="hWp-tq-rlC" eventType="touchUpInside" id="GFH-TP-wEb"/>
+                                            <action selector="getResearchKitData:" destination="hWp-tq-rlC" eventType="touchUpInside" id="JyV-3n-AbJ"/>
                                             <action selector="researchKitSurvey:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KeV-fm-6LO"/>
                                         </connections>
                                     </button>
@@ -86,6 +88,7 @@
                     <navigationItem key="navigationItem" title="Hybrid Physical and Digital Spaces" id="ROz-M0-QNX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="hWp-tq-rlC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="840.79999999999995" y="320.68965517241384"/>
         </scene>

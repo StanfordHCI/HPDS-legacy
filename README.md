@@ -13,10 +13,10 @@ This project requires XCode 9.4.1. All other frameworks/pods are included within
 Navigate into the directory on your computer where you would like to place the project folder. Then type the following command to download the project.
 
 ```
-$ git clone https://github.com/StanfordHCI/Hybrid-Physical-Digital-Spaces.git
+$ git clone --recursive https://github.com/StanfordHCI/Hybrid-Physical-Digital-Spaces.git
 ```
 
-This project uses git submodules, so you're going to have to install those. In Terminal, navigate to the folder, Hybrid-Physical-Digital-Spaces, then type:
+The ```--recursive``` flag tells git to install the submodules that this project uses. If you have installed the project but it is missing one or more, navigate to the project folder in your terminal, then enter the following two commands to install the project's submodules:
 
 ```
 $ git submodule init
@@ -25,7 +25,7 @@ $ git submodule init
 $ git submodule update
 ```
 
-Now that the submodules are installed, navigate into the Hybrid-Physical-Digital-Spaces directory, then into HPDS-Data. Open up the file with the .xcworkspace extension (not the .xcproject) in XCode. From here, you can make various edits, add features, have a party, etc.
+Now that the project submodules are installed, navigate into the Hybrid-Physical-Digital-Spaces directory, then into HPDS-Data. Open up the file with the .xcworkspace extension (not the .xcproject) in XCode. From here, you can make various edits, add features, have a party, etc.
 
 To commit changes to the repo, save all of your changes locally, then navigate into the project folder from your terminal. Then, type the following commands:
 

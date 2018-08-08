@@ -3,3 +3,4 @@
 //
 
 #import "ORKESerialization.h"
+#import "ResearchKitSensor.h"

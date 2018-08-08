@@ -12,9 +12,6 @@
 			      || creates the tables, but does not populate
 			      || them accordingly.
 --------------------------------------------------------------------------------
-[ ] (A) YYYY-MM-DD 2018-07-16 || Import ESM from linked JSON instead of 
-			      || hardcoding ESM Q&A into the app.
---------------------------------------------------------------------------------
 [X] (B) 2018-07-16 2018-07-16 || Button alignment for different devices.
 --------------------------------------------------------------------------------
 [X] (A) 2018-07-20 2018-07-19 || Fix cancel button for ESM. (Currently does
@@ -23,9 +20,12 @@
 --------------------------------------------------------------------------------
 [X] (A) 2018-07-23 2018-07-23 || Background processes data collection.
 --------------------------------------------------------------------------------
-[ ] (A) YYYY-MM-DD 2018-07-25 || Add orientation documentation for the AWARE-iOS
+[X] (A) 2018-07-26 2018-07-25 || Add orientation documentation for the AWARE-iOS
 			      || client.
 --------------------------------------------------------------------------------
-[ ] (A) YYYY-MM-DD 2018-07-25 || Digitize user consent through ResearchKit (if
-			      || we end up using ResearchKit).
+[ ] (A) YYYY-MM-DD 2018-07-25 || Digitize user consent through ResearchKit.
 --------------------------------------------------------------------------------
+[ ] (A) YYYY-MM-DD 2018-07-30 || Read ResearchKit JSON into ResearchKitSensor.
+--------------------------------------------------------------------------------
+
+
