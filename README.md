@@ -87,6 +87,8 @@ To deploy this project to an iOS simulator or to a live device:
 
 [Stephen Groom](https://stackoverflow.com/users/2475902/stephen-groom) on StackOverFlow. His [solution to send an email from an iOS app](https://stackoverflow.com/questions/25981422/how-to-open-mail-app-from-swift) was used in this project.
 
+[Tommy](https://stackoverflow.com/users/427332/tommy) on StackOverFlow. His [solution to parse JSON easily in Objective-C](https://stackoverflow.com/questions/5547311/how-do-i-parse-json-with-objective-c), with ever-so-minor modifications, was used in this project.
+
 ## Tutorials for Reference
 Here are a list of tutorials that were used over the course of this project. The hope here is that, if you are not familiar with some of the design elements of the HPDS-Data app, these resources will enable you to quickly bring yourself up to speed.
 
