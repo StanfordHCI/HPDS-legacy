@@ -109,8 +109,8 @@ extension ViewController : ORKTaskViewControllerDelegate {
             //Converts the JSON to a dictionary
             print(jsonToNSDictionary(jsonstring: jsonString as String))
             
-            let rkSensor = AppDelegate.shared().rk!
-            rkSensor.startSensor()
+            //let rkSensor = AppDelegate.shared().rk!
+            //rkSensor.startSensor()
             //The goal: something like syncESMWithAWARE(jsonToNSDictionary(jsonstring: jsonString as String)
         }
         else {

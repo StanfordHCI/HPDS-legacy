@@ -17,13 +17,9 @@
 		BC5C9A13210259F000EAAE1B /* AboutScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C9A12210259F000EAAE1B /* AboutScreenViewController.swift */; };
 		BC792CDC21078DF20039FE85 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD94AA121069F9200F2E25B /* ResearchKit.framework */; };
 		BC792CDD21078DF20039FE85 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCD94AA121069F9200F2E25B /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BC8D00032110E47B0093F108 /* EntitySample+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8DFFFF2110E47B0093F108 /* EntitySample+CoreDataClass.m */; };
-		BC8D00042110E47B0093F108 /* EntitySample+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8D00012110E47B0093F108 /* EntitySample+CoreDataProperties.m */; };
-		BCCCA52D210A7661005DDEF9 /* ResearchKitSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCCA52C210A7661005DDEF9 /* ResearchKitSensor.m */; };
 		BCCD599F20F80CDB00C2A225 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCD599E20F80CDB00C2A225 /* HealthKit.framework */; };
 		BCD94AA521069FFA00F2E25B /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD94AA421069FFA00F2E25B /* SurveyTask.swift */; };
 		BCD94AA62106A44400F2E25B /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD94AA121069F9200F2E25B /* ResearchKit.framework */; };
-		BCF9447B20FD1D0800DFCEFB /* ESMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF9447A20FD1D0800DFCEFB /* ESMViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,17 +49,10 @@
 		BC401FE1210916CB005B68CA /* ORKESerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKESerialization.m; sourceTree = "<group>"; };
 		BC401FE2210916CB005B68CA /* ORKESerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKESerialization.h; sourceTree = "<group>"; };
 		BC5C9A12210259F000EAAE1B /* AboutScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScreenViewController.swift; sourceTree = "<group>"; };
-		BC8D00002110E47B0093F108 /* EntitySample+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EntitySample+CoreDataProperties.h"; path = "Pods/AWAREFramework/AWAREFramework/Classes/Sensors/Data/EntitySample+CoreDataProperties.h"; sourceTree = SOURCE_ROOT; };
-		BC8D00012110E47B0093F108 /* EntitySample+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "EntitySample+CoreDataProperties.m"; path = "Pods/AWAREFramework/AWAREFramework/Classes/Sensors/Data/EntitySample+CoreDataProperties.m"; sourceTree = SOURCE_ROOT; };
-		BC8D00022110E47B0093F108 /* EntitySample+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EntitySample+CoreDataClass.h"; path = "Pods/AWAREFramework/AWAREFramework/Classes/Sensors/Data/EntitySample+CoreDataClass.h"; sourceTree = SOURCE_ROOT; };
-		BC8DFFFF2110E47B0093F108 /* EntitySample+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "EntitySample+CoreDataClass.m"; path = "Pods/AWAREFramework/AWAREFramework/Classes/Sensors/Data/EntitySample+CoreDataClass.m"; sourceTree = SOURCE_ROOT; };
-		BCCCA52B210A7660005DDEF9 /* ResearchKitSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResearchKitSensor.h; sourceTree = "<group>"; };
-		BCCCA52C210A7661005DDEF9 /* ResearchKitSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResearchKitSensor.m; sourceTree = "<group>"; };
 		BCCD599E20F80CDB00C2A225 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		BCCD59A020F80CDB00C2A225 /* HPDS-Data.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HPDS-Data.entitlements"; sourceTree = "<group>"; };
 		BCD94AA121069F9200F2E25B /* ResearchKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResearchKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD94AA421069FFA00F2E25B /* SurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
-		BCF9447A20FD1D0800DFCEFB /* ESMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESMViewController.swift; sourceTree = "<group>"; };
 		DAA8C17F6DE0FB340234ACF7 /* Pods-HPDS-Data.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPDS-Data.release.xcconfig"; path = "Pods/Target Support Files/Pods-HPDS-Data/Pods-HPDS-Data.release.xcconfig"; sourceTree = "<group>"; };
 		DBE52163F0EFA62568064A43 /* Pods-HPDS-Data.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPDS-Data.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HPDS-Data/Pods-HPDS-Data.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,18 +118,11 @@
 				BC143F8520F80A30007669A2 /* Main.storyboard */,
 				BC5C9A12210259F000EAAE1B /* AboutScreenViewController.swift */,
 				BC143F8820F80A31007669A2 /* Assets.xcassets */,
-				BCF9447A20FD1D0800DFCEFB /* ESMViewController.swift */,
 				BCD94AA421069FFA00F2E25B /* SurveyTask.swift */,
 				BC143F8A20F80A31007669A2 /* LaunchScreen.storyboard */,
 				BC143F8D20F80A31007669A2 /* Info.plist */,
 				BC401FE0210916CA005B68CA /* HPDS-Data-Bridging-Header.h */,
 				BCCCA52A210A70F2005DDEF9 /* ORKESerialization */,
-				BCCCA52B210A7660005DDEF9 /* ResearchKitSensor.h */,
-				BCCCA52C210A7661005DDEF9 /* ResearchKitSensor.m */,
-				BC8D00022110E47B0093F108 /* EntitySample+CoreDataClass.h */,
-				BC8DFFFF2110E47B0093F108 /* EntitySample+CoreDataClass.m */,
-				BC8D00002110E47B0093F108 /* EntitySample+CoreDataProperties.h */,
-				BC8D00012110E47B0093F108 /* EntitySample+CoreDataProperties.m */,
 			);
 			path = "HPDS-Data";
 			sourceTree = "<group>";
@@ -320,14 +302,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC5C9A13210259F000EAAE1B /* AboutScreenViewController.swift in Sources */,
-				BC8D00042110E47B0093F108 /* EntitySample+CoreDataProperties.m in Sources */,
 				BC401FE3210916CB005B68CA /* ORKESerialization.m in Sources */,
-				BC8D00032110E47B0093F108 /* EntitySample+CoreDataClass.m in Sources */,
-				BCF9447B20FD1D0800DFCEFB /* ESMViewController.swift in Sources */,
 				BCD94AA521069FFA00F2E25B /* SurveyTask.swift in Sources */,
 				BC143F8420F80A30007669A2 /* ViewController.swift in Sources */,
 				BC143F8220F80A30007669A2 /* AppDelegate.swift in Sources */,
-				BCCCA52D210A7661005DDEF9 /* ResearchKitSensor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
