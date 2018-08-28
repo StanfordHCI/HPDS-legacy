@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var core: AWARECore!
     var study: AWAREStudy!
     var manager: AWARESensorManager!
-    //var rk: RKSensor!
 
     static func shared() -> AppDelegate {
         //Returns an instance of the current AppDelegate - this is used to access class-level
@@ -57,9 +56,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Set study url to the url listed on AWARE Dashboard
         let studyurl = getUrl()
         self.study?.setStudyURL(studyurl)
-        
-        //self.rk = RKSensor(awareStudy: self.study)              //Since this is a class-level variable, we can access it in ViewController.swift
-                                                                //We define it here so that the study has a URL
         
         //Testing things from Yuuki's Slack suggestion
         let url = Bundle.main.url(forResource: "SampleDB", withExtension: "momd")
