@@ -57,14 +57,13 @@ class ViewController: UIViewController {
     
     /*
      * Action: openSurvey
-     * Description: Opens the survey online using an SFSafariViewController.
+     * Description: Opens the ESM survey using Safari-based in-app browsing.
      */
+    
     @IBAction func openSurvey(_ sender: Any) {
-        let urlString = NSURL(string: "www.google.com")
+        let urlString = NSURL(string: "https://stanforduniversity.qualtrics.com/jfe/form/SV_3dwr3XJjCyzY0Ul")
         let svc = SFSafariViewController(url: urlString! as URL)
         self.present(svc, animated: true, completion: nil)
-        
     }
-
     
 }
