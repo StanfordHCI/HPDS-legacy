@@ -92,6 +92,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Hybrid Physical and Digital Spaces" id="ROz-M0-QNX"/>
+                    <connections>
+                        <outlet property="openSurvey" destination="gcO-nH-Zai" id="NqK-a9-TWi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

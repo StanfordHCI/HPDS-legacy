@@ -8,7 +8,6 @@
 
 import UIKit
 import AWAREFramework
-import ResearchKit
 import SafariServices
 
 class ViewController: UIViewController {

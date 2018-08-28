@@ -1,0 +1,6 @@
+framework module KinveyResearchKit {
+  umbrella header "KinveyResearchKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
