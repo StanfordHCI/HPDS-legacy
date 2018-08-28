@@ -42,6 +42,7 @@
                                         <connections>
                                             <action selector="getData:" destination="hWp-tq-rlC" eventType="touchUpInside" id="GFH-TP-wEb"/>
                                             <action selector="getResearchKitData:" destination="hWp-tq-rlC" eventType="touchUpInside" id="JyV-3n-AbJ"/>
+                                            <action selector="openSurvey:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TsS-cC-KBx"/>
                                             <action selector="researchKitSurvey:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KeV-fm-6LO"/>
                                         </connections>
                                     </button>
@@ -94,6 +95,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Hybrid Physical and Digital Spaces" id="ROz-M0-QNX"/>
+                    <connections>
+                        <outlet property="openSurvey" destination="gcO-nH-Zai" id="NqK-a9-TWi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="hWp-tq-rlC" userLabel="Exit" sceneMemberID="exit"/>
