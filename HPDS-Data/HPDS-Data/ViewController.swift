@@ -9,6 +9,7 @@
 import UIKit
 import AWAREFramework
 import ResearchKit
+import SafariServices
 
 class ViewController: UIViewController {
     
@@ -56,67 +57,14 @@ class ViewController: UIViewController {
     }
     
     /*
-     * Action: researchKitSurvey
-     * Description: Opens the ResearchKit Survey in the "SurveyTask.swift" file; runs
-     * the survey.
+     * Function: openSurvey
+     * Description: uses a SFSafariViewController to open a Qualtrics-based ESM.
      */
-    @IBAction func researchKitSurvey(_ sender: Any) {
-        let taskViewController = ORKTaskViewController(task: SurveyTask, taskRun: nil)
-        taskViewController.delegate = (self as! ORKTaskViewControllerDelegate)
-        present(taskViewController, animated: true, completion: nil)
-        
-
-        
+    @IBAction func openSurvey(_ sender: Any) {
+        let urlString = NSURL(string: "https://stanforduniversity.qualtrics.com/jfe/form/SV_3dwr3XJjCyzY0Ul")
+        let svc = SFSafariViewController(url: urlString! as URL)
+        self.present(svc, animated: true, completion: nil)
     }
     
-}
-
-/*
- * Extension:    ViewController : ORKTaskViewControllerDelegate
- * Description: extends he current ViewController to implement the taskViewController delegate
- * method. This is necessary to allow the ViewController to support ResearchKit surveys.
- */
-extension ViewController : ORKTaskViewControllerDelegate {
     
-    func jsonToNSDictionary(jsonstring: String) -> NSDictionary {
-        //Converts a JSON string to an NSDictionary
-        
-        var dict: NSDictionary?
-        
-        if let data = jsonstring.data(using: String.Encoding.utf8) {
-            
-            do {
-                dict = try JSONSerialization.jsonObject(with: data, options: []) as? [String:AnyObject] as? NSDictionary
-                
-                if let myDictionary = dict
-                {
-                    return myDictionary
-                }
-            } catch let error as NSError {
-                print(error)
-            }
-        }
-        return dict!
-    }
-    
-    func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
-        
-        //Serializes the survey result into a JSON.
-        let taskResult = taskViewController.result
-        
-        let jsonData = try! ORKESerializer.jsonData(for: taskResult)
-        if let jsonString = NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue) {
-            //Converts the JSON to a dictionary
-            print(jsonToNSDictionary(jsonstring: jsonString as String))
-            
-            //let rkSensor = AppDelegate.shared().rk!
-            //rkSensor.startSensor()
-            //The goal: something like syncESMWithAWARE(jsonToNSDictionary(jsonstring: jsonString as String)
-        }
-        else {
-            print("Failure - could not serialize ORKResult to JSON.")
-        }
-        
-        taskViewController.dismiss(animated: true, completion: nil)
-    }
 }
