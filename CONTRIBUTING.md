@@ -4,7 +4,7 @@ Thanks so much for stopping by and showing an interest in contributing! Below, y
 
 Even if I (Michael) have moved on from the project by the time you are reading this, if you have any questions that I can help with, consider this an open invitation to [shoot me an email](mailto:coopermj@stanford.edu). I'm always happy to help.
 
-##Two Apologies In Advance
+## Two Apologies In Advance
 
 This guide is written for someone with a rudimentary knowledge of iOS app development and Swift. If your Swift abilities significantly exceed my own, then this guide may be a bit slow for you - if this is the case, I apologize in advance.
 
@@ -18,11 +18,11 @@ Currently, this sensing platform does two things:
 
 (2) Launch Qualtrics-based surveys to measure qualitative emotional (and other) states.
 
-###Basic Requirements
+### Basic Requirements
 
 This project has been built with XCode 9.4.1, and Swift 4.1 - if you have not yet updated to that version, [download the latest XCode](https://developer.apple.com/xcode/downloads/) to ensure your XCode version is compatible with that of this project.
 
-###Important Files
+### Important Files
 
 To open the project for development, navigate into the `HPDS-Data` folder and open `HPDS-Data.xcworkspace` (note - it is important that you open the `.xcworkspace` file and _not_ the `.xcodeproj` file!). Upon launching XCode, there are two files which are of primary relevance:
 
@@ -30,7 +30,7 @@ To open the project for development, navigate into the `HPDS-Data` folder and op
 
 - `AppDelegate.swift`: Upon application launch, the function `application` within `AppDelegate.swift` establishes a connection with the AWARE backend, initializes the AWARE sensor manager, and starts all the AWARE sensors.
 
-###Parameters to Edit
+### Parameters to Edit
 
 There exist various parameters within the source code which you may choose to edit during testing/deployment. I've compiled a small collection of parameters I suspect you may want to edit, and their locations within the project:
 
