@@ -4,6 +4,16 @@ Thanks so much for stopping by and showing an interest in contributing! Below, y
 
 Even if I (Michael) have moved on from the project by the time you are reading this, if you have any questions that I can help with, consider this an open invitation to [shoot me an email](mailto:coopermj@stanford.edu). I'm always happy to help.
 
+## "The Bird's Eye View" - What Am I Doing?
+
+This project is the sensing platform for the Hybrid Physical + Digital Spaces Project. This sensing platform is going to be used in two ways:
+
+(1) To power data collection for short-term (1 hr) experiments determining the impact of build environments on human wellbeing. These experiments are being done with the Catalyst Group - over Summer 2018 we worked to determine experimental protocol and to find rooms on campus which would be suitable for these experiments to take place (e.g. natural light that can be cut off, building that gives us sufficient data from buildin sensors, etc.).
+
+(2) To power data collection for a longer-term digital intervention pilot which we intend to pilot in Lantana later this year. The idea behind this pilot is that a digital display will be installed in Lantana, the displayed image of which varies depending on users' progress toward goals of wellbeing (these will be determined before installation, but may include increasing one's daily step count, getting sufficient sleep each night, etc.).
+
+I've also created [a system diagram](https://docs.google.com/presentation/d/1LOPQ9DrceVtQM-4Q3sGZyE6UcYlD4UMBH01ypuS9-ck/edit?usp=sharing) illustrating the various pieces of sensing data which this platform is (and will be) collecting.
+
 ## Two Apologies In Advance
 
 This guide is written for someone with a rudimentary knowledge of iOS app development and Swift. If your Swift abilities significantly exceed my own, then this guide may be a bit slow for you - if this is the case, I apologize in advance.
@@ -38,13 +48,37 @@ There exist various parameters within the source code which you may choose to ed
 
 - HealthKit data to pull: Located in `pods.xcodeproj` > `Pods` > `AWAREFramework` > `AWAREHealthKit.m`, in the functions, `charactersticDataTypesToRead`, `getDataQuantityTypes`, and `getDataCategoryTypes`. Comment and uncomment the data types based on what you are hoping to collect.
 
-- AWARE Backend: if I am no longer working on the project, I suspect you will want to set up a new AWARE backend. To do so, set up a new AWARE Dashboard [here](http://www.awareframework.com), and copy/paste the link to your dashboard into the string returned from `getURL()` in `AppDelegate.swift`.
+- AWARE Backend: if I am no longer working on the project, I suspect you will want to set up a new AWARE backend (since the current AWARE dashboard that is being used is registered under my name/email). To do so, set up a new AWARE Dashboard [here](http://www.awareframework.com), and copy/paste the link to your dashboard into the string returned from `getURL()` in `AppDelegate.swift`.
 
 - Qualtrics Backend: if you wish to setup a different Qualtrics survey on the backend of ESM (Experience Sampling Method - what this periodic surveying is known as), copy/paste the url to your Qualtrics survey into the `urlString` parameter within `openSurvey()` within `ViewController.swift`.
 
-## "Unfinished Tales" - What Remains to Be Completed (And Misc. Thoughts on How to Complete Them)
+### Helpful Resources
 
+- AWARE has a [Slack Channel](http://www.awareframework.com:3000) that you can use to speak with the development team. I have found them to be helpful and supportive, and this Slack channel is a great resource if you run into any difficulties with AWARE.
 
+## "Unfinished Tales" - What Remains to Be Completed (And Misc. Unsolicited Thoughts on How to Complete These Tasks)
+
+- [ ] Read data (CO2 levels, Air Velocity, Air Temperature into Room from Ventilation System, Room Temperature) from Stanford Building Sensors.
+	- Gerry Hamilton (Director, Facilities Energy Management here at Stanford) sent me [an email](https://drive.google.com/file/d/1ukx_KIGBWKWfiGk27PwvcqRQ-dvpJzpI/view?usp=sharing) containing [a sample data readout (.csv format)](https://drive.google.com/open?id=1ba-C1rVjnYvx8Fmq04Aau6OSlyy4ayrA) from the Arrillaga Alumni Center (and this data is similar to that from almost any building we would use for short-duration experiments).
+	- My initial approach to this would be to investigate writing a Python script (Python's Pandas module has great functionality for creating a flexible DataFrame from a .csv file) - or something similar - to read data from the .csv building data file, then querying the AWARE backend to load that data into a new table within the AWARE SQL database. I don't see much of a need to read this data through the app.
+- [ ] Modify Qualtrics ESM to read into AWARE backend.
+	- I don't see a need to read this data in through the HPDS-Data app - a similar Python script to the above could be used to read in data from the Qualtrics .csv file and push it to a new table on the AWARE backend.
+- [ ] Read data (Humidity, Temperature) from Elitech GSP Temperature and Humidity Data Logger.
+- [ ] Read data (EDA - Galvanic Skin Response) from Empatica Wristband.
+
+## "The Road(s) Not Taken" - Failed Experiments I've Tried and Roadblocks I've Encountered
+
+The biggest point of "iterative learning" (read: thinking something was working, pursuing it, only to realize that it would not, in fact, work as well as I'd hoped - or at all) that I experienced over the course of development was in the realm of setting up the ESM backend. I've compiled this list so that you may save the time that I spent setting them up, testing them, and attempting to fix errors, before moving on. Here are three things I tried before implementing the Qualtrics-based backend:
+
+(1) [Sage Bionetworks' BridgeAppSDK](https://github.com/Sage-Bionetworks/BridgeAppSDK): Apple's [ResearchKit](), which I initially had hoped to use for ESM, does not include a backend framework. Sage Bionetworks provides a backend framework to collect ResearchKit data. With this, they've created [a guide](https://developer.sagebridge.org/articles/ios_get_started.html) designed to help developers get set up with a ResearchKit app that pushes to their backend. During communication with them over the summer (when working through their guide gave me XCode errors), they informed me that their tutorial - and platform - are a bit outdated, but that they are working on a fix and updates. (So I am optimistic about using Sage Bionetworks' BridgeAppSDK in future).
+
+(2) [Designing a Sensor on the AWARE iOS Client](https://github.com/tetujin/aware-client-ios): by writing a sensor in the format of the file [SampleSensor.m](https://github.com/tetujin/AWAREFramework-iOS/blob/master/Example/AWAREFramework/SampleSensor.m) (along with its approriate header), it is possible to collect survey data from AWARE in the app, then send the data to the AWARE backend whenever the sensors are synchronized (and so the survey would collect/send data just like any other app). I attempted this, but found it beyond my abilities, at which point I began investigating other solutions (like the above and below) - but I am also optimistic that this is another option that is viable.
+
+(3) [ProgressKinvey's Kinvey-ResearchKit](https://github.com/Kinvey/kinvey-researchkit): a ResearchKit wrapper used to develop ResearchKit applications on the Kinvey Platform. When I worked through their [Getting Started Guide](https://devcenter.kinvey.com/ios/guides/getting-started), I found loads of syntax errors in their library: a friend who is familiar with Swift and iOS app development took a look and pointed out that the wrapper is almost certainly quite outdated. I have not heard back from the team after contacting them about this, nor have I heard anything about plans to update. It's worth keeping an eye on this one, but I'm less optimist about its ability to meet our needs.
+
+## What Comes Next?
+
+Hopefully, after reading through this document, you're all set to dive in! Wishing you all the best of luck - and remember, if there's something I haven't covered that you feel is crucial to know, I'm at most [an email away](mailto:coopermj@stanford.edu).
 
 
 
