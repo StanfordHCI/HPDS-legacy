@@ -1,4 +1,4 @@
-# CONTRIBUTING to Hybrid-Physical-Digital-Spaces
+# Contributing to Hybrid-Physical-Digital-Spaces
 
 Thanks so much for stopping by and showing an interest in contributing! Below, you'll find a detailed description of the system to help you get up and running in no time.
 
@@ -8,9 +8,9 @@ Even if I (Michael) have moved on from the project by the time you are reading t
 
 This project is the sensing platform for the Hybrid Physical + Digital Spaces Project. This sensing platform is going to be used in two ways:
 
-(1) To power data collection for short-term (1 hr) experiments determining the impact of build environments on human wellbeing. These experiments are being done with the Catalyst Group - over Summer 2018 we worked to determine experimental protocol and to find rooms on campus which would be suitable for these experiments to take place (e.g. natural light that can be cut off, building that gives us sufficient data from buildin sensors, etc.).
+1. To power data collection for short-term (1 hr) experiments determining the impact of build environments on human wellbeing. These experiments are being done with the Catalyst Group - over Summer 2018 we worked to determine experimental protocol and to find rooms on campus which would be suitable for these experiments to take place (e.g. natural light that can be cut off, building that gives us sufficient data from buildin sensors, etc.).
 
-(2) To power data collection for a longer-term digital intervention pilot which we intend to pilot in Lantana later this year. The idea behind this pilot is that a digital display will be installed in Lantana, the displayed image of which varies depending on users' progress toward goals of wellbeing (these will be determined before installation, but may include increasing one's daily step count, getting sufficient sleep each night, etc.).
+2. To power data collection for a longer-term digital intervention pilot which we intend to pilot in Lantana later this year. The idea behind this pilot is that a digital display will be installed in Lantana, the displayed image of which varies depending on users' progress toward goals of wellbeing (these will be determined before installation, but may include increasing one's daily step count, getting sufficient sleep each night, etc.). For example, each person may have a rendered plot of a garden displayed on the screen. Flowers would grow on participants' plots as they approach their goals for the week.
 
 I've also created [a system diagram](https://docs.google.com/presentation/d/1LOPQ9DrceVtQM-4Q3sGZyE6UcYlD4UMBH01ypuS9-ck/edit?usp=sharing) illustrating the various pieces of sensing data which this platform is (and will be) collecting.
 
@@ -24,9 +24,9 @@ Second, this is the first application I have written in Swift, and I was learnin
 
 Currently, this sensing platform does two things:
 
-(1) Passively collect HealthKit data; relay that data to a database on AWARE (a sensing framework system).
+1. Passively collect HealthKit data; relay that data to a database on AWARE (a sensing framework system).
 
-(2) Launch Qualtrics-based surveys to measure qualitative emotional (and other) states.
+2. Launch Qualtrics-based surveys to measure qualitative emotional (and other) states.
 
 ### Basic Requirements
 
@@ -70,11 +70,11 @@ There exist various parameters within the source code which you may choose to ed
 
 The biggest point of "iterative learning" (read: thinking something was working, pursuing it, only to realize that it would not, in fact, work as well as I'd hoped - or at all) that I experienced over the course of development was in the realm of setting up the ESM backend. I've compiled this list so that you may save the time that I spent setting them up, testing them, and attempting to fix errors, before moving on. Here are three things I tried before implementing the Qualtrics-based backend:
 
-(1) [Sage Bionetworks' BridgeAppSDK](https://github.com/Sage-Bionetworks/BridgeAppSDK): Apple's [ResearchKit](), which I initially had hoped to use for ESM, does not include a backend framework. Sage Bionetworks provides a backend framework to collect ResearchKit data. With this, they've created [a guide](https://developer.sagebridge.org/articles/ios_get_started.html) designed to help developers get set up with a ResearchKit app that pushes to their backend. During communication with them over the summer (when working through their guide gave me XCode errors), they informed me that their tutorial - and platform - are a bit outdated, but that they are working on a fix and updates. (So I am optimistic about using Sage Bionetworks' BridgeAppSDK in future).
+1. [Sage Bionetworks' BridgeAppSDK](https://github.com/Sage-Bionetworks/BridgeAppSDK): Apple's [ResearchKit](), which I initially had hoped to use for ESM, does not include a backend framework. Sage Bionetworks provides a backend framework to collect ResearchKit data. With this, they've created [a guide](https://developer.sagebridge.org/articles/ios_get_started.html) designed to help developers get set up with a ResearchKit app that pushes to their backend. During communication with them over the summer (when working through their guide gave me XCode errors), they informed me that their tutorial - and platform - are a bit outdated, but that they are working on a fix and updates. (So I am optimistic about using Sage Bionetworks' BridgeAppSDK in future).
 
-(2) [Designing a Sensor on the AWARE iOS Client](https://github.com/tetujin/aware-client-ios): by writing a sensor in the format of the file [SampleSensor.m](https://github.com/tetujin/AWAREFramework-iOS/blob/master/Example/AWAREFramework/SampleSensor.m) (along with its approriate header), it is possible to collect survey data from AWARE in the app, then send the data to the AWARE backend whenever the sensors are synchronized (and so the survey would collect/send data just like any other app). I attempted this, but found it beyond my abilities, at which point I began investigating other solutions (like the above and below) - but I am also optimistic that this is another option that is viable.
+2. [Designing a Sensor on the AWARE iOS Client](https://github.com/tetujin/aware-client-ios): by writing a sensor in the format of the file [SampleSensor.m](https://github.com/tetujin/AWAREFramework-iOS/blob/master/Example/AWAREFramework/SampleSensor.m) (along with its approriate header), it is possible to collect survey data from AWARE in the app, then send the data to the AWARE backend whenever the sensors are synchronized (and so the survey would collect/send data just like any other app). I attempted this, but found it beyond my abilities, at which point I began investigating other solutions (like the above and below) - but I am also optimistic that this is another option that is viable.
 
-(3) [ProgressKinvey's Kinvey-ResearchKit](https://github.com/Kinvey/kinvey-researchkit): a ResearchKit wrapper used to develop ResearchKit applications on the Kinvey Platform. When I worked through their [Getting Started Guide](https://devcenter.kinvey.com/ios/guides/getting-started), I found loads of syntax errors in their library: a friend who is familiar with Swift and iOS app development took a look and pointed out that the wrapper is almost certainly quite outdated. I have not heard back from the team after contacting them about this, nor have I heard anything about plans to update. It's worth keeping an eye on this one, but I'm less optimist about its ability to meet our needs.
+3. [ProgressKinvey's Kinvey-ResearchKit](https://github.com/Kinvey/kinvey-researchkit): a ResearchKit wrapper used to develop ResearchKit applications on the Kinvey Platform. When I worked through their [Getting Started Guide](https://devcenter.kinvey.com/ios/guides/getting-started), I found loads of syntax errors in their library: a friend who is familiar with Swift and iOS app development took a look and pointed out that the wrapper is almost certainly quite outdated. I have not heard back from the team after contacting them about this, nor have I heard anything about plans to update. It's worth keeping an eye on this one, but I'm less optimist about its ability to meet our needs.
 
 ## What Comes Next?
 
