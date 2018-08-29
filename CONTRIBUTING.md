@@ -52,6 +52,8 @@ There exist various parameters within the source code which you may choose to ed
 
 - Qualtrics Backend: if you wish to setup a different Qualtrics survey on the backend of ESM (Experience Sampling Method - what this periodic surveying is known as), copy/paste the url to your Qualtrics survey into the `urlString` parameter within `openSurvey()` within `ViewController.swift`.
 
+Warning: if you update the AWARE library, it may overwrite the parameters that have been set within some of the files in your local version of the library. I recommend making a backup beforehand so you are familiar with the parameters that you have set in your copy of the library.
+
 ### Helpful Resources
 
 - AWARE has a [Slack Channel](http://www.awareframework.com:3000) that you can use to speak with the development team. I have found them to be helpful and supportive, and this Slack channel is a great resource if you run into any difficulties with AWARE.
@@ -79,8 +81,3 @@ The biggest point of "iterative learning" (read: thinking something was working,
 ## What Comes Next?
 
 Hopefully, after reading through this document, you're all set to dive in! Wishing you all the best of luck - and remember, if there's something I haven't covered that you feel is crucial to know, I'm at most [an email away](mailto:coopermj@stanford.edu).
-
-
-
-
-
