@@ -24,7 +24,7 @@ Second, this is the first application I have written in Swift, and I was learnin
 
 Currently, this sensing platform does two things:
 
-1. Passively collect HealthKit data; relay that data to a database on AWARE (a sensing framework system).
+1. Passively collect [HealthKit](https://developer.apple.com/healthkit/) data; relay that data to a database on AWARE (a sensing framework system).
 
 2. Launch Qualtrics-based surveys to measure qualitative emotional (and other) states.
 
@@ -50,7 +50,7 @@ There exist various parameters within the source code which you may choose to ed
 
 - AWARE Backend: if I am no longer working on the project, I suspect you will want to set up a new AWARE backend (since the current AWARE dashboard that is being used is registered under my name/email). To do so, set up a new AWARE Dashboard [here](http://www.awareframework.com), and copy/paste the link to your dashboard into the string returned from `getURL()` in `AppDelegate.swift`.
 
-- Qualtrics Backend: if you wish to setup a different Qualtrics survey on the backend of ESM (Experience Sampling Method - what this periodic surveying is known as), copy/paste the url to your Qualtrics survey into the `urlString` parameter within `openSurvey()` within `ViewController.swift`.
+- Qualtrics Backend: if you wish to setup a different Qualtrics survey on the backend of ESM (Experience Sampling Method - what this periodic surveying is known as), [create a new Qualtrics survey](https://stanforduniversity.ca1.qualtrics.com/ControlPanel/), then copy/paste the url to your Qualtrics survey into the `urlString` parameter within `openSurvey()` within `ViewController.swift`.
 
 Warning: if you update the AWARE library, it may overwrite the parameters that have been set within some of the files in your local version of the library. I recommend making a backup beforehand so you are familiar with the parameters that you have set in your copy of the library.
 
@@ -76,7 +76,7 @@ The biggest point of "iterative learning" (read: thinking something was working,
 
 2. [Designing a Sensor on the AWARE iOS Client](https://github.com/tetujin/aware-client-ios): by writing a sensor in the format of the file [SampleSensor.m](https://github.com/tetujin/AWAREFramework-iOS/blob/master/Example/AWAREFramework/SampleSensor.m) (along with its approriate header), it is possible to collect survey data from AWARE in the app, then send the data to the AWARE backend whenever the sensors are synchronized (and so the survey would collect/send data just like any other app). I attempted this, but found it beyond my abilities, at which point I began investigating other solutions (like the above and below) - but I am also optimistic that this is another option that is viable.
 
-3. [ProgressKinvey's Kinvey-ResearchKit](https://github.com/Kinvey/kinvey-researchkit): a ResearchKit wrapper used to develop ResearchKit applications on the Kinvey Platform. When I worked through their [Getting Started Guide](https://devcenter.kinvey.com/ios/guides/getting-started), I found loads of syntax errors in their library: a friend who is familiar with Swift and iOS app development took a look and pointed out that the wrapper is almost certainly quite outdated. I have not heard back from the team after contacting them about this, nor have I heard anything about plans to update. It's worth keeping an eye on this one, but I'm less optimist about its ability to meet our needs.
+3. [ProgressKinvey's Kinvey-ResearchKit](https://github.com/Kinvey/kinvey-researchkit): a ResearchKit wrapper used to develop ResearchKit applications on the Kinvey Platform. When I worked through their [Getting Started Guide](https://devcenter.kinvey.com/ios/guides/getting-started), I found loads of syntax errors in their library: a friend who is familiar with Swift and iOS app development took a look and pointed out that the wrapper is almost certainly quite outdated. I have not heard back from the team after contacting them about this, nor have I heard anything about plans to update. It's worth keeping an eye on this one, but I'm less optimistic about its ability to meet our needs.
 
 ## What Comes Next?
 
