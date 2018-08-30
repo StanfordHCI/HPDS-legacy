@@ -81,10 +81,6 @@ To deploy this project to an iOS simulator or to a live device:
 ## Acknowledgments
 [Yuuki Nishiyama](https://github.com/tetujin) for his work on the AWARE Framework iOS, and for his AWARE Framework tutorials, which were used in the development of this application.
 
-[jeffery\_the\_wind](https://stackoverflow.com/users/959306/jeffery-the-wind) on StackOverFlow. His [solution to serialize a ORKResult to a JSON](https://stackoverflow.com/questions/36225543/how-to-use-orkeserializer-in-my-app) (with ever-so-minor modifications) was used in this project. 
-
-[Sergey Kargopolov](http://swiftdeveloperblog.com/about/) on Swift Developer Blog. His code to [convert JSON string to NSDictionary in Swift](http://swiftdeveloperblog.com/code-examples/convert-json-string-to-nsdictionary-in-swift/) was used in this project.
-
 [Stephen Groom](https://stackoverflow.com/users/2475902/stephen-groom) on StackOverFlow. His [solution to send an email from an iOS app](https://stackoverflow.com/questions/25981422/how-to-open-mail-app-from-swift) was used in this project.
 
 ## Tutorials for Reference
