@@ -1,0 +1,5 @@
+# Required libraries for Hybrid-Physical-Digital-Systems
+# project.
+
+pandas==0.22.0
+PyMySQL==0.9.2
