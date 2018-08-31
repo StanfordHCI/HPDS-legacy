@@ -77,7 +77,7 @@ XCode:
 * ```ViewController.swift```: Provides the ```syncSensors``` function (though sensors sync automatically, this enables the "Sync Sensors" button you will find on the home screen), openEmail function (which enables the user to contact the researchers running the study), and the researchKitSurvey function (which starts a survey through ResearchKit).
 
 Python:
-* `read_building_data.py`: Upon being passed in the filename of a .csv file containing building data, this program creates a Pandas dataframe of the building data.
+* `read_building_data.py`: Upon being passed in the filename of a .csv file containing building or Qualtrics survey data, this program creates a Pandas dataframe of the building data.
 * `read_sql_remote_data.py`: This script pulls data from a remote SQL database and reads it into a Pandas dataframe. By default, this script is set up to pull data from an AWARE server (though this can be altered by modifying the host and credentials).
 
 ## Deployment
@@ -88,6 +88,17 @@ To deploy the HPDS Mobile Client to an iOS simulator or to a live device:
 2. Update the ```getUrl() -> String``` function in ```AppDelegate.swift``` to return the url of your new AWARE server. Additionally, update the variable ```email``` under the ```openEmail``` function in ```ViewController.swift``` to an email at which you would like users to be able to reach you.
 
 3. Build and run the project in XCode. From XCode, you can set the simulated device on which you would like the project to run. To run on a live device, plug the device into your computer. After a few seconds, the device should become available to select from the menu in the top-left corner (to the right of the play button). Select your device, then run the project.
+
+## Data Collection
+The following instructions detail how to collect data from a deployment of the HPDS Mobile Client:
+
+1. Create a new Python file for your data analysis. At the top of the file, add the lines:
+```
+from read_sql_remote_data import gen_df_from_remote_SQL
+from read_csv_data import read_csv_data
+```
+
+2. Call the functions in your analysis file with the required parameters. Each function call will return a pandas dataframe.
 
 ## Built With
 [AWARE Framework iOS](https://github.com/tetujin/AWAREFramework-iOS)  
