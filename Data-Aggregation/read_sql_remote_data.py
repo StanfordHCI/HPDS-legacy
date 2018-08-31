@@ -1,5 +1,7 @@
 import pymysql
 import pandas as pd
+from datetime import datetime
+import time
 
 '''
 Return a list of column names a table that the pymysql cursor is pointing
@@ -38,6 +40,9 @@ def gen_df_from_remote_SQL(hostname, username, password, database_name, table_na
 	df = pd.DataFrame(data_list)
 	df.columns = column_names
 
+	# Convert unix timestamps to readable dates/times
+	df['timestamp'] = df['timestamp'].apply(lambda ts: time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(ts/1000)))
+
 	return df
 
 if __name__ == "__main__":
@@ -48,7 +53,7 @@ if __name__ == "__main__":
 	# Column names can be viewed by accessing 
 	hostname = "api.awareframework.com"
 	username = "Cooper_1945"
-	password = "" # password redacted
+	password = "tPSSOpKF" # password redacted
 	database_name = "Cooper_1945"
 
 	table_name = "accelerometer" # Table of interest
