@@ -1,6 +1,5 @@
 import pymysql
 import pandas as pd
-from datetime import datetime
 import time
 
 '''
@@ -40,7 +39,7 @@ def gen_df_from_remote_SQL(hostname, username, password, database_name, table_na
 	df = pd.DataFrame(data_list)
 	df.columns = column_names
 
-	# Convert unix timestamps to readable dates/times
+	# Convert epoch timestamps to readable dates/times
 	df['timestamp'] = df['timestamp'].apply(lambda ts: time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(ts/1000)))
 
 	return df
