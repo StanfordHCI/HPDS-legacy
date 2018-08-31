@@ -2,27 +2,41 @@ import pymysql
 import pandas as pd
 
 '''
+Return a list of column names a table that the cursor is pointing
+to.
+'''
+def get_column_names(cursor):
+
+	desc = cursor.description
+	column_names = []
+	for tup in desc:
+		column_names.append(tup[0])
+	return column_names
+
+'''
 Access data from remote SQL database (the example credentials use 
 an AWARE backend database) using the provided credentials, then 
 returns a pandas dataframe consisting of the data from SQL table 
 table_name.
 '''
-def gen_pandas_dataframe(hostname, username, password, database_name, table_name, columnnames):
+def gen_pandas_dataframe(hostname, username, password, database_name, table_name):
 	pymysql.install_as_MySQLdb()
-	conn = pymysql.connect(hostname, username, password, database_name)
+	connection = pymysql.connect(hostname, username, password, database_name)
 
-	cursor = conn.cursor()
+	cursor = connection.cursor()
 	cursor.execute("SELECT * FROM " + table_name)
 
 	data = cursor.fetchall()
 	data_list = []
+
+	column_names = get_column_names(cursor)
 
 	# Read rows from data into a list from which we can create the dataframe
 	for row in data:
 		data_list.append(row)
 
 	df = pd.DataFrame(data_list)
-	df.columns = columnnames
+	df.columns = column_names
 
 	return df
 
@@ -38,7 +52,6 @@ if __name__ == "__main__":
 	database_name = "Cooper_1945"
 
 	table_name = "accelerometer" # Table of interest
-	columnnames = ["id", "timestamp", "device_id", "double_values_0", "double_values_1", "double_values_2", "accuracy", "label"] # Column names for AWARE accelerometer table
 
-	print(gen_pandas_dataframe(hostname, username, password, database_name, table_name, columnnames))
+	print(gen_pandas_dataframe(hostname, username, password, database_name, table_name))
 
