@@ -77,8 +77,8 @@ XCode:
 * ```ViewController.swift```: Provides the ```syncSensors``` function (though sensors sync automatically, this enables the "Sync Sensors" button you will find on the home screen), openEmail function (which enables the user to contact the researchers running the study), and the researchKitSurvey function (which starts a survey through ResearchKit).
 
 Python:
-* `read_building_data.py`: Upon being passed in the filename of a .csv file containing building or Qualtrics survey data, this program creates a Pandas dataframe of the building data.
-* `read_sql_remote_data.py`: This script pulls data from a remote SQL database and reads it into a Pandas dataframe. By default, this script is set up to pull data from an AWARE server (though this can be altered by modifying the host and credentials).
+* `read_building_data.py`: Upon being passed in the filename of a .csv file containing building or Qualtrics survey data (since Stanford Qualtrics does not allow API access, to read in the data, one must download the Qualtrics responses as a .csv file, then run this script on the downloaded file), this program creates a Pandas dataframe of the building data.
+* `read_sql_remote_data.py`: This program pulls data from a remote SQL database and reads it into a Pandas dataframe. By default, this script is set up to pull data from an AWARE server (though this can be altered by modifying the host and credentials).
 
 ## Deployment
 To deploy the HPDS Mobile Client to an iOS simulator or to a live device:
@@ -105,8 +105,13 @@ from read_csv_data import read_csv_data
 [ResearchKit](https://github.com/ResearchKit/ResearchKit)
 
 ## Contributing
+See [CONTRIBUTING.md](CONTRIBUTING.md) for more project context and contribution instructions/guidance!
 
 ## Authors
+* Michael Cooper
+* Alex Weitzman
+* Gabe Saldivar
+* Andrew Ying
 
 ## License
 
