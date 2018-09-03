@@ -60,11 +60,12 @@ Warning: if you update the AWARE library, it may overwrite the parameters that h
 
 ## "Unfinished Tales" - What Remains to Be Completed (And Misc. Unsolicited Thoughts on How to Complete These Tasks)
 
-- [ ] Read data (CO2 levels, Air Velocity, Air Temperature into Room from Ventilation System, Room Temperature) from Stanford Building Sensors.
+- [X] Read data (CO2 levels, Air Velocity, Air Temperature into Room from Ventilation System, Room Temperature) from Stanford Building Sensors.
 	- Gerry Hamilton (Director, Facilities Energy Management here at Stanford) sent me [an email](https://drive.google.com/file/d/1ukx_KIGBWKWfiGk27PwvcqRQ-dvpJzpI/view?usp=sharing) containing [a sample data readout (.csv format)](https://drive.google.com/open?id=1ba-C1rVjnYvx8Fmq04Aau6OSlyy4ayrA) from the Arrillaga Alumni Center (and this data is similar to that from almost any building we would use for short-duration experiments).
 	- My initial approach to this would be to investigate writing a Python script (Python's Pandas module has great functionality for creating a flexible DataFrame from a .csv file) - or something similar - to read data from the .csv building data file, then querying the AWARE backend to load that data into a new table within the AWARE SQL database. I don't see much of a need to read this data through the app.
 - [ ] Modify Qualtrics ESM to read into AWARE backend.
 	- I don't see a need to read this data in through the HPDS-Data app - a similar Python script to the above could be used to read in data from the Qualtrics .csv file and push it to a new table on the AWARE backend.
+	- Check if there is a way to pull from Stanford Qualtrics API instead of having to download data?
 - [ ] Read data (Humidity, Temperature) from Elitech GSP Temperature and Humidity Data Logger.
 - [ ] Read data (EDA - Galvanic Skin Response) from Empatica Wristband.
 
