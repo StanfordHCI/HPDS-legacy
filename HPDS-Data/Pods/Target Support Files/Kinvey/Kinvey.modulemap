@@ -1,6 +1,0 @@
-framework module Kinvey {
-  umbrella header "Kinvey-umbrella.h"
-
-  export *
-  module * { export * }
-}
