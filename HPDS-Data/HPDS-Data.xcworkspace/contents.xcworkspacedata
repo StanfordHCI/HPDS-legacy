@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:ResearchKit/ResearchKit.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:HPDS-Data.xcodeproj">
    </FileRef>
    <FileRef

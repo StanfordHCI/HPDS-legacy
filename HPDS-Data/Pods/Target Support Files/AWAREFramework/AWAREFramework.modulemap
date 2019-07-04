@@ -1,6 +1,0 @@
-framework module AWAREFramework {
-  umbrella header "AWAREFramework-umbrella.h"
-
-  export *
-  module * { export * }
-}

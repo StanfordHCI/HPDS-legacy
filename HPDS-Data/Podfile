@@ -8,5 +8,5 @@ target 'HPDS-Data' do
   # Pods for HPDS-Data
   platform :ios, '10.0'
   pod 'AWAREFramework', :git=>'https://github.com/tetujin/AWAREFramework-iOS.git'
-
+  pod 'ResearchKit'
 end
