@@ -28,17 +28,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    /*
-     * Action: syncSensors
-     * Description: Syncs all AWARE sensors with the AWARE server.
-     */
-    @IBAction func syncSensors(_ sender: Any) {
-        //Pull in the sensorManager from our AppDelegate file.
-        let sensorManager = AppDelegate.shared().manager!
-        //Sync the sensor data with the AWARE server.
-        sensorManager.syncAllSensors()
-    }
     
     /*
      * Action: openEmail
@@ -46,7 +35,7 @@ class ViewController: UIViewController {
      * the client addressed to the email address below.
      */
     @IBAction func openEmail(_ sender: Any) {
-        let email = "foo@bar.com" // To be updated with real contact info
+        let email = "renj@stanford.edu" // To be updated with real contact info
         if let url = URL(string: "mailto:\(email)") {
             if #available(iOS 10.0, *) {
                 UIApplication.shared.open(url)

@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var core: AWARECore!
     var study: AWAREStudy!
     var manager: AWARESensorManager!
-    //var rk: RKSensor!
 
     static func shared() -> AppDelegate {
         //Returns an instance of the current AppDelegate - this is used to access class-level
@@ -27,10 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func getUrl() -> String {
         //Returns the URL of the AWARE study on which this application is running
-        return "https://api.awareframework.com/index.php/webservice/index/1888/UqMEKGUkE07T"
+        return "https://api.awareframework.com/index.php/webservice/index/2439/QPnWjaZXyx6l"
     }
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         self.core = AWARECore.shared()!                         //Initialize AWARE Core
         self.study = AWAREStudy.shared()                        //Initialize AWARE Study
@@ -48,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let activity = IOSActivityRecognition(awareStudy: self.study)
 
         //Setup background fetching interval
-        UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
+        UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplication.backgroundFetchIntervalMinimum)
         
         //Add AWARE sensors to the sensor manager
         manager?.add(healthkit)
@@ -57,15 +56,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Set study url to the url listed on AWARE Dashboard
         let studyurl = getUrl()
         self.study?.setStudyURL(studyurl)
-        
-        //self.rk = RKSensor(awareStudy: self.study)              //Since this is a class-level variable, we can access it in ViewController.swift
-                                                                //We define it here so that the study has a URL
-        
-        //Testing things from Yuuki's Slack suggestion
-        let url = Bundle.main.url(forResource: "SampleDB", withExtension: "momd")
-        ExternalCoreDataHandler.shared()!.overwriteDatabasePath(withFileURL: url)
-        let sqliteURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last
-        ExternalCoreDataHandler.shared()!.sqliteFileURL = sqliteURL?.appendingPathComponent("SampleDB.sqlite")
         
         self.study?.join(withURL: studyurl, completion: { (settings, studyState, error) in
             self.manager?.createDBTablesOnAwareServer()             //Initialize database for sensors
@@ -83,6 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
         
         //Here we use this to sync up our data with AWARE.
+        self.manager?.syncAllSensors()
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {
@@ -91,20 +82,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Start sensors operating in the background
         self.manager?.startAllSensors()
+        self.manager?.syncAllSensors()
 
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        self.manager?.syncAllSensors()
+
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        self.manager?.startAllSensors()
+
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        self.manager?.startAllSensors()
+        self.manager?.syncAllSensors()
     }
-    
     
 }
