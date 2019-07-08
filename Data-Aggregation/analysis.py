@@ -3,21 +3,21 @@ from read_csv_data import read_csv_data
 
 
 def aActivities(df):
-    print(df)
+    act = df[df["activities"] != ""]  # remove empty entries
+    print(act)
 
 
 if __name__ == "__main__":
 
-    # Sample credentials for a sample study that I setup on AWARE.
+    # credentials for a PPS setup for AWARE.
     # Credentials can be accessed on api.awareframework.com from
     # Study Dashboard > View Credentials.
-    # Column names can be viewed by accessing
+    # Column names can be viewed by accessing df["column_name"]
     hostname = "api.awareframework.com"
     username = "Ren_2425"
     password = "4kjUaIyK"
     database_name = "Ren_2425"
 
-    # can access columsn using df['column name']
     df = gen_df_from_remote_SQL(hostname, username,
                                 password, database_name, "plugin_ios_activity_recognition")
     aActivities(df)
