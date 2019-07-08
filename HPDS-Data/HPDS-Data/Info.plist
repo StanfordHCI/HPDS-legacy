@@ -26,6 +26,8 @@
 	<string></string>
 	<key>NSHealthShareUsageDescription</key>
 	<string>HealthKit Share</string>
+	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
+	<string></string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>HealthKit Update</string>
 	<key>NSLocationAlwaysUsageDescription</key>
