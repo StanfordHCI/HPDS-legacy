@@ -50,7 +50,17 @@ class ViewController: UIViewController {
      * Description: uses a SFSafariViewController to open a Qualtrics-based ESM.
      */
     @IBAction func openSurvey(_ sender: Any) {
-        let urlString = NSURL(string: "https://stanforduniversity.qualtrics.com/jfe/form/SV_4Zyz9y3uUDXKLMp")
+        let urlString = NSURL(string: "https://stanforduniversity.qualtrics.com/jfe/form/SV_0P1d0g3k8oB6UV7")
+        let svc = SFSafariViewController(url: urlString! as URL)
+        self.present(svc, animated: true, completion: nil)
+    }
+    
+    /*
+     * Function: openDiary
+     * Description: uses a SFSafariViewController to open a Qualtrics-based ESM.
+     */
+    @IBAction func openDiary(_ sender: Any) {
+        let urlString = NSURL(string: "https://stanforduniversity.qualtrics.com/jfe/form/SV_etIfLk7J9jTgIIJ")
         let svc = SFSafariViewController(url: urlString! as URL)
         self.present(svc, animated: true, completion: nil)
     }

@@ -1,16 +1,33 @@
 from read_sql_remote_data import gen_df_from_remote_SQL
 from read_csv_data import read_csv_data
+import numpy
+import matplotlib.pyplot as plt
 
 
 # analyze plugin_ios_activity_recognition data from AWARE server SQL database.
 def activitiesAnalysis(df):
-    act = df[df["activities"] != ""]  # remove empty entries
-    print(act)
+    plt.close('all')
+    gdf = df.groupby("activities")  # group by activities type for aggregate
+    actMap = {}
+    # create a map that links activities type to frequency
+    for key, item in gdf:
+        actMap[key] = len(gdf.get_group(key))
+    labels = list(actMap.keys())
+    sizes = list(actMap.values())
+    fig1, ax1 = plt.subplots()
+    ax1.pie(sizes, labels=labels, autopct='%1.1f%%',
+            startangle=90)
+    # Equal aspect ratio ensures that pie is drawn as a circle.
+    ax1.axis('equal')
+    plt.show()
 
 
 # analyze healthkit quantity data from AWARE server SQL database.
 def healthQuanAnalysis(df):
-    print(df)
+    hdf = df.groupby("type")
+    # displays the entries of each HealthKit type grouped by type
+    for key, item in hdf:
+        print(hdf.get_group(key), "\n\n")
 
 
 # analyze qualtrics survey data
@@ -31,7 +48,7 @@ if __name__ == "__main__":
     healquandf = gen_df_from_remote_SQL(hostname, username,
                                         password, database_name, "health_kit_quantity")
     qualdf = read_csv_data('yah yeet_July 8, 2019_16.24.csv')
-    # Column names can be viewed by accessing df["column_name"]
+
     # qualtricsAnalysis(qualdf)
     activitiesAnalysis(actdf)
-    healthQuanAnalysis(healquandf)
+    # healthQuanAnalysis(healquandf)

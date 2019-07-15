@@ -19,21 +19,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="V1L-IX-qMN">
-                                <rect key="frame" x="95.666666666666686" y="259" width="223" height="218"/>
+                                <rect key="frame" x="91.666666666666686" y="216" width="231" height="304"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcO-nH-Zai">
-                                        <rect key="frame" x="0.0" y="0.0" width="223" height="46"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="231" height="46"/>
                                         <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="28"/>
-                                        <state key="normal" title="     ESM Survey     ">
+                                        <state key="normal" title="      EMA Survey     ">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="openSurvey:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A06-gH-b4T"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWw-K2-fz9">
+                                        <rect key="frame" x="0.0" y="86" width="231" height="46"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.15770537013376007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="28"/>
+                                        <state key="normal" title="Daily Diary">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openDiary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1OB-ZR-GlJ"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzk-H2-1xU">
-                                        <rect key="frame" x="0.0" y="86" width="223" height="46"/>
+                                        <rect key="frame" x="0.0" y="172" width="231" height="46"/>
                                         <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="28"/>
                                         <state key="normal" title="Contact">
@@ -44,7 +55,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMm-GJ-Ykh">
-                                        <rect key="frame" x="0.0" y="172" width="223" height="46"/>
+                                        <rect key="frame" x="0.0" y="258" width="231" height="46"/>
                                         <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="28"/>
                                         <state key="normal" title="About">
@@ -87,21 +98,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3tS-6A-2wF">
-                                <rect key="frame" x="16" y="20" width="343" height="716"/>
+                                <rect key="frame" x="16" y="64" width="343" height="672"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDY-a8-5cY">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="1046"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gDY-a8-5cY">
+                                        <rect key="frame" x="0.0" y="50" width="335" height="4961.333333333333"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <string key="text">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex velit, tincidunt vitae euismod eu, pulvinar sit amet massa. Pellentesque interdum eu ligula vitae pretium. Aenean scelerisque pellentesque aliquam. Pellentesque erat est, mattis vel nunc nec, mollis pretium libero. Curabitur vehicula nibh non nunc elementum auctor. Praesent et mattis eros, sed pharetra ante. Cras eget odio ut nisl efficitur consequat sit amet vel nulla. Proin ut ultricies turpis, in pulvinar dui.
-
-Donec sagittis pellentesque sollicitudin. Aliquam pulvinar molestie enim, non varius tortor pulvinar sed. Nullam tristique, lectus quis faucibus facilisis, quam elit facilisis tortor, a vulputate erat tortor vitae elit. Pellentesque elementum pharetra ante, eget semper leo posuere id. Integer consequat elit enim, eget porta urna ultricies vitae. Phasellus eu ipsum leo. Ut in nunc fermentum, sagittis nisl ut, ultrices nulla. Suspendisse lacinia posuere mi efficitur varius. Pellentesque tristique mattis tempus. Nam eleifend gravida sollicitudin. Duis posuere fermentum varius. Nulla ac tincidunt nulla, quis rutrum neque. Proin libero velit, lacinia vel blandit quis, suscipit sit amet nisl. Phasellus at arcu ut eros accumsan lobortis. Donec id eros at lectus luctus lobortis.
-
-Nullam eleifend diam diam, ac bibendum neque tempus non. Duis lobortis sagittis tempor. Morbi eget lorem ut massa fringilla volutpat. Aenean fringilla, mi quis semper pharetra, metus mauris finibus sapien, et mattis lacus urna id elit. Aenean non enim eget est rutrum vulputate. Ut velit purus, suscipit id pellentesque eu, convallis at lectus. Nulla eget leo ipsum.
-
-Phasellus est dolor, euismod et ligula a, fermentum fermentum lorem. Morbi in est id orci ullamcorper lacinia et eu eros. Etiam rutrum sapien non quam sollicitudin elementum sit amet quis urna. Etiam quis malesuada odio. Phasellus risus libero, luctus quis tincidunt sit amet, efficitur vel mi. Praesent consectetur nunc odio, quis tristique tortor fringilla sed. Maecenas posuere ante id euismod sollicitudin. Donec ultricies dapibus justo sit amet accumsan. Morbi et luctus libero. Quisque ac lobortis lectus. Cras tristique eros ac diam placerat venenatis. Nullam ac dui feugiat, posuere augue id, rhoncus justo.
-
-Proin euismod auctor tellus eget cursus. Donec molestie rutrum metus, eget congue nibh pharetra in. Quisque quis pharetra risus, sed elementum libero. Donec dignissim suscipit dolor lobortis tincidunt. Proin dapibus risus a odio luctus, at facilisis neque ornare. Etiam consectetur sollicitudin magna, a mattis orci pharetra eu. Quisque eget sem odio.</string>
+                                        <string key="text">This is a research application from Stanford University. It collects data to measure changes in behavior and pain levels during the day. If you have any questions, feel free to contact Dr. Elizabeth Murnane, emurnane@stanford.edu.</string>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -150,7 +152,7 @@ Proin euismod auctor tellus eget cursus. Donec molestie rutrum metus, eget congu
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wf8-Gq-PHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1766" y="1121"/>
+            <point key="canvasLocation" x="1765.217391304348" y="1120.108695652174"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JHe-YV-pOK">
@@ -170,7 +172,6 @@ Proin euismod auctor tellus eget cursus. Donec molestie rutrum metus, eget congu
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hYs-vk-TGX"/>
-        <segue reference="0l7-CF-dre"/>
+        <segue reference="Yjm-Bi-d7P"/>
     </inferredMetricsTieBreakers>
 </document>
