@@ -19,32 +19,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="V1L-IX-qMN">
-                                <rect key="frame" x="91.666666666666686" y="216" width="231" height="304"/>
+                                <rect key="frame" x="95.666666666666686" y="216" width="223" height="304"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcO-nH-Zai">
-                                        <rect key="frame" x="0.0" y="0.0" width="231" height="46"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="223" height="46"/>
                                         <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="28"/>
-                                        <state key="normal" title="      EMA Survey     ">
+                                        <state key="normal" title="     ESM Survey     ">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="openSurvey:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A06-gH-b4T"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWw-K2-fz9">
-                                        <rect key="frame" x="0.0" y="86" width="231" height="46"/>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="0.15770537013376007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCJ-DZ-Inq">
+                                        <rect key="frame" x="0.0" y="86" width="223" height="46"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.036245735243500832" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="28"/>
                                         <state key="normal" title="Daily Diary">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="openDiary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1OB-ZR-GlJ"/>
+                                            <action selector="openDiary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UOz-n4-f3N"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzk-H2-1xU">
-                                        <rect key="frame" x="0.0" y="172" width="231" height="46"/>
+                                        <rect key="frame" x="0.0" y="172" width="223" height="46"/>
                                         <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="28"/>
                                         <state key="normal" title="Contact">
@@ -55,7 +55,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMm-GJ-Ykh">
-                                        <rect key="frame" x="0.0" y="258" width="231" height="46"/>
+                                        <rect key="frame" x="0.0" y="258" width="223" height="46"/>
                                         <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="28"/>
                                         <state key="normal" title="About">
@@ -98,12 +98,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3tS-6A-2wF">
-                                <rect key="frame" x="16" y="64" width="343" height="672"/>
+                                <rect key="frame" x="16" y="20" width="343" height="716"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gDY-a8-5cY">
-                                        <rect key="frame" x="0.0" y="50" width="335" height="4961.333333333333"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="694"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <string key="text">This is a research application from Stanford University. It collects data to measure changes in behavior and pain levels during the day. If you have any questions, feel free to contact Dr. Elizabeth Murnane, emurnane@stanford.edu.</string>
+                                        <string key="text">
+  This is a research application from Stanford University. It collects data to measure changes in behavior and pain levels during the day. If you have any questions, feel free to contact Dr. Elizabeth Murnane, emurnane@stanford.edu.</string>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -172,6 +173,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Yjm-Bi-d7P"/>
+        <segue reference="hYs-vk-TGX"/>
+        <segue reference="0l7-CF-dre"/>
     </inferredMetricsTieBreakers>
 </document>

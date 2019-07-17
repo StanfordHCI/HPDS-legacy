@@ -24,10 +24,10 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string></string>
-	<key>NSHealthShareUsageDescription</key>
-	<string>HealthKit Share</string>
 	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
 	<string></string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>HealthKit Share</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>HealthKit Update</string>
 	<key>NSLocationAlwaysUsageDescription</key>
@@ -41,6 +41,7 @@
 		<string>external-accessory</string>
 		<string>fetch</string>
 		<string>location</string>
+		<string>remote-notification</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
