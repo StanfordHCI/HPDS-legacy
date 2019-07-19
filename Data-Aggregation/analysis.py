@@ -6,26 +6,26 @@ import matplotlib.pyplot as plt
 
 # analyze plugin_ios_activity_recognition data from AWARE server SQL database.
 def activitiesAnalysis(df):
-    print(df)
-    # plt.close('all')
-    # gdf = df.groupby("activities")  # group by activities type for aggregate
-    # actMap = {}
-    # # create a map that links activities type to frequency
-    # for key, item in gdf:
-    #     actMap[key] = len(gdf.get_group(key))
-    # labels = list(actMap.keys())
-    # sizes = list(actMap.values())
-    # fig1, ax1 = plt.subplots()
-    # ax1.pie(sizes, labels=labels, autopct='%1.1f%%',
-    #         startangle=90)
-    # # Equal aspect ratio ensures that pie is drawn as a circle.
-    # ax1.axis('equal')
-    # plt.show()
+    # print(df)
+    plt.close('all')
+    gdf = df.groupby("activities")  # group by activities type for aggregate
+    actMap = {}
+    # create a map that links activities type to frequency
+    for key, item in gdf:
+        actMap[key] = len(gdf.get_group(key))
+    labels = list(actMap.keys())
+    sizes = list(actMap.values())
+    fig1, ax1 = plt.subplots()
+    ax1.pie(sizes, labels=labels, autopct='%1.1f%%',
+            startangle=90)
+    # Equal aspect ratio ensures that pie is drawn as a circle.
+    ax1.axis('equal')
+    plt.show()
 
 
 # analyze healthkit quantity data from AWARE server SQL database.
 def healthQuanAnalysis(df):
-    hdf = df.groupby("type")
+    hdf = df.groupby(["type", "device_id"])
     # displays the entries of each HealthKit type grouped by type
     for key, item in hdf:
         print(hdf.get_group(key), "\n\n")
@@ -59,5 +59,5 @@ if __name__ == "__main__":
 
     # qualtricsAnalysis(qualdf)
     activitiesAnalysis(actdf)
-    healthQuanAnalysis(healquandf)
+    # healthQuanAnalysis(healquandf)
     # healthCatAnalysis(healcatdf)
