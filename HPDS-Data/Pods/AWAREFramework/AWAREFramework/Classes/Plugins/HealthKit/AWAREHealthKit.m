@@ -222,7 +222,7 @@
                                                                 }];
         if(healthStore != nil){
             // Execute the query
-d            [healthStore executeQuery:sampleQuery];
+            [healthStore executeQuery:sampleQuery];
         }else{
 //            [self saveDebugEventWithText:@"ERROR in HealthKit Sensor" type:DebugTypeInfo label:@"HealthKit object is nil."];
         }

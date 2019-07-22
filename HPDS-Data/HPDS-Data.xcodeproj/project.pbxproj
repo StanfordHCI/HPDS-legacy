@@ -160,6 +160,9 @@
 							com.apple.HealthKit = {
 								enabled = 1;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 						};
 					};
 				};
@@ -431,14 +434,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "HPDS-Data/HPDS-Data.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = USZKY6D4N2;
+				DEVELOPMENT_TEAM = SM94AGM8Y6;
 				INFOPLIST_FILE = "HPDS-Data/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Joshua-Ren.HPDS-Data";
+				PRODUCT_BUNDLE_IDENTIFIER = "Joshua-Ren.Pain-Patterns";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -454,14 +457,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "HPDS-Data/HPDS-Data.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = USZKY6D4N2;
+				DEVELOPMENT_TEAM = SM94AGM8Y6;
 				INFOPLIST_FILE = "HPDS-Data/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Joshua-Ren.HPDS-Data";
+				PRODUCT_BUNDLE_IDENTIFIER = "Joshua-Ren.Pain-Patterns";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -58,6 +58,6 @@ if __name__ == "__main__":
     qualdf = read_csv_data('yah yeet_July 8, 2019_16.24.csv')
 
     # qualtricsAnalysis(qualdf)
-    activitiesAnalysis(actdf)
-    # healthQuanAnalysis(healquandf)
+    # activitiesAnalysis(actdf)
+    healthQuanAnalysis(healquandf)
     # healthCatAnalysis(healcatdf)
