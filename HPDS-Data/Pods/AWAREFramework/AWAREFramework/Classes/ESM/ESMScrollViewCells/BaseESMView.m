@@ -10,6 +10,9 @@
 #import "EntityESM+CoreDataClass.h"
 #import "ESM.h"
 
+NSString * const AWARE_ESM_SELECTION_UPDATE_EVENT = @"AWARE_ESM_SELECTION_UPDATE_EVENT";
+NSString * const AWARE_ESM_SELECTION_UPDATE_EVENT_DATA = @"DATA";
+
 @implementation BaseESMView{
     bool naState;
     
@@ -29,7 +32,6 @@
     int HEIGHT_NA;
     
     NSBundle *bundle;
-
 }
 
 
@@ -105,7 +107,7 @@
         _instructionLabel = [[UILabel alloc] initWithFrame:CGRectMake(SIDE_SPACE, [self getBaseViewHeight], WIDTH_BASE_VIEW-(SIDE_SPACE*2), HEIGHT_INSTRUCTION)];
         _instructionLabel.text = _esmEntity.esm_instructions;
         _instructionLabel.adjustsFontSizeToFitWidth = YES;
-        _instructionLabel.font = [_titleLabel.font fontWithSize:20];
+        _instructionLabel.font = [_titleLabel.font fontWithSize:18];
         [_instructionLabel setTextColor:[UIColor darkTextColor]];
         _instructionLabel.numberOfLines = 5;
         [self addSubview:_instructionLabel];
@@ -152,8 +154,9 @@
     }else{
         _naView.hidden = YES;
     }
-    /////////////////////////////////
     
+    ////////////////////////////////
+    //// debug
 //    [_titleLabel setBackgroundColor:[UIColor greenColor]];
 //    [_instructionLabel setBackgroundColor:[UIColor redColor]];
 //    [_mainView setBackgroundColor:[UIColor blueColor]];

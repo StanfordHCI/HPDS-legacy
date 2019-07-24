@@ -26,18 +26,20 @@ typedef enum: NSInteger {
     int esmType;
 }
 
+extern NSString * const AWARE_ESM_SELECTION_UPDATE_EVENT;
+extern NSString * const AWARE_ESM_SELECTION_UPDATE_EVENT_DATA;
+
 @property UIViewController * viewController;
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 
 @property (nonatomic) IBOutlet EntityESM * esmEntity;
-
-@property (nonatomic) IBOutlet UILabel *titleLabel;
-@property (nonatomic) IBOutlet UILabel *instructionLabel;
-@property (nonatomic) IBOutlet UIView *mainView;
-@property (nonatomic) IBOutlet UIView *naView;
-@property (nonatomic) IBOutlet UIButton *naButton;
-@property (nonatomic) IBOutlet UIView *splitLineView;
-@property (nonatomic) IBOutlet UIView *spaceView;
+@property (nonatomic) IBOutlet UILabel   * titleLabel;
+@property (nonatomic) IBOutlet UILabel   * instructionLabel;
+@property (nonatomic) IBOutlet UIView    * mainView;
+@property (nonatomic) IBOutlet UIView    * naView;
+@property (nonatomic) IBOutlet UIButton  * naButton;
+@property (nonatomic) IBOutlet UIView    * splitLineView;
+@property (nonatomic) IBOutlet UIView    * spaceView;
 
 @property BOOL isDebug;
 

@@ -269,11 +269,18 @@
 }
 
 - (instancetype) initAsDateTimeESMWithTrigger:(NSString *) trigger{
+    return [self initAsDateTimeESMWithTrigger:trigger minutesGranularity:nil];
+}
+
+- (instancetype) initAsDateTimeESMWithTrigger:(NSString *) trigger minutesGranularity:(NSNumber *)granularity{
     self = [self init];
     esmDict = [self setBasicElementsWithESMType:AwareESMTypeDateTime
-                                                              trigger:trigger];
+                                        trigger:trigger];
     if (esmDict != nil) {
         _esm_json = [self convertToJSONStringWithDictionary:esmDict];
+        if (granularity != nil) {
+            _esm_minute_step = granularity;
+        }
     }
     return self;
 }
@@ -314,11 +321,18 @@
 }
 
 - (instancetype) initAsTimePickerESMWithTrigger:(NSString *)trigger{
+    return [self initAsTimePickerESMWithTrigger:trigger minutesGranularity:nil];
+}
+
+- (instancetype)initAsTimePickerESMWithTrigger:(NSString *)trigger minutesGranularity:(NSNumber *)granularity{
     self = [self init];
     esmDict = [self setBasicElementsWithESMType:AwareESMTypeTime
                                         trigger:trigger];
     if (esmDict != nil) {
         _esm_json = [self convertToJSONStringWithDictionary:esmDict];
+        if (granularity!=nil) {
+            _esm_minute_step = granularity;
+        }
     }
     return self;
 }
@@ -438,6 +452,22 @@
     _esm_number = @(number);
     if (esmDict!=nil) {
         [esmDict setObject:@(number) forKey:@"esm_number"];
+        _esm_json = [self convertToJSONStringWithDictionary:esmDict];
+    }
+}
+
+- (void)setType:(int)type{
+    _esm_type = @(type);
+    if (esmDict!=nil) {
+        [esmDict setObject:@(type) forKey:@"esm_type"];
+        _esm_json = [self convertToJSONStringWithDictionary:esmDict];
+    }
+}
+
+- (void)setTrigger:(NSString *)trigger{
+    _esm_trigger = trigger;
+    if (esmDict!=nil) {
+        [esmDict setObject:trigger forKey:@"esm_trigger"];
         _esm_json = [self convertToJSONStringWithDictionary:esmDict];
     }
 }

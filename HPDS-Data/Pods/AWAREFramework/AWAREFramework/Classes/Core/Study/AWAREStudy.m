@@ -6,7 +6,6 @@
 //  Copyright © 2015 Yuuki NISHIYAMA. All rights reserved.
 //
 
-#import "AWAREDelegate.h"
 #import "AWAREStudy.h"
 #import "AWAREKeys.h"
 #import "AWARESensorManager.h"
@@ -26,13 +25,13 @@ static AWAREStudy * sharedStudy;
     bool networkReachable;
     NSInteger networkState;
     bool isDebug;
-    __weak NSURLSession *session;
+    NSURLSession *session;
     NSURLSessionConfiguration *sessionConfig;
     NSMutableData * receivedData;
     NSString * deviceId;
 }
 
-+ (AWAREStudy * )sharedStudy{
++ (AWAREStudy * _Nonnull)sharedStudy{
     @synchronized(self){
         if (!sharedStudy){
             sharedStudy = [[AWAREStudy alloc] initWithReachability:YES];
@@ -86,7 +85,7 @@ static AWAREStudy * sharedStudy;
         sessionConfig.HTTPMaximumConnectionsPerHost = 60;
         sessionConfig.timeoutIntervalForResource = 60; //60*60*24; // 1 day
         sessionConfig.allowsCellularAccess = YES;
-        session = [NSURLSession sessionWithConfiguration:sessionConfig delegate:self delegateQueue:nil];
+        
         
         isDebug = [self isDebug];
         
@@ -148,7 +147,7 @@ static AWAREStudy * sharedStudy;
  * @param completionHandler A handler for the joining process
  */
 - (void)joinStudyWithURL:(NSString *)url completion:(JoinStudyCompletionHandler)completionHandler{
-
+    
     [self setStudyURL:url];
     
     joinStudyCompletionHandler = completionHandler;
@@ -156,13 +155,14 @@ static AWAREStudy * sharedStudy;
     NSString * uuid = [self getDeviceId];
     NSString * post = [NSString stringWithFormat:@"device_id=%@", uuid];
     NSData   * postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-    NSString * postLength = [NSString stringWithFormat:@"%ld", [postData length]];
+    NSString * postLength = [NSString stringWithFormat:@"%zd", [postData length]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:[NSURL URLWithString:url]];
     [request setHTTPMethod:@"POST"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
     [request setHTTPBody:postData];
     [request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
+    session = [NSURLSession sessionWithConfiguration:sessionConfig delegate:self delegateQueue:nil];
     NSURLSessionDataTask* dataTask = [session dataTaskWithRequest:request];
     [dataTask resume];
 }
@@ -182,7 +182,7 @@ didReceiveResponse:(NSURLResponse *)response
  completionHandler:(void (^)(NSURLSessionResponseDisposition disposition))completionHandler {
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
     int responseCode = (int)[httpResponse statusCode];
-    // NSLog(@"%d",responseCode);
+    NSLog(@"%d",responseCode);
     if (responseCode == 200) {
         [session finishTasksAndInvalidate];
     }else{
@@ -213,7 +213,7 @@ didReceiveResponse:(NSURLResponse *)response
               task:(NSURLSessionTask *)task
 didCompleteWithError:(NSError *)error {
     if (error != nil) {
-        NSLog(@"ERROR: %@ %ld", error.debugDescription , error.code);
+        NSLog(@"ERROR: %@ %zd", error.debugDescription , error.code);
         if (error.code == -1202) {
             /**
              * If the error code is -1202, this device needs .crt for SSL(secure) connection.
@@ -284,7 +284,7 @@ didCompleteWithError:(NSError *)error {
             NSString * pluginName = [plugin objectForKey:@"plugin"];
             NSArray * settings = [plugin objectForKey:@"settings"];
             if (settings != nil) {
-                for (NSDictionary * setting in sensors) {
+                for (NSDictionary * setting in settings) {
                     NSString * key = [setting objectForKey:@"setting"];
                     NSObject * value = [setting objectForKey:@"value"];
                     [self setSetting:key value:value packageName:pluginName];
@@ -292,17 +292,17 @@ didCompleteWithError:(NSError *)error {
             }
         }
     }
-
+    
     dispatch_async(dispatch_get_main_queue(), ^{
         
         NSString * url =  [self getStudyURL];
-        NSString * uuid = [AWAREUtils getSystemUUID];
+        NSString * uuid = [self getDeviceId]; //[AWAREUtils getSystemUUID];
         
         bool isExistDeviceId = [self isExistDeviceId:uuid onAwareServer:url];
         if (!isExistDeviceId) {
             [self addNewDeviceToAwareServer:url withDeviceId:uuid];
         }
-
+        
         [self setStudyState:YES];
         
         [NSNotificationCenter.defaultCenter postNotificationName:ACTION_AWARE_UPDATE_STUDY_CONFIG object:nil];
@@ -340,7 +340,7 @@ didCompleteWithError:(NSError *)error {
 
 - (bool) isExistDeviceId:(NSString *)deviceId onAwareServer:(NSString *)url{
     NSString * result = [self getLatestStoredDataInAwareServerWithUrl:url deviceId:deviceId];
-    if([result isEqualToString:@"[]"] ){
+    if([result isEqualToString:@"[]"] || [result isEqualToString:@"\n\n[]"]){
         if (isDebug) NSLog(@"[AWAREStudy] Your device_id (%@) is not stored.", deviceId);
         return NO;
     }else{
@@ -356,7 +356,7 @@ didCompleteWithError:(NSError *)error {
     NSString *post = [NSString stringWithFormat:@"device_id=%@", deviceId];
     // NSLog(@"%@", url);
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-    NSString *postLength = [NSString stringWithFormat:@"%ld", [postData length]];
+    NSString *postLength = [NSString stringWithFormat:@"%zd", [postData length]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:[NSURL URLWithString:url]];
     [request setHTTPMethod:@"POST"];
@@ -422,7 +422,7 @@ didCompleteWithError:(NSError *)error {
     NSString *post = [NSString stringWithFormat:@"device_id=%@&fields=%@", uuid, query];
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    NSString *postLength = [NSString stringWithFormat:@"%ld", [postData length]];
+    NSString *postLength = [NSString stringWithFormat:@"%zd", [postData length]];
     
     NSNumber * unixtime = [AWAREUtils getUnixTimestamp:[NSDate new]];
     url = [NSString stringWithFormat:@"%@?%@", url, unixtime];
@@ -479,7 +479,33 @@ didCompleteWithError:(NSError *)error {
 
 - (BOOL) insertDeviceIdToAwareServerWithURL:(NSString *)url
                                    deviceId:(NSString *)uuid
-                                 deviceName:(NSString *)deviceName{
+                                 deviceName:(NSString *)deviceName {
+    return [self insertDeviceIdToAwareServerWithURL:url
+                                           deviceId:deviceId
+                                         deviceName:deviceName
+                                         completion:nil];
+}
+
+- (BOOL) updateDeviceName:(NSString *)deviceName
+               completion:(void (^)(NSData *data, NSURLResponse *response, NSError *error))completionHandler{
+    [self setDeviceName:deviceName];
+    NSString * deviceId = [self getDeviceId];
+    NSString * url = [self getStudyURL];
+    if ([url isEqualToString:@""]) {
+        return NO;
+    }
+    
+    return [self insertDeviceIdToAwareServerWithURL:url
+                                           deviceId:deviceId
+                                         deviceName:deviceName
+                                         completion:completionHandler];
+}
+
+
+- (BOOL) insertDeviceIdToAwareServerWithURL:(NSString *)url
+                                   deviceId:(NSString *)uuid
+                                 deviceName:(NSString *)deviceName
+                                 completion:(void (^)(NSData *data, NSURLResponse *response, NSError *error))completionHandler{
     
     // preparing for insert device information
     NSNumber * unixtime = [AWAREUtils getUnixTimestamp:[NSDate new]];
@@ -491,7 +517,7 @@ didCompleteWithError:(NSError *)error {
     NSString* release =  [NSString stringWithCString:systemInfo.release  encoding:NSUTF8StringEncoding]; // ok
     // NSString* systemName = [NSString stringWithCString:systemInfo.sysname encoding:NSUTF8StringEncoding];// ok
     NSString* version = [NSString stringWithCString:systemInfo.version encoding:NSUTF8StringEncoding];
-
+    
     NSString *systemVersion = [[UIDevice currentDevice] systemVersion];//ok
     NSString *localizeModel = [[UIDevice currentDevice] localizedModel];//
     NSString *model = [[UIDevice currentDevice] model]; //ok
@@ -531,7 +557,7 @@ didCompleteWithError:(NSError *)error {
     }
     NSString *post = [NSString stringWithFormat:@"data=%@&device_id=%@", jsonString,uuid];
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-    NSString *postLength = [NSString stringWithFormat:@"%ld", [postData length]];
+    NSString *postLength = [NSString stringWithFormat:@"%zd", [postData length]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:[NSURL URLWithString:url]];
     [request setHTTPMethod:@"POST"];
@@ -573,6 +599,9 @@ didCompleteWithError:(NSError *)error {
         [session finishTasksAndInvalidate];
         [session invalidateAndCancel];
         dispatch_semaphore_signal(sem);
+        if ( completionHandler != nil ) {
+            completionHandler(data, response, error);
+        }
     }] resume];
     
     dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
@@ -586,9 +615,17 @@ didCompleteWithError:(NSError *)error {
 ////////////////////////////////////////////////////////////////////////
 
 - (void) setDeviceName:(NSString *) deviceName {
+    [self setDeviceName:deviceName sync:NO completion:nil];
+}
+
+- (void) setDeviceName:(NSString *)deviceName
+                  sync:(BOOL)sync
+            completion:(void (^)(NSData *data, NSURLResponse *response, NSError *error))completionHandler{
+    // Set the given device name into local storage
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setObject:deviceName forKey:KEY_AWARE_DEVICE_NAME];
     [userDefaults synchronize];
+    
 }
 
 - (NSString *) getDeviceName {

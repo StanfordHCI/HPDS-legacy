@@ -41,11 +41,11 @@
                                                               delegate:self
                                                          delegateQueue:nil];
         
-        if (_debug) {
-            NSLog(@"[SyncExecutor:%@] NSURLSession is initalized",sensorName);
-            NSLog(@"[SyncExecutor:%@] NSURLSession identifier = %@",sensorName, sessionConfig.identifier);
-            NSLog(@"[SyncExecutor:%@] NSURLSession container identifier = %@",sensorName, sessionConfig.sharedContainerIdentifier);
-        }
+//        if (_debug) {
+//            NSLog(@"[SyncExecutor:%@] NSURLSession is initalized",sensorName);
+//            NSLog(@"[SyncExecutor:%@] NSURLSession identifier = %@",sensorName, sessionConfig.identifier);
+//            NSLog(@"[SyncExecutor:%@] NSURLSession container identifier = %@",sensorName, sessionConfig.sharedContainerIdentifier);
+//        }
         
     }
     return self;
@@ -75,7 +75,7 @@
     NSData* postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     NSMutableData * mutablePostData = [[NSMutableData alloc] initWithData:postData];
     [mutablePostData appendData:data]; // <-- this data should be JSON format
-    NSString* postLength = [NSString stringWithFormat:@"%ld", [mutablePostData length]];
+    NSString* postLength = [NSString stringWithFormat:@"%tu", [mutablePostData length]];
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] init];
     [request setURL:[NSURL URLWithString:url]];
     [request setHTTPMethod:@"POST"];

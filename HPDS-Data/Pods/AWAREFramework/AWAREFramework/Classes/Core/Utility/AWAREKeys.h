@@ -142,7 +142,6 @@ extern NSString* const SENSOR_PLUGIN_GOOGLE_CAL_PUSH;
 extern NSString* const SENSOR_PLUGIN_GOOGLE_LOGIN;
 extern NSString* const SENSOR_PLUGIN_CAMPUS;
 extern NSString* const SENSOR_PLUGIN_PEDOMETER;
-extern NSString* const SENSOR_PLUGIN_RKSENSOR;                  //ResearchKit sensor - added
 extern NSString* const SENSOR_PLUGIN_WEB_ESM;
 extern NSString* const SENSOR_PLUGIN_BLE_HR;
 extern NSString* const SENSOR_AWARE_DEBUG;
@@ -152,6 +151,7 @@ extern NSString* const SENSOR_PLUGIN_CONTACTS;
 extern NSString* const SENSOR_BASIC_SETTINGS;
 extern NSString* const SENSOR_PLUGIN_CALENDAR;
 extern NSString* const SENSOR_PLUGIN_STUDENTLIFE_AUDIO;
+extern NSString* const SENSOR_PLUGIN_CALENDAR_ESM_SCHEDULER;
 
 extern NSString* const STATUS_SENSOR_PLUGIN_GOOGLE_ACTIVITY_RECOGNITION;
 extern NSString* const STATUS_SENSOR_IOS_ACTIVITY_RECOGNITION;

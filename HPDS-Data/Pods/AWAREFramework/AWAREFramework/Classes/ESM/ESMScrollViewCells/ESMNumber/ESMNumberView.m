@@ -37,7 +37,7 @@
     _freeTextView.layer.cornerRadius = 3.0f;
     _freeTextView.layer.borderColor = [UIColor grayColor].CGColor;
     _freeTextView.selectable = YES;
-    _freeTextView.keyboardType = UIKeyboardTypeNumberPad;
+    _freeTextView.keyboardType = UIKeyboardTypeDecimalPad; //UIKeyboardTypeNumberPad;
     _freeTextView.textAlignment = NSTextAlignmentCenter;
      _freeTextView.delegate = self;
     [_freeTextView setFont:[UIFont systemFontOfSize:23]];
@@ -54,7 +54,13 @@
 ////////////////
 - (void)textViewDidChange:(UITextView *)textView{
     [_freeTextView.font fontWithSize:25];
+    if(textView.text != nil){
+        [NSNotificationCenter.defaultCenter postNotificationName:AWARE_ESM_SELECTION_UPDATE_EVENT
+                                                          object:self
+                                                        userInfo:@{AWARE_ESM_SELECTION_UPDATE_EVENT_DATA:textView.text}];
+    }
 }
+
 
 //////////////////////////
 

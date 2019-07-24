@@ -10,26 +10,24 @@
 
 @implementation ESMAudioView {
     UIButton * audioPlayBtn;
-    UIButton *shutterBtn;
-    UIView * audioLevelView;
+    UIButton * shutterBtn;
+    UIView   * audioLevelView;
     int * maxAudioLevelViewSize;
     NSString * audioFileName;
-    NSTimer * baseTimer;
-    UILabel * timerLabel;
-    UIView * timerBGView;
+    NSTimer  * baseTimer;
+    UILabel  * timerLabel;
+    UIView   * timerBGView;
     int totalTime;
-    NSTimer * levelTimer;
-    
+    NSTimer  * levelTimer;
 }
-
 
 - (instancetype)initWithFrame:(CGRect)frame esm:(EntityESM *)esm viewController:(UIViewController *)viewController{
     self = [super initWithFrame:frame esm:esm viewController:viewController];
     
     if(self != nil){
         [self addAudioElement:esm withFrame:frame];
-        // [_imageView setBackgroundColor:[UIColor grayColor]];
     }
+    
     return self;
 }
 
@@ -43,35 +41,6 @@
     // int widthSpace = 20;
     int previewHeight = 260;
     
-//    UIView * audioBaseLevelView = [[UIView alloc] initWithFrame:CGRectMake(0,0,
-//                                                              10,
-//                                                              10)];
-//    audioBaseLevelView.layer.cornerRadius = audioBaseLevelView.frame.size.width / 2.0;
-//    audioBaseLevelView.center = CGPointMake(self.mainView.center.x, previewHeight/2);
-//    audioBaseLevelView.clipsToBounds = YES;
-//    audioBaseLevelView.backgroundColor = [UIColor whiteColor];
-//    [self.mainView addSubview:audioBaseLevelView];
-    
-
-    
-    /////////////////////////////////////////////////////////////////////////////
-//    int previewHeight = (self.mainView.frame.size.width-(widthSpace*2))/3 * 4;
-//    AVCaptureVideoPreviewLayer *previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:captureSession];
-//    previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-//    previewLayer.frame = CGRectMake(widthSpace,
-//                                    0, //self.mainView.frame.origin.y,
-//                                    self.mainView.frame.size.width-(widthSpace*2),
-//                                    previewHeight);
-//    [self.mainView.layer insertSublayer:previewLayer atIndex:0];
-    
-    ///////////////////////////////////////////////////////////////////////////////
-//    _playerViewController = [[AVPlayerViewController alloc] init];
-//    _playerViewController.view.frame = CGRectMake(0, 0, self.mainView.frame.size.width, 100);
-//    _playerViewController.showsPlaybackControls = YES;
-//    _playerViewController.view.hidden = YES;
-//    _playerViewController.view.contentMode = UIViewContentModeScaleToFill;
-//    [self.mainView addSubview:_playerViewController.view];
-    
     /////////////////////////////////////////////////////////////////////////////
     timerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
     timerLabel.center = CGPointMake(self.mainView.center.x,
@@ -81,7 +50,7 @@
     timerLabel.font = [UIFont fontWithName:timerLabel.font.fontName size:24];
     timerLabel.textColor = [UIColor whiteColor];;
     
-    timerBGView =[[UIView alloc] initWithFrame:timerLabel.frame];
+    timerBGView = [[UIView alloc] initWithFrame:timerLabel.frame];
     [timerBGView setBackgroundColor:[UIColor grayColor]];
     timerBGView.alpha = 0.5;//
     timerBGView.layer.cornerRadius = 2.0f;
@@ -125,9 +94,6 @@
     [self.mainView addSubview:audioPlayBtn];
 
     /////////////////////////////////////////////////////////
-    
-    
-
     
     [self startAudioSession];
     
@@ -177,10 +143,10 @@
         shutterBtn.tag = 2;
         // _playerViewController.view.hidden = NO;
         timerLabel.text = @"00:00";
-        if(baseTimer != nil)[baseTimer invalidate];
+        if(baseTimer  != nil)[baseTimer invalidate];
         if(levelTimer != nil)[levelTimer invalidate];
-        timerLabel.hidden = YES;
-        timerBGView.hidden = YES;
+        timerLabel.hidden   = YES;
+        timerBGView.hidden  = YES;
         audioPlayBtn.hidden = NO;
         [self stopRecording];
         [self performSelector:@selector(playStopSound) withObject:nil afterDelay:0.5f];
@@ -223,7 +189,7 @@
 - (NSString *)getUserAnswer{
     NSData *musicData = [self getAudioData];
     if (musicData != nil) {
-        NSString *base64Encoded = [musicData base64EncodedStringWithOptions:0];
+        NSString * base64Encoded = [musicData base64EncodedStringWithOptions:0];
         return base64Encoded;
     }else{
         return @"";
@@ -232,11 +198,11 @@
 
 
 - (NSData *) getAudioData{
-    NSArray *searchPaths =NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentPath_ = [searchPaths objectAtIndex: 0];
-    NSString *pathToSave = [documentPath_ stringByAppendingPathComponent:audioFileName];
-    NSURL *url = [NSURL fileURLWithPath:pathToSave];//FILEPATH];
-    NSData *musicData = [NSData dataWithContentsOfURL:url];
+    NSArray  * searchPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString * documentPath_ = [searchPaths objectAtIndex: 0];
+    NSString * pathToSave  = [documentPath_ stringByAppendingPathComponent:audioFileName];
+    NSURL    * url = [NSURL fileURLWithPath:pathToSave];//FILEPATH];
+    NSData   * musicData = [NSData dataWithContentsOfURL:url];
     return musicData;
 }
 
@@ -272,17 +238,17 @@
     
     [settings setValue: [NSNumber numberWithInt:kAudioFormatLinearPCM] forKey:AVFormatIDKey];
     [settings setValue: [NSNumber numberWithFloat:8000.0] forKey:AVSampleRateKey];
-    [settings setValue: [NSNumber numberWithInt: 1] forKey:AVNumberOfChannelsKey];
-    [settings setValue: [NSNumber numberWithInt:16] forKey:AVLinearPCMBitDepthKey];
+    [settings setValue: [NSNumber numberWithInt: 1]  forKey:AVNumberOfChannelsKey];
+    [settings setValue: [NSNumber numberWithInt:16]  forKey:AVLinearPCMBitDepthKey];
     [settings setValue: [NSNumber numberWithBool:NO] forKey:AVLinearPCMIsBigEndianKey];
     [settings setValue: [NSNumber numberWithBool:NO] forKey:AVLinearPCMIsFloatKey];
-    [settings setValue:  [NSNumber numberWithInt: AVAudioQualityMax] forKey:AVEncoderAudioQualityKey];
+    [settings setValue: [NSNumber numberWithInt: AVAudioQualityMax] forKey:AVEncoderAudioQualityKey];
     
-    NSArray *searchPaths =NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentPath_ = [searchPaths objectAtIndex: 0];
-    NSString *pathToSave = [documentPath_ stringByAppendingPathComponent:audioFileName];
+    NSArray  * searchPaths   = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString * documentPath_ = [searchPaths objectAtIndex: 0];
+    NSString * pathToSave    = [documentPath_ stringByAppendingPathComponent:audioFileName];
     // File URL
-    NSURL *url = [NSURL fileURLWithPath:pathToSave];//FILEPATH];
+    NSURL * url = [NSURL fileURLWithPath:pathToSave];//FILEPATH];
     
     NSFileManager *manager = [[NSFileManager alloc] init];
     if ([manager fileExistsAtPath:pathToSave]) {
@@ -346,14 +312,13 @@
     return YES;
 }
 
-- (void)levelTimerCallback:(NSTimer *)timer {
+- (void) levelTimerCallback:(NSTimer *)timer {
     [_recorder updateMeters];
     // here is the DB!
     // the value is -160 - 0
     // https://developer.apple.com/documentation/avfoundation/avaudioplayer/1388509-peakpowerforchannel?changes=latest_minor&language=objc
     // float peakDecebels =  [_recorder peakPowerForChannel:0];
     float averagePower = ([_recorder averagePowerForChannel:0] * -1 );
-    // NSLog(@"%f",averagePower);
     // audioLevelView.alpha = averagePower;
     audioLevelView.layer.borderColor = [UIColor darkGrayColor].CGColor;
     audioLevelView.layer.borderWidth = averagePower;
@@ -366,7 +331,7 @@
     [_recorder stop];
 }
 
--(void)play {
+-(void) play {
     NSArray *searchPaths =NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentPath_ = [searchPaths objectAtIndex: 0];
     NSString *pathToSave = [documentPath_ stringByAppendingPathComponent:audioFileName];
@@ -399,19 +364,18 @@
     [_player stop];
 }
 
+/**
+ Resume from a paused recording
+ */
 - (void) continueRecording {
-    // resume from a paused recording
     [_recorder record];
 }
 
+/**
+ Pause an ongoing recording
+ */
 - (void) pauseRecording {
-    // pause an ongoing recording
     [_recorder pause];
 }
-
-
-///////////////////////////////////////////////
-
-
 
 @end

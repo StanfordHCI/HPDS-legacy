@@ -7,11 +7,19 @@
 //
 
 #import "AWARESensor.h"
-// #import <HealthKit/HealthKit.h>
+#import <HealthKit/HealthKit.h>
 
 @interface AWAREHealthKitQuantity : AWARESensor
 
+NS_ASSUME_NONNULL_BEGIN
 
-- (void) saveQuantityData:(NSArray *) data;
+- (instancetype)initWithAwareStudy:(AWAREStudy * _Nullable)study
+                            dbType:(AwareDBType)dbType
+                        sensorName:(NSString * _Nullable)sensorName
+                        entityName:(NSString * _Nullable)entityName;
+
+- (void)saveQuantityData:(NSArray <HKQuantitySample *> * _Nonnull)data;
+
+NS_ASSUME_NONNULL_END
 
 @end

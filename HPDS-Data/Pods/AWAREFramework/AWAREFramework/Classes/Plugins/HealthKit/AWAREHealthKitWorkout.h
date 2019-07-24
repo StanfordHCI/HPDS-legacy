@@ -7,10 +7,14 @@
 //
 
 #import "AWARESensor.h"
-// #import <HealthKit/HealthKit.h>
+#import <HealthKit/HealthKit.h>
 
 @interface AWAREHealthKitWorkout : AWARESensor
 
+NS_ASSUME_NONNULL_BEGIN
+
 - (void) saveWorkoutData:(NSArray *)data;
+
+NS_ASSUME_NONNULL_END
 
 @end

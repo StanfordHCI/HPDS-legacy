@@ -11,25 +11,35 @@
 
 @interface ESMScheduleManager : NSObject
 
-+ (ESMScheduleManager *) sharedESMScheduleManager;
++ (ESMScheduleManager * _Nonnull) sharedESMScheduleManager;
 
 @property BOOL debug;
 
 typedef void (^NotificationRemoveCompleteHandler)(void);
 
-- (BOOL) addSchedule:(ESMSchedule *)schedule;
-- (BOOL) addSchedule:(ESMSchedule *)schedule withNotification:(BOOL)notification;
-- (BOOL) deleteScheduleWithId:(NSString *)scheduleId;
+- (BOOL) setScheduleByConfig:(NSArray <NSDictionary * > * _Nonnull) config;
+- (BOOL) addSchedule:(ESMSchedule * _Nonnull)schedule;
+- (BOOL) addSchedule:(ESMSchedule * _Nonnull)schedule withNotification:(BOOL)notification;
+- (BOOL) deleteScheduleWithId:(NSString * _Nonnull)scheduleId;
 - (BOOL) deleteAllSchedules;
 - (BOOL) deleteAllSchedulesWithNotification:(BOOL)notification;
-- (NSArray *) getValidSchedules;
-- (NSArray *) getValidSchedulesWithDatetime:(NSDate *)datetime;
+- (NSArray * _Nonnull) getValidSchedules;
+- (NSArray * _Nonnull) getValidSchedulesWithDatetime:(NSDate * _Nonnull)datetime;
 
 - (BOOL) removeAllSchedulesFromDB;
 - (BOOL) removeAllESMHitoryFromDB;
 
 - (void) removeAllNotifications;
-- (void) removeESMNotificationsWithHandler:(NotificationRemoveCompleteHandler)handler;
+- (void) removeESMNotificationsWithHandler:(NotificationRemoveCompleteHandler _Nullable)handler;
 - (void) refreshESMNotifications;
+
+- (BOOL) saveESMAnswerWithTimestamp:(NSNumber * _Nonnull) timestamp
+                           deviceId:(NSString * _Nonnull) deviceId
+                            esmJson:(NSString * _Nonnull) esmJson
+                         esmTrigger:(NSString * _Nonnull) esmTrigger
+             esmExpirationThreshold:(NSNumber * _Nonnull) esmExpirationThreshold
+             esmUserAnswerTimestamp:(NSNumber * _Nonnull) esmUserAnswerTimestamp
+                      esmUserAnswer:(NSString * _Nonnull) esmUserAnswer
+                          esmStatus:(NSNumber * _Nonnull) esmStatus;
 
 @end

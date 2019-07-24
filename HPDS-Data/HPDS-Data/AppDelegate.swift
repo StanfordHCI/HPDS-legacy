@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        self.core = AWARECore.shared()!                         //Initialize AWARE Core
+        self.core = AWARECore.shared()                         //Initialize AWARE Core
         self.study = AWAREStudy.shared()                        //Initialize AWARE Study
         self.study.setDebug(false)                               //Debugging settings - turn off when running in production
         self.manager = AWARESensorManager.shared()              //Initialize AWARE Sensor Manager
@@ -46,7 +46,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Declare, initialize AWARE sensors
         let healthkit = AWAREHealthKit(awareStudy: self.study)
         let activity = IOSActivityRecognition(awareStudy: self.study)
-
+        
+        //initialize notification capabilities
+        registerForPushNotifications()
+        
+        //notification content details
+        let content = UNMutableNotificationContent()
+        content.title = "Weekly Staff Meeting"
+        content.body = "Every Tuesday at 2pm"
+        
+        //notification sending details
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (30), repeats: false)
+        let uuidString = UUID().uuidString
+        let request = UNNotificationRequest(identifier: uuidString,
+                                            content: content, trigger: trigger)
+        
+        // Schedule the request with the system.
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.add(request) { (error) in
+            if error != nil {
+                print("error occurred while sending notification request")
+            }
+        }
+        
         //Setup background fetching interval
         UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplication.backgroundFetchIntervalMinimum)
         
@@ -64,8 +86,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.manager?.startAllSensors()                         //Start sensors running
         })
         
-        registerForPushNotifications()
-
         print("Setup complete.")
 
         return true
@@ -85,7 +105,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Start sensors operating in the background
         self.manager?.startAllSensors()
-        self.manager?.syncAllSensors()
 
     }
     
@@ -104,7 +123,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         self.manager?.startAllSensors()
-        self.manager?.syncAllSensors()
     }
     
     func registerForPushNotifications() {

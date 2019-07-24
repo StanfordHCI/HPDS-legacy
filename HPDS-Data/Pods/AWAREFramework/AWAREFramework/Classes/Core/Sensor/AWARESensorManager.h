@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <SVProgressHUD/SVProgressHUD.h>
 #import <AudioToolbox/AudioServices.h>
 
 #import "AWARESensor.h"
@@ -15,20 +14,22 @@
 
 @interface AWARESensorManager : NSObject <UIAlertViewDelegate>
 
-+ (AWARESensorManager *) sharedSensorManager;
++ (AWARESensorManager * _Nonnull) sharedSensorManager;
 
 /** Initializer */
+NS_ASSUME_NONNULL_BEGIN
 
-- (void) addSensor:(AWARESensor *) sensor;
-- (void) addSensors:(NSArray *)sensors;
-- (BOOL) addSensorsWithStudy:(AWAREStudy *) study;
-- (BOOL) addSensorsWithStudy:(AWAREStudy *) study dbType:(AwareDBType)dbType;
-- (BOOL) isExist :(NSString *) key;
-- (NSArray *) getAllSensors;
+- (void) addSensor:(AWARESensor *  _Nonnull) sensor;
+- (void) addSensors:(NSArray<AWARESensor *> * _Nonnull)sensors;
+- (BOOL) addSensorsWithStudy:(AWAREStudy * _Nonnull) study;
+- (BOOL) addSensorsWithStudy:(AWAREStudy * _Nonnull) study dbType:(AwareDBType)dbType;
+- (BOOL) isExist :(NSString * _Nonnull) sensorName;
+- (NSArray<AWARESensor *> * _Nonnull) getAllSensors;
+- (AWARESensor * _Nullable ) getSensor:(NSString * _Nonnull) sensorName;
 
 ///////////////////////////////////
-- (void) setSensorEventHandlerToAllSensors:(SensorEventHandler)handler;
-- (void) setSyncProcessCallbackToAllSensorStorages:(SyncProcessCallBack)callback;
+- (void) setSensorEventHandlerToAllSensors:(SensorEventHandler _Nonnull)handler;
+- (void) setSyncProcessCallbackToAllSensorStorages:(SyncProcessCallBack _Nonnull)callback;
 - (void) setDebugToAllSensors:(bool)state;
 - (void) setDebugToAllStorage:(bool)state;
 
@@ -52,10 +53,12 @@
 ////////////////////////////
 
 // get latest sensor data with sensor name
-- (NSString *) getLatestSensorValue:(NSString *)sensorName;
-- (NSDictionary *) getLatestSensorData:(NSString *) sensorName;
+- (NSString * _Nullable) getLatestSensorValue:(NSString * _Nonnull) sensorName;
+- (NSDictionary * _Nullable) getLatestSensorData:(NSString * _Nonnull) sensorName;
 
 - (void) resetAllMarkerPositionsInDB;
 - (void) removeAllFilesFromDocumentRoot;
+
+NS_ASSUME_NONNULL_END
 
 @end

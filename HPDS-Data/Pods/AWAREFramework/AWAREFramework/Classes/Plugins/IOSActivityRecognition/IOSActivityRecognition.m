@@ -175,7 +175,7 @@ NSString * const AWARE_PREFERENCES_LIVE_MODE_IOS_ACTIVITY_RECOGNITION = @"status
     }else if(mode == IOSActivityRecognitionModeDisposable){
         /** motion activity */
         if([CMMotionActivityManager isActivityAvailable]){
-            NSLog(@"Start iOS Activity Recognition Plugin as disposable mode (limit=%d)",limit);
+            // NSLog(@"Start iOS Activity Recognition Plugin as disposable mode (limit=%d)",limit);
             motionActivityManager = [CMMotionActivityManager new];
             [motionActivityManager startActivityUpdatesToQueue:[NSOperationQueue new]
                                                    withHandler:^(CMMotionActivity *activity) {
@@ -252,7 +252,7 @@ NSString * const AWARE_PREFERENCES_LIVE_MODE_IOS_ACTIVITY_RECOGNITION = @"status
                     self->latestActivity = activity;
                 }
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    NSLog(@"[%@] %ld records", [self getSensorName], array.count);
+                    // NSLog(@"[%@] %ld records", [self getSensorName], array.count);
                     // [self saveDataWithArray:array];
                     [self.storage saveDataWithArray:array buffer:NO saveInMainThread:YES];
                     if (self->latestActivity != nil) {
@@ -274,7 +274,7 @@ NSString * const AWARE_PREFERENCES_LIVE_MODE_IOS_ACTIVITY_RECOGNITION = @"status
                 
                 if ([self isDebug]) {
                     NSInteger count = activities.count;
-                    NSString * message = [NSString stringWithFormat:@"iOS Activity Recognition Sensor is called by a timer (%ld activites)" ,count];
+                    NSString * message = [NSString stringWithFormat:@"iOS Activity Recognition Sensor is called by a timer (%zd activites)" ,count];
                     NSLog(@"%@",message);
                 }
             }
@@ -362,7 +362,7 @@ NSString * const AWARE_PREFERENCES_LIVE_MODE_IOS_ACTIVITY_RECOGNITION = @"status
     }
     
     if ([self isDebug]) {
-        NSLog(@"[%@] %@ %ld", motionActivity.startDate, activitiesStr, motionActivity.confidence);
+        NSLog(@"[%@] %@ %zd", motionActivity.startDate, activitiesStr, motionActivity.confidence);
     }
     
     NSNumber * unixtime = [AWAREUtils getUnixTimestamp:motionActivity.startDate];

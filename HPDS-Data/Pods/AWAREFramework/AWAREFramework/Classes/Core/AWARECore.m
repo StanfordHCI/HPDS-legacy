@@ -18,9 +18,11 @@
 
 static AWARECore * sharedCore;
 
-@implementation AWARECore
+@implementation AWARECore{
+    LocationAPIAuthorizationCompletionHandler completionHandler;
+}
 
-+ (AWARECore *) sharedCore{
++ (AWARECore * _Nonnull) sharedCore{
     @synchronized(self){
         if (!sharedCore){
             sharedCore = [[AWARECore alloc] init];
@@ -61,6 +63,9 @@ static AWARECore * sharedCore;
             [study setDBType:AwareDBTypeSQLite];
             [userDefaults setBool:YES forKey:@"aware_inited"];
         }
+        
+        _sharedLocationManager = [[CLLocationManager alloc] init];
+        _sharedLocationManager.delegate = self;
     }
     return self;
 }
@@ -145,8 +150,8 @@ static AWARECore * sharedCore;
 
 - (void)ubiquitousDataDidChange:(NSNotification *)notification
 {
-    NSDictionary *dict = [notification userInfo];
-    NSLog(@"[iCloud] Update : %@", dict);
+//     NSDictionary *dict = [notification userInfo];
+//    NSLog(@"[iCloud] Update : %@", dict);
 //    NSArray *keys = [dict objectForKey:NSUbiquitousKeyValueStoreChangedKeysKey];
 //    NSUbiquitousKeyValueStore *ukvs = [NSUbiquitousKeyValueStore defaultStore];
 //    for (NSString *key in keys) {
@@ -189,13 +194,12 @@ void exceptionHandler(NSException *exception) {
  * And also, this sensing interval is the most low level.
  */
 - (void) startBaseLocationSensor {
-
-    NSLog(@"called startBaseLocationSensor");
-
-    if ( _sharedLocationManager == nil) {
-        // locatino sensor
-        _sharedLocationManager  = [[CLLocationManager alloc] init];
-        _sharedLocationManager.delegate = self;
+    CLAuthorizationStatus state = [CLLocationManager authorizationStatus];
+    if(state == kCLAuthorizationStatusAuthorizedAlways){
+        if (_sharedLocationManager == nil) {
+            _sharedLocationManager = [[CLLocationManager alloc] init];
+            _sharedLocationManager.delegate = self;
+        }
         _sharedLocationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;
         _sharedLocationManager.pausesLocationUpdatesAutomatically = NO;
         _sharedLocationManager.activityType = CLActivityTypeOther;
@@ -204,11 +208,6 @@ void exceptionHandler(NSException *exception) {
             /// After iOS 9.0, we have to set "YES" for background sensing.
             _sharedLocationManager.allowsBackgroundLocationUpdates = YES;
         }
-    }
-
-    CLAuthorizationStatus state = [CLLocationManager authorizationStatus];
-    if(state == kCLAuthorizationStatusAuthorizedAlways){
-        NSLog(@"Start Background Sensing");
         [_sharedLocationManager startUpdatingLocation];
         [_sharedLocationManager startMonitoringSignificantLocationChanges];
     }else{
@@ -271,9 +270,23 @@ void exceptionHandler(NSException *exception) {
                           }];
 }
 
+
 - (void) requestPermissionForBackgroundSensing{
-    if (_sharedLocationManager != nil){
-        [_sharedLocationManager requestAlwaysAuthorization];
+    [self requestPermissionForBackgroundSensingWithCompletion:nil];
+}
+                                                              
+- (void) requestPermissionForBackgroundSensingWithCompletion:(LocationAPIAuthorizationCompletionHandler)completionHandler{
+    self->completionHandler = completionHandler;
+    CLAuthorizationStatus state = [CLLocationManager authorizationStatus];
+    if(state != kCLAuthorizationStatusAuthorizedAlways){
+        if (_sharedLocationManager != nil){
+            [_sharedLocationManager requestAlwaysAuthorization];
+        }
+    }else{
+        if (self->completionHandler != nil) {
+            self->completionHandler();
+        }
+        self->completionHandler = nil;
     }
 }
 
@@ -281,6 +294,7 @@ void exceptionHandler(NSException *exception) {
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
+    
     if(status == kCLAuthorizationStatusNotDetermined ){
         ////////////////// kCLAuthorizationStatusRestricted ///////////////////////
     }else if (status == kCLAuthorizationStatusRestricted ){
@@ -292,6 +306,10 @@ void exceptionHandler(NSException *exception) {
         if(_isNeedBackgroundSensing){
             [self startBaseLocationSensor];
         }
+        if (self->completionHandler) {
+            self->completionHandler();
+            self->completionHandler = nil;
+        }
     }else if (status == kCLAuthorizationStatusAuthorizedWhenInUse){
         //////////////////// Unknown ///////////////////////////////
     }else {
@@ -299,26 +317,6 @@ void exceptionHandler(NSException *exception) {
     }
 }
 
-
-
-
-
-////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////
-
-
-
-/**
- * Start data sync with all sensors in the background when the device is started a battery charging.
- */
-//- (void) changedBatteryState:(id) sender {
-
-//}
-
-
-
-////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////
 
 - (void) checkCompliance {
     [self checkComplianceWithViewController:nil];
@@ -352,9 +350,7 @@ void exceptionHandler(NSException *exception) {
     }
 }
 
-//////////////////////////////////////////////////////////////////
-
-- (bool) checkLocationSensorWithViewController:(UIViewController *) viewController showDetail:(BOOL)detail{
+- (bool)checkLocationSensorWithViewController:(UIViewController *) viewController showDetail:(BOOL)detail{
     bool state = NO;
     CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
     if (status == kCLAuthorizationStatusAuthorizedWhenInUse || status == kCLAuthorizationStatusDenied || status == kCLAuthorizationStatusRestricted) {
@@ -375,9 +371,9 @@ void exceptionHandler(NSException *exception) {
                                                                   handler:^(UIAlertAction * action) {
                                                                       // Send the user to the Settings for this app
                                                                       NSURL *settingsURL = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
-                                                                      if([AWAREUtils getCurrentOSVersionAsFloat] < 10.0f ){
-                                                                          settingsURL = [NSURL URLWithString:@"prefs:root=LOCATION_SERVICES"];
-                                                                      }
+                                                                      // if([AWAREUtils getCurrentOSVersionAsFloat] < 10.0f ){
+                                                                      //    settingsURL = [NSURL URLWithString:@"prefs:root=LOCATION_SERVICES"];
+                                                                      // }
                                                                       // [[UIApplication sharedApplication] openURL:settingsURL];
                                                                       [[UIApplication sharedApplication] openURL:settingsURL options:@{} completionHandler:^(BOOL success) {
                                                                           
@@ -393,17 +389,6 @@ void exceptionHandler(NSException *exception) {
             if (detail) {
                 [viewController presentViewController:alert animated:YES completion:nil];
             }
-        }else{
-            /*
-            [AWAREUtils sendLocalNotificationForMessage:message
-                                                  title:title
-                                              soundFlag:NO
-                                               category:nil
-                                               fireDate:[NSDate new]
-                                         repeatInterval:0
-                                               userInfo:nil
-                                        iconBadgeNumber:1];
-             */
         }
         
 //        DebugTypeUnknown = 0, DebugTypeInfo = 1, DebugTypeError = 2, DebugTypeWarn = 3, DebugTypeCrash = 4
@@ -444,9 +429,9 @@ void exceptionHandler(NSException *exception) {
                                                                   handler:^(UIAlertAction * action) {
                                                                       // Send the user to the Settings for this app
                                                                       NSURL *settingsURL = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
-                                                                      if([AWAREUtils getCurrentOSVersionAsFloat] < 10.0f ){
-                                                                          settingsURL = [NSURL URLWithString:@"prefs:root=General&path=AUTO_CONTENT_DOWNLOAD"];
-                                                                      }
+                                                                      // if([AWAREUtils getCurrentOSVersionAsFloat] < 10.0f ){
+                                                                      //    settingsURL = [NSURL URLWithString:@"prefs:root=General&path=AUTO_CONTENT_DOWNLOAD"];
+                                                                      // }
                                                                       [[UIApplication sharedApplication] openURL:settingsURL options:@{} completionHandler:^(BOOL success) {
                                                                           
                                                                       }];
@@ -508,9 +493,9 @@ void exceptionHandler(NSException *exception) {
                                                                           handler:^(UIAlertAction * action) {
                                                                               // Send the user to the Settings for this app
                                                                               NSURL *settingsURL = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
-                                                                              if([AWAREUtils getCurrentOSVersionAsFloat] < 10.0f ){
-                                                                                  settingsURL = [NSURL URLWithString:@"prefs:root=Notifications"];
-                                                                              }
+                                                                              // if([AWAREUtils getCurrentOSVersionAsFloat] < 10.0f ){
+                                                                              //    settingsURL = [NSURL URLWithString:@"prefs:root=Notifications"];
+                                                                              // }
                                                                               [[UIApplication sharedApplication] openURL:settingsURL options:@{} completionHandler:^(BOOL success) {
                                                                                   
                                                                               }];
@@ -535,6 +520,9 @@ void exceptionHandler(NSException *exception) {
                 [debugSensor startSyncDB];
                 break;
             }
+            case UNAuthorizationStatusProvisional:
+                
+                break;
         }
 //        switch (settings.lockScreenSetting) {
 //            case UNNotificationSettingEnabled:
@@ -560,9 +548,9 @@ void exceptionHandler(NSException *exception) {
         int GiB = 1024*1024*1024;
         float free = [[dictionary objectForKey: NSFileSystemFreeSize] floatValue]/GiB;
         float total = [[dictionary objectForKey: NSFileSystemSize] floatValue]/GiB;
-        NSLog(@"Used: %.3f", total-free);
-        NSLog(@"Space: %.3f", free);
-        NSLog(@"Total: %.3f", total);
+//        NSLog(@"Used: %.3f", total-free);
+//        NSLog(@"Space: %.3f", free);
+//        NSLog(@"Total: %.3f", total);
         float percentage = free/total * 100.0f;
         NSString * event = [NSString stringWithFormat:@"[compliance] TOTAL:%.3fGB, USED:%.3fGB, FREE:%.3fGB", total, total-free, free];
         Debug * debugSensor = [[Debug alloc] initWithAwareStudy:[AWAREStudy sharedStudy] dbType:AwareDBTypeJSON];
@@ -610,9 +598,9 @@ void exceptionHandler(NSException *exception) {
                                                                           NSLog(@"%@", UIApplicationOpenSettingsURLString);
                                                                           // settingsURL = [NSURL URLWithString:@"prefs:"];
                                                                           
-                                                                          if([AWAREUtils getCurrentOSVersionAsFloat] < 10.0f ){
-                                                                              settingsURL = [NSURL URLWithString:@"prefs:root=BATTERY_USAGE"];
-                                                                          }
+                                                                          // if([AWAREUtils getCurrentOSVersionAsFloat] < 10.0f ){
+                                                                          //    settingsURL = [NSURL URLWithString:@"prefs:root=BATTERY_USAGE"];
+                                                                          // }
                                                                           [[UIApplication sharedApplication] openURL:settingsURL options:@{} completionHandler:^(BOOL success) {
                                                                               
                                                                           }];
@@ -664,9 +652,9 @@ void exceptionHandler(NSException *exception) {
                                                                   handler:^(UIAlertAction * action) {
 //                                                                       Send the user to the Settings for this app
                                                                       NSURL *settingsURL = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
-                                                                      if([AWAREUtils getCurrentOSVersionAsFloat] < 10.0f ){
-                                                                          settingsURL = [NSURL URLWithString:@"prefs:root=WIFI"];
-                                                                      }
+                                                                      // if([AWAREUtils getCurrentOSVersionAsFloat] < 10.0f ){
+                                                                      //    settingsURL = [NSURL URLWithString:@"prefs:root=WIFI"];
+                                                                      // }
                                                                       [[UIApplication sharedApplication] openURL:settingsURL options:@{} completionHandler:^(BOOL success) {
                                                                           
                                                                       }];
@@ -686,7 +674,6 @@ void exceptionHandler(NSException *exception) {
         }else{
             // [AWAREUtils sendLocalNotificationForMessage:@"Please turn on WiFi! AWARE client needs WiFi for data uploading." soundFlag:NO];
         }
-        
         
         Debug * debugSensor = [[Debug alloc] initWithAwareStudy:[AWAREStudy sharedStudy] dbType:AwareDBTypeJSON];
         [debugSensor saveDebugEventWithText:@"[compliance] WiFi is OFF" type:DebugTypeWarn label:@""];

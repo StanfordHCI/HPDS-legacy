@@ -134,8 +134,7 @@ NSString* const SENSOR_PLUGIN_DEVICE_USAGE    = @"plugin_device_usage";
 NSString* const SENSOR_PLUGIN_NTPTIME         = @"plugin_ntptime";
 NSString* const SENSOR_PLUGIN_SCHEDULER       = @"scheduler";
 NSString* const SENSOR_PLUGIN_CAMPUS          = @"plugin_cmu_esm";
-NSString* const SENSOR_PLUGIN_PEDOMETER       = @"plugin_pedometer";
-NSString* const SENSOR_PLUGIN_RKSENSOR        = @"plugin_rksensor";                     //ResearchKit sensor
+NSString* const SENSOR_PLUGIN_PEDOMETER       = @"plugin_ios_pedometer";
 NSString* const SENSOR_PLUGIN_WEB_ESM         = @"plugin_web_esm";
 NSString* const SENSOR_PLUGIN_BLE_HEARTRATE   = @"plugin_ble_heartrate";
 NSString* const SENSOR_AWARE_DEBUG            = @"aware_debug";
@@ -147,6 +146,8 @@ NSString* const SENSOR_PLUGIN_STUDENTLIFE_AUDIO  = @"plugin_studentlife_audio";
 
 NSString* const SENSOR_PLUGIN_BLE_HR          = @"plugin_ble_heartrate";
 NSString* const SENSOR_PLUGIN_FITBIT          = @"plugin_fitbit";
+
+NSString* const SENSOR_PLUGIN_CALENDAR_ESM_SCHEDULER = @"plugin_calendar_esm_scheduler";
 
 NSString* const SENSOR_PLUGIN_MSBAND_SENSORS_CALORIES      = @"plugin_msband_sensors_calories";
 NSString* const SENSOR_PLUGIN_MSBAND_SENSORS_DEVICECONTACT = @"plugin_msband_sensors_devicecontact";
@@ -179,7 +180,7 @@ NSString* const STATUS_SENSOR_PLUGIN_GOOGLE_CAL_PULL             = @"status_plug
 NSString* const STATUS_SENSOR_PLUGIN_GOOGLE_CAL_PUSH             = @"status_plugin_balancedcampusjournal";
 NSString* const STATUS_SENSOR_PLUGIN_GOOGLE_LOGIN                = @"status_plugin_google_login";
 NSString* const STATUS_SENSOR_PLUGIN_CAMPUS                      = @"status_plugin_cmu_esm";
-NSString* const STATUS_SENSOR_PLUGIN_PEDOMETER       = @"status_plugin_pedometer";
+NSString* const STATUS_SENSOR_PLUGIN_PEDOMETER       = @"status_plugin_ios_pedometer";
 NSString* const STATUS_SENSOR_PLUGIN_WEB_ESM         = @"status_plugin_web_esm";
 NSString* const STATUS_SENSOR_PLUGIN_BLE_HR          = @"status_plugin_ble_heartrate";
 NSString* const STATUS_SENSOR_AWARE_DEBUG            = @"status_aware_debug";

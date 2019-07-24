@@ -25,7 +25,7 @@ def activitiesAnalysis(df):
 
 # analyze healthkit quantity data from AWARE server SQL database.
 def healthQuanAnalysis(df):
-    hdf = df.groupby(["type", "device_id"])
+    hdf = df.groupby(["device_id", "type"])
     # displays the entries of each HealthKit type grouped by type
     for key, item in hdf:
         print(hdf.get_group(key), "\n\n")
@@ -55,7 +55,7 @@ if __name__ == "__main__":
                                         password, database_name, "health_kit_quantity")
     # healcatdf = gen_df_from_remote_SQL(hostname, username,
     # password, database_name, "health_kit_category")
-    qualdf = read_csv_data('yah yeet_July 8, 2019_16.24.csv')
+    # qualdf = read_csv_data('yah yeet_July 8, 2019_16.24.csv')
 
     # qualtricsAnalysis(qualdf)
     # activitiesAnalysis(actdf)

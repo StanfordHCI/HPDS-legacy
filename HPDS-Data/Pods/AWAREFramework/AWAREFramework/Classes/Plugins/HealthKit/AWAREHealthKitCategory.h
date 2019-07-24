@@ -7,10 +7,19 @@
 //
 
 #import "AWARESensor.h"
-// #import <HealthKit/HealthKit.h>
+#import <HealthKit/HealthKit.h>
 
 @interface AWAREHealthKitCategory : AWARESensor
 
-- (void) saveCategoryData:(NSArray *) data;
+NS_ASSUME_NONNULL_BEGIN
+
+- (instancetype)initWithAwareStudy:(AWAREStudy * _Nullable)study
+                            dbType:(AwareDBType)dbType
+                        sensorName:(NSString * _Nullable)sensorName
+                        entityName:(NSString * _Nullable)entityName;
+
+- (void)saveCategoryData:(NSArray <HKCategorySample *> * _Nonnull)data;
+
+NS_ASSUME_NONNULL_END
 
 @end

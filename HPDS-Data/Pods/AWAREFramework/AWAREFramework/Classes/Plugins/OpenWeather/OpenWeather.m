@@ -7,12 +7,12 @@
 //
 
 #import "OpenWeather.h"
-#import "AWAREKeys.h"
 #import "EntityOpenWeather.h"
-#import "AWAREDelegate.h"
 
+#import "AWAREKeys.h"
+#import "AWARECore.h"
 
-NSString * const AWARE_PREFERENCES_STATUS_OPENWEATHER    = @"status_plugin_openweather_frequency";
+NSString * const AWARE_PREFERENCES_STATUS_OPENWEATHER    = @"status_plugin_openweather";
 NSString * const AWARE_PREFERENCES_OPENWEATHER_FREQUENCY = @"plugin_openweather_frequency";
 NSString * const AWARE_PREFERENCES_OPENWEATHER_API_KEY   = @"api_key_plugin_openweather";
 
@@ -336,6 +336,11 @@ didReceiveResponse:(NSURLResponse *)response
             
             [self.storage saveDataWithDictionary:dict buffer:NO saveInMainThread:YES];
             [self setLatestData:dict];
+            [self setLatestValue:[NSString stringWithFormat:@"Temperature: %@ (Max: %@, Min: %@), Weather: %@",
+                                  [self getTemp],
+                                  [self getTempMax],
+                                  [self getTempMin],
+                                  [self getWeather]]];
             
             SensorEventHandler handler = [self getSensorEventHandler];
             if (handler!=nil) {
