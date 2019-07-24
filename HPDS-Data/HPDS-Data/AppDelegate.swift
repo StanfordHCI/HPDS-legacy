@@ -52,11 +52,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //notification content details
         let content = UNMutableNotificationContent()
-        content.title = "Weekly Staff Meeting"
-        content.body = "Every Tuesday at 2pm"
+        content.title = "ESM Survey"
+        content.body = "Time for a survey! :)"
         
-        //notification sending details
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (30), repeats: false)
+        //notification sending details: change interval between notifications at timeInterval (in seconds)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (60), repeats: false)
         let uuidString = UUID().uuidString
         let request = UNNotificationRequest(identifier: uuidString,
                                             content: content, trigger: trigger)
@@ -81,8 +81,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.study?.setStudyURL(studyurl)
         
         self.study?.join(withURL: studyurl, completion: { (settings, studyState, error) in
-            self.manager?.createDBTablesOnAwareServer()             //Initialize database for sensors
             self.manager?.addSensors(with: self.study)              //Add sensors to study
+            self.manager?.createDBTablesOnAwareServer()             //Initialize database for sensors
             self.manager?.startAllSensors()                         //Start sensors running
         })
         
@@ -110,7 +110,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-        self.manager?.syncAllSensors()
 
     }
     
@@ -123,6 +122,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         self.manager?.startAllSensors()
+        self.manager?.syncAllSensors()
     }
     
     func registerForPushNotifications() {

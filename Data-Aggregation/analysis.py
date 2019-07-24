@@ -6,21 +6,21 @@ import matplotlib.pyplot as plt
 
 # analyze plugin_ios_activity_recognition data from AWARE server SQL database.
 def activitiesAnalysis(df):
-    # print(df)
-    plt.close('all')
-    gdf = df.groupby("activities")  # group by activities type for aggregate
-    actMap = {}
-    # create a map that links activities type to frequency
-    for key, item in gdf:
-        actMap[key] = len(gdf.get_group(key))
-    labels = list(actMap.keys())
-    sizes = list(actMap.values())
-    fig1, ax1 = plt.subplots()
-    ax1.pie(sizes, labels=labels, autopct='%1.1f%%',
-            startangle=90)
-    # Equal aspect ratio ensures that pie is drawn as a circle.
-    ax1.axis('equal')
-    plt.show()
+    print(df.to_string())
+    # plt.close('all')
+    # gdf = df.groupby("activities")  # group by activities type for aggregate
+    # actMap = {}
+    # # create a map that links activities type to frequency
+    # for key, item in gdf:
+    #     actMap[key] = len(gdf.get_group(key))
+    # labels = list(actMap.keys())
+    # sizes = list(actMap.values())
+    # fig1, ax1 = plt.subplots()
+    # ax1.pie(sizes, labels=labels, autopct='%1.1f%%',
+    #         startangle=90)
+    # # Equal aspect ratio ensures that pie is drawn as a circle.
+    # ax1.axis('equal')
+    # plt.show()
 
 
 # analyze healthkit quantity data from AWARE server SQL database.
@@ -33,12 +33,17 @@ def healthQuanAnalysis(df):
 
 # analyze healthkit category data from AWARE server SQL database.
 def healthCatAnalysis(df):
-    print(df)
+    print(df.to_string())
 
 
 # analyze qualtrics survey data
 def qualtricsAnalysis(df):
     print(df)
+
+
+# analyze accelerometer data
+def accelAnalysis(df):
+    print(df.to_string())
 
 
 if __name__ == "__main__":
@@ -51,13 +56,16 @@ if __name__ == "__main__":
 
     actdf = gen_df_from_remote_SQL(hostname, username,
                                    password, database_name, "plugin_ios_activity_recognition")
+    acceldf = gen_df_from_remote_SQL(hostname, username,
+                                     password, database_name, "accelerometer")
     healquandf = gen_df_from_remote_SQL(hostname, username,
                                         password, database_name, "health_kit_quantity")
-    # healcatdf = gen_df_from_remote_SQL(hostname, username,
-    # password, database_name, "health_kit_category")
+    healcatdf = gen_df_from_remote_SQL(hostname, username,
+                                       password, database_name, "health_kit_category")
     # qualdf = read_csv_data('yah yeet_July 8, 2019_16.24.csv')
 
     # qualtricsAnalysis(qualdf)
     # activitiesAnalysis(actdf)
-    healthQuanAnalysis(healquandf)
+    # healthQuanAnalysis(healquandf)
     # healthCatAnalysis(healcatdf)
+    accelAnalysis(acceldf)
