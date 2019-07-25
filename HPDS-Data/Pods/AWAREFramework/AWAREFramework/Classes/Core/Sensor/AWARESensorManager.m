@@ -417,31 +417,10 @@ static AWARESensorManager * sharedSensorManager;
 
 - (void)syncAllSensors {
     
-    if ([awareStudy isAutoDBSyncOnlyWifi]) {
-        if (![awareStudy isWifiReachable]) {
-            if(awareStudy.isDebug) NSLog(@"[AWARESensorManager] No Wifi Reachable");
-            return;
-        }else{
-            if(awareStudy.isDebug) NSLog(@"[AWARESensorManager] Wifi Reachable");
-        }
-    }
+    if(awareStudy.isDebug) NSLog(@"[AWARESensorManager] Start SyncDB forcefully");
     
-    if ([awareStudy isAutoDBSyncOnlyBatterChargning]) {
-        switch ([UIDevice currentDevice].batteryState) {
-            case UIDeviceBatteryStateFull:
-            case UIDeviceBatteryStateCharging:
-                if(awareStudy.isDebug) NSLog(@"[AWARESensorManager] Battery Charging Condition");
-                break;
-            case UIDeviceBatteryStateUnknown:
-            case UIDeviceBatteryStateUnplugged:
-                if(awareStudy.isDebug) NSLog(@"[AWARESensorManager] Not Battery Charging Condition");
-                return;
-        }
-    }
-    
-    if(awareStudy.isDebug) NSLog(@"[AWARESensorManager] Start SyncDB");
-
     for (AWARESensor * sensor in awareSensors ) {
+        NSLog(@"%@",sensor.getSensorName);
         [sensor startSyncDB];
     }
 }

@@ -203,7 +203,7 @@ NSString* const AWARE_PREFERENCES_STATUS_BATTERY = @"status_battery";
     int androidState = 1;
     if  (state == 0) {       // ios = unknown
         androidState = 1;
-    }else if (state == 1) {  // ios = unplegged
+    }else if (state == 1) {  // ios = unplugged
         androidState = 4;
     } else if (state == 2) { // ios = charging
         androidState = 2;
