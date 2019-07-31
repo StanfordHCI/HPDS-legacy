@@ -47,27 +47,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let healthkit = AWAREHealthKit(awareStudy: self.study)
         let activity = IOSActivityRecognition(awareStudy: self.study)
         
-        //initialize notification capabilities
+        //initialize notification capabilities and enlist them
         registerForPushNotifications()
-        
-        //notification content details
-        let content = UNMutableNotificationContent()
-        content.title = "ESM Survey"
-        content.body = "Time for a survey! :)"
-        
-        //notification sending details: change interval between notifications at timeInterval (in seconds)
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (60), repeats: false)
-        let uuidString = UUID().uuidString
-        let request = UNNotificationRequest(identifier: uuidString,
-                                            content: content, trigger: trigger)
-        
-        // Schedule the request with the system.
-        let notificationCenter = UNUserNotificationCenter.current()
-        notificationCenter.add(request) { (error) in
-            if error != nil {
-                print("error occurred while sending notification request")
-            }
-        }
+        createPushNotifications()
         
         //Setup background fetching interval
         UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplication.backgroundFetchIntervalMinimum)
@@ -81,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.study?.setStudyURL(studyurl)
         
         self.study?.join(withURL: studyurl, completion: { (settings, studyState, error) in
-            self.manager?.addSensors(with: self.study)              //Add sensors to study
+            self.manager?.addSensors(with: self.study)              //Add sensors to study from AWARE study dashboard
             self.manager?.createDBTablesOnAwareServer()             //Initialize database for sensors
             self.manager?.startAllSensors()                         //Start sensors running
         })
@@ -133,6 +115,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Permission granted: \(granted)")
                 guard granted else { return }
                 self?.getNotificationSettings()
+        }
+    }
+    
+    func createPushNotifications() {
+        //notification content details
+        let content = UNMutableNotificationContent()
+        content.title = "ESM Survey"
+        content.body = "Time for a survey! :)"
+        
+        //notification sending details: change interval between notifications at timeInterval (in seconds)
+        var date = DateComponents()
+        date.hour = 0
+        date.minute = 0
+        
+        let uuidString = UUID().uuidString
+        for i in 1...4 {
+            let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
+            let request = UNNotificationRequest(identifier: uuidString,
+                                                content: content, trigger: trigger)
+            
+            // Schedule the request with the system.
+            let notificationCenter = UNUserNotificationCenter.current()
+            notificationCenter.add(request) { (error) in
+                if error != nil {
+                    print("error occurred while sending notification request")
+                }
+            }
+            let curHour = 6 * i
+            date.hour = curHour
         }
     }
     

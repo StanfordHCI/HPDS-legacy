@@ -55,17 +55,17 @@ if __name__ == "__main__":
     database_name = "Ren_2425"
 
     actdf = gen_df_from_remote_SQL(hostname, username,
-                                   password, database_name, "plugin_ios_activity_recognition")
+                                   password, database_name, "aware_device")
     acceldf = gen_df_from_remote_SQL(hostname, username,
                                      password, database_name, "accelerometer")
     healquandf = gen_df_from_remote_SQL(hostname, username,
                                         password, database_name, "health_kit_quantity")
     healcatdf = gen_df_from_remote_SQL(hostname, username,
                                        password, database_name, "health_kit_category")
-    # qualdf = read_csv_data('yah yeet_July 8, 2019_16.24.csv')
+    # qualdf = read_csv_data('oof.csv')
 
     # qualtricsAnalysis(qualdf)
     # activitiesAnalysis(actdf)
-    # healthQuanAnalysis(healquandf)
+    healthQuanAnalysis(healquandf)
     # healthCatAnalysis(healcatdf)
-    accelAnalysis(acceldf)
+    # accelAnalysis(acceldf)

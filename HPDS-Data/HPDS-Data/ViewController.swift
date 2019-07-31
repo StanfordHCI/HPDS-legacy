@@ -35,7 +35,7 @@ class ViewController: UIViewController {
      * the client addressed to the email address below.
      */
     @IBAction func openEmail(_ sender: Any) {
-        let email = "renj@stanford.edu" // To be updated with real contact info
+        let email = "renj@stanford.edu" // Email to be contacted
         if let url = URL(string: "mailto:\(email)") {
             if #available(iOS 10.0, *) {
                 UIApplication.shared.open(url)
