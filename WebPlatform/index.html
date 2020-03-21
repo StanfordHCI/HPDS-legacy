@@ -4,13 +4,31 @@
     <title>Visual Stimulant Survey</title>
   </head>
   <body>
-    <div style="display:block;position:absolute;top:0px;left:0px;z-index:998;">
+  	<!-- Embedded Media Background -->
+    <div style="display:block;position:absolute;top:0px;left:0px;z-index:0;">
       <iframe width="1280" height="660" src="https://www.youtube.com/embed/2JQynIMHUGw?autoplay=1"
       frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
       picture-in-picture" allowfullscreen></iframe>
     </div>
+	</div>
 
-    <div style="display:block;position:absolute;top:80px;left:160px;z-index:999;">
+    <!-- Transparent Layer to Prevent Interacting with Media -->
+    <style>
+		.dividingLayer {
+		  height: 150vw;
+		  width: 150vw;
+		  background-color: #FFF;
+		  opacity: 0;
+		  position: absolute;
+		  z-index: 1;
+		  margin-left: -5vw;
+		  margin-top: -5vw;
+		}
+	</style>
+    <div class="dividingLayer"></div>
+
+    <!-- Qualtrics Survey -->
+    <div style="display:block;position:absolute;top:80px;left:160px;z-index:2;">
       <iframe src = "https://stanforduniversity.qualtrics.com/jfe/form/SV_41GXiV5cYShW6yh" width="960" height="495"  <! adjust survey dimensions here> ALLOWTRANSPARENCY="false"></iframe>
     </div>
 
