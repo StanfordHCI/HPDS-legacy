@@ -1,36 +1,142 @@
 <html>
-  <head>
-    <meta charset = "UTF-8">
-    <title>Visual Stimulant Survey</title>
-  </head>
-  <body>
-  	<!-- Embedded Media Background -->
-    <div style="display:block;position:absolute;top:0px;left:0px;z-index:0;">
-      <iframe width="1280" height="660" src="https://www.youtube.com/embed/2JQynIMHUGw?autoplay=1"
-      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
-      picture-in-picture" allowfullscreen></iframe>
-    </div>
-	</div>
 
-    <!-- Transparent Layer to Prevent Interacting with Media -->
-    <style>
-		.dividingLayer {
-		  height: 150vw;
-		  width: 150vw;
-		  background-color: #FFF;
-		  opacity: 0;
-		  position: absolute;
-		  z-index: 1;
-		  margin-left: -5vw;
-		  margin-top: -5vw;
-		}
-	</style>
-    <div class="dividingLayer"></div>
+<style>
+.buttons {
+  position: absolute;
+  z-index: 5;
+  bottom: 8px;
+}
 
-    <!-- Qualtrics Survey -->
-    <div style="display:block;position:absolute;top:80px;left:160px;z-index:2;">
-      <iframe src = "https://stanforduniversity.qualtrics.com/jfe/form/SV_41GXiV5cYShW6yh" width="960" height="495"  <! adjust survey dimensions here> ALLOWTRANSPARENCY="false"></iframe>
-    </div>
+.myButton {
+    background-color:#FFFFFF;
+    border-radius:6px;
+    border:1px solid #000000;
+    display:inline-block;
+    cursor:pointer;
+    color:#000000;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:12px 44px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #0000000;
+}
+.myButton:hover:enabled {
+    background-color:#8B1515;
+    color:#FFFFFF;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
 
-  </body>
+.myButton:disabled {
+    color: #ECECEC;
+    pointer-events: none;
+}
+</style>
+<div class="buttons">
+<button id="btn-start-recording" class="myButton">Start Recording</button>
+<button id="btn-stop-recording" disabled class="myButton">Stop Recording</button>
+</div>
+<style>
+.bottomright {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+  z-index: 4;
+}
+</style>
+<div class="bottomright">
+<video controls autoplay playsinline height="150"></video>
+</div>
+
+<script src="/RecordRTC.js"></script>
+<script>
+var video = document.querySelector('video');
+
+function captureCamera(callback) {
+    navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(function(camera) {
+        callback(camera);
+    }).catch(function(error) {
+        alert('Unable to capture your camera. Please check console logs.');
+        console.error(error);
+    });
+}
+
+function stopRecordingCallback() {
+    video.src = video.srcObject = null;
+    video.muted = false;
+    video.volume = 1;
+    video.src = URL.createObjectURL(recorder.getBlob());
+    
+    recorder.camera.stop();
+    recorder.destroy();
+    recorder = null;
+}
+
+var recorder; // globally accessible
+
+document.getElementById('btn-start-recording').onclick = function() {
+    this.disabled = true;
+    captureCamera(function(camera) {
+        video.muted = true;
+        video.volume = 0;
+        video.srcObject = camera;
+
+        recorder = RecordRTC(camera, {
+            type: 'video'
+        });
+
+        recorder.startRecording();
+
+        // release camera on stopRecording
+        recorder.camera = camera;
+
+        document.getElementById('btn-stop-recording').disabled = false;
+    });
+};
+
+document.getElementById('btn-stop-recording').onclick = function() {
+    this.disabled = true;
+    recorder.stopRecording(stopRecordingCallback);
+};
+</script>
+
+<body>
+<!-- Embedded Media Background -->
+<div style="display:block;position:absolute;top:0px;left:0px;z-index:0;">
+  <iframe width="1280" height="660" src="https://www.youtube.com/embed/zofBinqC2F4?autoplay=1&mute=1"
+  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
+  picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+
+<!-- Transparent Layer to Prevent Interacting with Media -->
+<style>
+    .dividingLayer {
+      height: 150vw;
+      width: 150vw;
+      background-color: #FFF;
+      opacity: 0;
+      position: absolute;
+      z-index: 1;
+      margin-left: -5vw;
+      margin-top: -5vw;
+    }
+</style>
+<div class="dividingLayer"></div>
+
+<!-- Qualtrics Survey -->
+<div style="display:block;position:absolute;top:80px;left:160px;z-index:2;">
+  <iframe src = "https://stanforduniversity.qualtrics.com/jfe/form/SV_41GXiV5cYShW6yh" width="960" height="495"  <! adjust survey dimensions here> ALLOWTRANSPARENCY="false"></iframe>
+</div>
+
+</body>
+
+<footer style="margin-top: 20px;"><small id="send-message"></small></footer>
+<script src="https://www.webrtc-experiment.com/common.js"></script>
+
+
 </html>
