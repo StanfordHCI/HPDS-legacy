@@ -1,1 +1,6 @@
 WebPlatform/HPDS-Posenet-Python/hpds-venv/
+
+*.espressostorage
+*.esproj/
+/.project
+/.metadata/
