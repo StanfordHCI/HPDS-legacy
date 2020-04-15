@@ -1,0 +1,64 @@
+/* Navbar */
+
+.navbar-nav li a {
+
+  /* original css
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+  color: #F4F4F4; 
+  padding: 20px;
+  */
+
+  
+  float: left;
+  position: relative;
+  text-transform: uppercase;
+  padding: 0px 20px;
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #F4F4F4;
+  
+}
+
+/*
+.navbar-nav li a:hover {
+  color: #d2c295;
+  font-weight: 900;
+}
+*/
+
+.navbar-nav li a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 2px;
+  width: 0;
+  background: transparent;
+  color: #F4F4F4;
+}
+
+/* Footer */
+
+.mylink:after {
+  transition: width .5s ease, background-color .5s ease, left .5s ease;
+}
+
+.mylink:hover:after {
+  width: 60%;
+  left: 20%;
+  background: #F4F4F4;
+}
+
+.mymail {
+    color: #F4F4F4;
+}
+
+.mymail:hover {
+    /* color: #B1040E; */
+    color: #d2c295;
+}
