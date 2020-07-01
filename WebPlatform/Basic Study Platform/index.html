@@ -1,0 +1,75 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<style>
+  html, body {margin: 0; height: 100%; overflow: hidden; background-color:black;}
+
+</style>
+
+<body>
+<!-- Embedded Media Background -->
+<div id="atmosphere" style="display:none">
+  <div style="position:absolute;width:100%;height:100%;z-index:0;">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VXPXkAhB6ek?autoplay=1&mute=1&controls=0"
+      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
+      picture-in-picture"></iframe>
+  </div>
+</div>
+<!-- Transparent Layer to Prevent Interacting with Media -->
+<style>
+    .dividingLayer {
+      height: 100vw;
+      width: 100vw;
+      background-color: #FFF;
+      opacity: 0;
+      position: absolute;
+      z-index: 1;
+      margin-left: 0vw;
+      margin-top: 0vw;
+    }
+</style>
+<div class="dividingLayer"></div>
+
+<!-- Instructions to Participant to Take In Environment -->
+<div id="instructions" style="position:absolute;z-index:3;top:40%;left:9%;">
+  <b style="color:white;font-size:60px;font-family:arial">
+    Observe the environment on your screen.
+    
+  </b>
+</div>
+
+<!-- Qualtrics Survey -->
+<div id="surveytask" style="display:none">
+  <div style="display:block;position:absolute;margin:auto;top:10%;left:30%;z-index:2;">
+    <iframe src = "https://stanforduniversity.qualtrics.com/jfe/form/SV_5hBjuoHD7q3Yxtb" width="550vw" height="550vh" ALLOWTRANSPARENCY="false"></iframe>
+  </div>
+</div>
+
+<script>
+// After 5 seconds, hide the instructions text
+$(function(){
+   setTimeout(function(){
+     $('#instructions').hide();
+   },5000);
+});
+
+// Also after 5 seconds, show the atmosphere
+$(function(){
+   setTimeout(function(){
+     $('#atmosphere').show();
+   },5000);
+});
+
+// After 15 seconds, show the survey
+$(function(){
+   setTimeout(function(){
+     $('#surveytask').show();
+   },15000);
+});
+</script>
+
+</body>
+
+</html>
